@@ -1,0 +1,146 @@
+{
+  "articulos": [
+    {
+      "id": "urgencia",
+      "slug": "urgencia-de-los-margenes",
+      "titulo": "La Urgencia de los Márgenes: Por Qué Revistas como Margen Son Indispensables para el Diseño Actual",
+      "autor": "Claudia Martínez Capitán de Margen*",
+      "categoria": "Nota Editorial",
+      "subcategoria": "Edición 0 · Nacimiento",
+      "fecha": "2026-07-21",
+      "tiempo_lectura": "6 min",
+      "extracto": "El diseño, hoy, se asfixia. La homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. La aparición de una publicación como Margen no es solo un alivio, es una necesidad imperiosa.",
+      "imagen": "margen-hero.jpg",
+      "imagen_alt": "El margen como espacio de decisión compositiva",
+      "destacado": true,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "El diseño, hoy, se asfixia. Seamos directos: la homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. Por eso, la aparición de una publicación como Revista Margen no es solo un alivio, es una necesidad imperiosa. Su propuesta editorial, que eleva la tipografía a la categoría de \"arquitectura invisible\" y concibe el diseño como un \"acto de comunicación ética\", se erige como una brújula para quienes buscamos ir más allá de lo obvio y desafiar las narrativas establecidas. La verdadera fuerza de Margen reside en su capacidad para cultivar una <strong>multiplicidad de voces y pensamientos</strong>, un antídoto crucial contra la tentación de convertir el diseño en un \"club de privilegiados\"."},
+        {"tipo": "parrafo", "texto": "La democratización del diseño no es una utopía; es una obligación<sup>1</sup>. Durante demasiado tiempo, el discurso del diseño ha permanecido enclaustrado en círculos cerrados, a menudo definidos por geografías, instituciones o figuras de autoridad. Esta endogamia intelectual, si bien puede producir resultados notables en nichos específicos, corre el peligro de asfixiar la innovación genuina y de ignorar las perspectivas que brotan de contextos menos visibles. Una revista que busca y amplifica deliberadamente las ideas que habitan en los <strong>márgenes</strong> —aquellas que cuestionan lo establecido, que surgen de experiencias diversas o que proponen enfoques no convencionales— es, a mi entender, vital para romper esta dinámica. Es precisamente en esos espacios, a menudo desatendidos, donde se forjan las ideas más frescas y disruptivas, las que realmente pueden impulsar la evolución de nuestra disciplina."},
+        {"tipo": "parrafo", "texto": "La pluralidad de voces no es un mero capricho democrático; es una condición <em>sine qua non</em> para la vitalidad del diseño. Cuando permitimos que diferentes perspectivas dialoguen, el debate se enriquece, los dogmas se tambalean y se abren nuevas avenidas para la experimentación y la crítica. Revista Margen, al ofrecer una plataforma para estas reflexiones diversas, contribuye activamente a desmantelar la idea de que el diseño es un coto privado de unos pocos elegidos. Por el contrario, lo presenta como un campo de disputa intelectual, de pensamiento crítico y de producción cultural accesible y permeable a múltiples interpretaciones<sup>2</sup>."},
+        {"tipo": "cita", "texto": "Las 'buenas ideas' rara vez germinan en el centro de la convención. Con frecuencia, son el fruto de una mirada lateral, de una pregunta incómoda o de una experimentación audaz que se atreve a explorar lo que yace fuera del foco principal."},
+        {"tipo": "parrafo", "texto": "Revista Margen, desde su propio nombre, ya nos sugiere esta vocación: siempre hay algo valioso, algo revelador, en el margen. Es ahí donde la tipografía se revela como arquitectura cognitiva, donde la retícula se transforma en pensamiento y donde el diseño, en su expresión más rigurosa y ética, halla su belleza más radical. Por todo esto, la existencia y el apoyo a publicaciones como Margen son cruciales para asegurar que el diseño siga siendo una disciplina dinámica, inclusiva y, sobre todo, pertinente para los desafíos que nos depara el futuro."}
+      ],
+      "notas": [
+        {"numero": 1, "texto": "Emerge Studio. \"La democratización del diseño: un futuro más inclusivo y sostenible.\" <em>Emerge Studio</em>.", "url": "https://emergestudio.design/language/es/la-democratizacion-del-diseno-un-futuro-mas-inclusivo-y-sostenible/"},
+        {"numero": 2, "texto": "Victor Margolin. \"El diseño también es un campo de disputa, pensamiento crítico y producción cultural.\" <em>Instagram</em>.", "url": "https://www.instagram.com/p/DQMVxyFABBW/"}
+      ]
+    },
+    {
+      "id": "arquitectura",
+      "slug": "arquitectura-invisible-del-pensamiento",
+      "titulo": "La Arquitectura Invisible del Pensamiento: Una Mirada Crítica al Diseño Editorial",
+      "autor": "Claudia Martínez Capitán de Margen*",
+      "categoria": "Ensayo",
+      "subcategoria": "",
+      "fecha": "2026-07-21",
+      "tiempo_lectura": "5 min",
+      "extracto": "El diseño editorial trasciende la mera estética. Es una arquitectura invisible que no solo da forma, sino que sostiene el pensamiento.",
+      "imagen": "",
+      "imagen_alt": "",
+      "destacado": false,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "El diseño editorial, en su esencia, trasciende la mera estética. Lo concibo como una <strong>arquitectura invisible</strong> que no solo da forma, sino que sostiene el pensamiento. La propuesta de Revista Margen, al destacar la tipografía como un cimiento cognitivo, me invita a una reflexión profunda sobre el rigor y la ética que subyacen a cada decisión de diseño. No se trata de una simple decoración; la elección de una fuente o la configuración de una retícula es, en realidad, un acto de construcción que determina la interacción del lector con el contenido y su asimilación."},
+        {"tipo": "parrafo", "texto": "La era digital ha exacerbado la relevancia de esta perspectiva. Las pantallas, con su resolución fluctuante y contextos de lectura fragmentados, nos obligan a una comprensión más aguda de cómo el diseño puede facilitar o, por el contrario, obstaculizar la comunicación. Tomemos la <strong>retícula de 12 columnas</strong>: su función va más allá de la organización superficial. La veo como la manifestación matemática de una intuición editorial fundamental: la necesidad de un equilibrio entre orden y flexibilidad. Este marco no solo estructura el contenido, sino que redefine los márgenes, tradicionalmente vistos como espacios inertes, transformándolos en <strong>espacios de respiración</strong> vitales para el flujo cognitivo. Son estos silencios visuales los que, en mi experiencia, permiten que el pensamiento se desarrolle sin interferencias, un pilar de la comunicación ética en el diseño editorial."},
+        {"tipo": "cita", "texto": "El diseño editorial es un acto de comunicación ética. No es decoración. No es tecnología por la tecnología. Es la arquitectura invisible que permite que el pensamiento fluya sin ruido."},
+        {"tipo": "parrafo", "texto": "Desde esta óptica, el diseño se consolida como un <strong>acto de comunicación ética</strong><sup>1</sup>. No es una cuestión de seguir tendencias efímeras o de priorizar la tecnología por su novedad, sino de un compromiso inquebrantable con la claridad, la legibilidad y la experiencia del usuario. La distinción entre una tipografía serif para el cuerpo de texto, diseñada para guiar el ojo horizontalmente, y una sans-serif para la navegación, que busca acelerar la comprensión, no es una elección estilística arbitraria, sino una decisión de rigor funcional. Este rigor, como bien subraya Revista Margen, representa la forma más contundente de belleza en un entorno digital que, con demasiada frecuencia, valora la inmediatez por encima de la sustancia."},
+        {"tipo": "parrafo", "texto": "La ética del diseño editorial contemporáneo, a mi juicio, conlleva una responsabilidad profunda: la de edificar interfaces y publicaciones que no solo sean atractivas, sino que funcionen como conductos transparentes para el conocimiento. Márgenes, tipografía y retícula no son elementos disociados; son componentes interconectados de una estructura que, cuando se orquesta con conciencia y precisión, permite que el pensamiento se despliegue en toda su plenitud. En última instancia, el diseño editorial es el custodio de la legibilidad y el catalizador de la comprensión, una arquitectura discreta pero formidable que moldea nuestra interacción con el universo de las ideas."}
+      ],
+      "notas": [
+        {"numero": 1, "texto": "Ricardo Victoria Uribe. \"La ética del Diseño: Hacia un sistema más sustentable y responsable.\" <em>ResearchGate</em>.", "url": "https://www.researchgate.net/profile/Ricardo_Victoria_Uribe/publication/274638707_La_etica_del_Diseno_Hacia_un_sistema_mas_sustentable_y_responsable/links/5524610c0cf2caf11bfcc72e.pdf"}
+      ]
+    },
+    {
+      "id": "tipografia",
+      "slug": "tipografia-como-arquitectura",
+      "titulo": "La tipografía como arquitectura del pensamiento",
+      "autor": "Javier Ríos",
+      "categoria": "Ensayo destacado",
+      "subcategoria": "",
+      "fecha": "2026-07-15",
+      "tiempo_lectura": "12 min",
+      "extracto": "Un análisis profundo sobre cómo las decisiones tipográficas construyen no solo la legibilidad, sino también la estructura cognitiva del contenido editorial en la era digital.",
+      "imagen": "",
+      "imagen_alt": "",
+      "destacado": false,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "La tipografía no es decoración. Es arquitectura invisible que sostiene el pensamiento. Cuando elegimos una fuente, no estamos eligiendo una estética: estamos construyendo la estructura cognitiva por la cual el lector accederá al contenido."},
+        {"tipo": "parrafo", "texto": "En la tradición editorial, esta verdad ha sido conocida desde Gutenberg, pero en la era digital ha adquirido una urgencia nueva. Las pantallas imponen restricciones que el papel no conoce: resolución variable, distancias de lectura impredecibles, contextos de uso fragmentados."},
+        {"tipo": "subtitulo", "texto": "La retícula como pensamiento"},
+        {"tipo": "parrafo", "texto": "La retícula de 12 columnas no es una convención arbitraria. Es la expresión matemática de una intuición editorial: que el contenido necesita tanto orden como flexibilidad."},
+        {"tipo": "cita", "texto": "El diseño editorial es un acto de comunicación ética. No es decoración. No es tecnología por la tecnología. Es la arquitectura invisible que permite que el pensamiento fluya sin ruido."},
+        {"tipo": "parrafo", "texto": "Cuando aplicamos esta retícula a la tipografía, algo interesante ocurre: los márgenes dejan de ser espacios muertos y se convierten en espacios de respiración."},
+        {"tipo": "subtitulo", "texto": "El asterisco como llamada"},
+        {"tipo": "parrafo", "texto": "En la tradición académica, el asterisco (*) funciona como una llamada que invita a descender a notas al pie, a investigar más, a profundizar. En Margen*, este símbolo no es decorativo: es estructural."},
+        {"tipo": "parrafo", "texto": "Cada decisión tipográfica en esta plataforma responde a esta lógica. La tipografía serif para cuerpo de texto porque su estructura de trazos guía el ojo horizontalmente. La sans-serif para navegación porque su claridad geométrica acelera la comprensión."},
+        {"tipo": "parrafo", "texto": "No son decisiones de moda. Son decisiones de rigor. Y en un mundo saturado de información, el rigor es la forma más radical de belleza."}
+      ],
+      "notas": []
+    },
+    {
+      "id": "ia",
+      "slug": "ia-crisis-autoria-creativa",
+      "titulo": "Inteligencia artificial y la crisis de la autoría creativa",
+      "autor": "Dr. Carlos Méndez",
+      "categoria": "IA + Diseño",
+      "subcategoria": "",
+      "fecha": "2026-07-10",
+      "tiempo_lectura": "12 min",
+      "extracto": "¿Puede una máquina ser autora? Exploramos los límites éticos y conceptuales de la generación automática en el campo del diseño gráfico.",
+      "imagen": "",
+      "imagen_alt": "",
+      "destacado": false,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "La pregunta no es si la IA puede diseñar. La pregunta es si el diseño generado por algoritmos puede ser considerado un acto creativo en el sentido tradicional. Esta distinción no es filosófica: tiene consecuencias legales, económicas y culturales inmediatas."},
+        {"tipo": "parrafo", "texto": "Cuando Midjourney produce una imagen a partir de un prompt, ¿quién es el autor? ¿El usuario que escribió el prompt? ¿Los ingenieros que entrenaron el modelo? ¿Los millones de artistas cuyas obras alimentaron el dataset sin su consentimiento?"},
+        {"tipo": "cita", "texto": "La autoría no es un acto de producción, sino de intención. Sin intención, no hay autoría. Sin autoría, no hay responsabilidad ética."},
+        {"tipo": "subtitulo", "texto": "El dataset como territorio colonial"},
+        {"tipo": "parrafo", "texto": "Los modelos de IA se entrenan con datasets que incluyen millones de imágenes sin licencia. Esto no es un bug: es una característica del sistema. El diseño generado por IA, en su forma actual, depende de una apropiación masiva de trabajo creativo humano."},
+        {"tipo": "parrafo", "texto": "Para Margen*, esta pregunta no es abstracta. Si publicamos una imagen generada por IA, ¿estamos legitimando un sistema de extracción? ¿O estamos explorando legítimamente una nueva herramienta? La respuesta, como siempre, está en el rigor de la pregunta."}
+      ],
+      "notas": []
+    },
+    {
+      "id": "swiss",
+      "slug": "mas-alla-estilo-suizo",
+      "titulo": "Más allá del estilo suizo: legado y evolución",
+      "autor": "Ana Lucía Torres",
+      "categoria": "Investigación",
+      "subcategoria": "",
+      "fecha": "2026-07-05",
+      "tiempo_lectura": "18 min",
+      "extracto": "Revisamos cómo los principios de la Escuela de Basilea siguen vigentes en las interfaces digitales contemporáneas.",
+      "imagen": "",
+      "imagen_alt": "",
+      "destacado": false,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "El estilo suizo no es un estilo. Es un sistema de pensamiento. Cuando Josef Müller-Brockmann publicó Grid Systems in Graphic Design en 1981, no estaba proponiendo una moda: estaba formalizando una epistemología del diseño."},
+        {"tipo": "parrafo", "texto": "La retícula de 12 columnas, la jerarquía tipográfica basada en tamaños matemáticos, el uso del espacio en blanco como elemento activo: estos no son recetas estéticas. Son principios de organización del conocimiento visual."},
+        {"tipo": "subtitulo", "texto": "De la imprenta a la pantalla"},
+        {"tipo": "parrafo", "texto": "La transición del papel a la pantalla no invalidó estos principios: los radicalizó. En una pantalla, el diseñador no controla el tamaño del viewport, la resolución, ni el contexto de lectura. La retícula, lejos de ser una restricción, se convierte en una herramienta de adaptación."},
+        {"tipo": "parrafo", "texto": "Las interfaces de iOS, Material Design, y los sistemas de diseño de Figma no son descendientes del estilo suizo: son su continuación lógica en un medio diferente."}
+      ],
+      "notas": []
+    },
+    {
+      "id": "margenes",
+      "slug": "margen-como-resistencia",
+      "titulo": "El margen como espacio de resistencia editorial",
+      "autor": "Javier Ríos",
+      "categoria": "Ensayo",
+      "subcategoria": "",
+      "fecha": "2026-06-28",
+      "tiempo_lectura": "8 min",
+      "extracto": "El espacio en blanco no es ausencia: es decisión compositiva que comunica calma, jerarquía y respeto por el lector.",
+      "imagen": "",
+      "imagen_alt": "",
+      "destacado": false,
+      "contenido": [
+        {"tipo": "parrafo", "texto": "En la economía visual de la web contemporánea, el espacio en blanco es un acto de resistencia. Cada píxel no utilizado es una declaración: aquí no hay publicidad, aquí no hay distracción, aquí el contenido es suficiente."},
+        {"tipo": "parrafo", "texto": "Los márgenes de Margen* no son decorativos. Son funcionales. Un margen de 120px en desktop no es capricho: es la distancia mínima que permite al ojo descansar entre el borde de la pantalla y el inicio del contenido."},
+        {"tipo": "cita", "texto": "El espacio en blanco no es lo que queda cuando terminas de diseñar. Es lo que diseñas primero."},
+        {"tipo": "parrafo", "texto": "En la tradición editorial japonesa, el concepto de ma (間) —el espacio intervalar, el silencio entre dos eventos— es tan importante como los eventos mismos. Margen* hereda esta tradición: el espacio entre párrafos, entre secciones, entre la imagen y su caption, no es ausencia. Es presencia de otra clase."}
+      ],
+      "notas": []
+    }
+  ]
+}
