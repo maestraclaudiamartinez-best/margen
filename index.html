@@ -11,7 +11,7 @@
 body{font-family:var(--n);background:var(--bg);color:var(--t);min-height:100vh}
 header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--b)}
 .hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;cursor:pointer;background:none;border:none;font-family:inherit;color:var(--t)}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;cursor:pointer;background:none;border:none;font-family:inherit;color:var(--t);display:flex;align-items:center;gap:4px}
 .logo span{font-weight:400}
 nav{display:flex;gap:32px}
 nav button{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--t2);background:none;border:none;cursor:pointer;position:relative;font-family:inherit}
@@ -38,7 +38,8 @@ section>p{font-size:15px;color:var(--tm);margin-bottom:40px;max-width:600px;line
 .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--tm);border-top:1px solid var(--b);padding-top:16px}
 .meta span:first-child{font-weight:500;color:var(--t2)}
 .featured{max-width:1400px;margin:0 auto 80px;padding:0 4%;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.f-img{aspect-ratio:4/3;background:linear-gradient(135deg,#e8e8e8,#d0d0d0);display:flex;align-items:center;justify-content:center;font-family:var(--s);font-size:14px;color:var(--tm);letter-spacing:0.1em;text-transform:uppercase}
+.f-img{aspect-ratio:16/10;overflow:hidden;background:var(--w);border:1px solid var(--b)}
+.f-img img{width:100%;height:100%;object-fit:cover}
 .f-lab{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--a);margin-bottom:20px}
 .f-tit{font-family:var(--s);font-size:36px;font-weight:500;line-height:1.2;margin-bottom:20px}
 .f-exc{font-size:16px;line-height:1.8;color:var(--t2);margin-bottom:32px}
@@ -77,33 +78,168 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 .back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--tm);background:none;border:none;margin-bottom:32px;cursor:pointer;font-family:inherit}
 .back:hover{color:var(--t)}
 .mobile{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--t)}
-input,textarea{font-family:var(--n)}
-input:focus,textarea:focus{border-color:var(--t)!important}
+.a-hero-img{width:100%;margin:0 auto 48px;max-width:1400px;padding:0 4%}
+.a-hero-img img{width:100%;height:auto;display:block;border:1px solid var(--b)}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.featured{grid-template-columns:1fr;gap:32px}.ov-grid{grid-template-columns:1fr}.f-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:1fr}nav{display:none}.hero h1{font-size:32px}.mobile{display:block}.actions .icon-btn span{display:none}.f-grid{grid-template-columns:repeat(2,1fr)}.f-bot{flex-direction:column;gap:8px;text-align:center}}
 </style>
+<base target="_blank">
 </head>
 <body>
 <div class="progress" id="readingProgress"></div>
-<header><div class="hi"><button class="mobile" onclick="toggleMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button><button class="logo" onclick="showPage('home')">MARGEN<span>*</span></button><nav><button onclick="showPage('home')" class="active" id="nav-home">Inicio</button><button onclick="showPage('revista')" id="nav-revista">Revista</button><button onclick="showPage('articulos')" id="nav-articulos">Artículos</button><button onclick="showPage('proyectos')" id="nav-proyectos">Proyectos</button><button onclick="showPage('nosotros')" id="nav-nosotros">Nosotros</button></nav><div class="actions"><button class="icon-btn" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscador</span></button><button class="icon-btn" onclick="showPage('newsletter')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>Newsletter</span></button><button class="icon-btn" onclick="showPage('cuenta')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Mi cuenta</span></button><button class="sub-btn" onclick="showPage('newsletter')">Suscribirse</button></div></div></header>
+<header><div class="hi"><button class="mobile" onclick="toggleMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button><button class="logo" onclick="showPage('home')"><span>MARGEN</span><span>*</span></button><nav><button onclick="showPage('home')" class="active" id="nav-home">Inicio</button><button onclick="showPage('revista')" id="nav-revista">Revista</button><button onclick="showPage('articulos')" id="nav-articulos">Artículos</button><button onclick="showPage('proyectos')" id="nav-proyectos">Proyectos</button><button onclick="showPage('nosotros')" id="nav-nosotros">Nosotros</button></nav><div class="actions"><button class="icon-btn" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscador</span></button><button class="icon-btn" onclick="showPage('newsletter')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>Newsletter</span></button><button class="icon-btn" onclick="showPage('cuenta')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Mi cuenta</span></button><button class="sub-btn" onclick="showPage('newsletter')">Suscribirse</button></div></div></header>
+
 <div class="overlay" id="menuOverlay"><button class="ov-close" onclick="toggleMenu()">&times;</button><div class="ov-grid"><div class="ov-col"><h3>Revista</h3><button onclick="showPage('revista');toggleMenu()">Número actual</button><div class="sub">Edición vigente</div><button onclick="showPage('revista');toggleMenu()">Números anteriores</button><div class="sub">Archivo histórico</div></div><div class="ov-col"><h3>Artículos</h3><button onclick="showPage('articulos');toggleMenu()">Ensayos</button><div class="sub">Reflexión y pensamiento</div><button onclick="showPage('articulos');toggleMenu()">Investigación</button><div class="sub">Estudios y papers</div><button onclick="showPage('articulos');toggleMenu()">Opinión</button><div class="sub">Artículos de opinión</div><button onclick="showPage('articulos');toggleMenu()">IA + Diseño</button><div class="sub">Inteligencia artificial</div><button onclick="showPage('articulos');toggleMenu()">Diseño y Negocios</button><div class="sub">Gestión e innovación</div><button onclick="showPage('articulos');toggleMenu()">Entrevistas</button><div class="sub">Conversaciones</div></div><div class="ov-col"><h3>Plataforma</h3><button onclick="showPage('convocatorias');toggleMenu()">Convocatorias</button><div class="sub">Oportunidades abiertas</div><button onclick="showPage('proyectos');toggleMenu()">Proyectos Destacados</button><div class="sub">Selección editorial</div><button onclick="showPage('nosotros');toggleMenu()">Nosotros</button><div class="sub">La revista Margen*</div><button onclick="showPage('contacto');toggleMenu()">Contacto</button><div class="sub">Comunicación directa</div><button onclick="showPage('newsletter');toggleMenu()">Newsletter</button><div class="sub">Suscripción</div></div></div></div>
-<div class="page active" id="page-home"><div class="hero"><h1>Unimos la academia con el<br>pensamiento creativo.</h1><p>Revista Iberoamericana de Diseño</p><div></div></div><div class="featured"><div class="f-img">Imagen destacada</div><div><div class="f-lab">Ensayo destacado</div><h2 class="f-tit">La tipografía como arquitectura del pensamiento</h2><p class="f-exc">Un análisis profundo sobre cómo las decisiones tipográficas construyen no solo la legibilidad, sino también la estructura cognitiva del contenido editorial en la era digital.</p><button class="f-cta" onclick="showArticle('tipografia')">Leer ensayo completo &rarr;</button></div></div><section><h2>Artículos recientes</h2><p>Reflexión, investigación y pensamiento crítico sobre diseño desde Iberoamérica.</p><div class="grid"><div class="card" onclick="showArticle('ia')"><div class="cat">IA + Diseño</div><h3>Inteligencia artificial y la crisis de la autoría creativa</h3><p>¿Puede una máquina ser autora? Exploramos los límites éticos y conceptuales de la generación automática en el campo del diseño gráfico.</p><div class="meta"><span>Dr. Carlos Méndez</span><span>12 min</span></div></div><div class="card" onclick="showArticle('swiss')"><div class="cat">Investigación</div><h3>Más allá del estilo suizo: legado y evolución</h3><p>Revisamos cómo los principios de la Escuela de Basilea siguen vigentes en las interfaces digitales contemporáneas.</p><div class="meta"><span>Ana Lucía Torres</span><span>18 min</span></div></div><div class="card" onclick="showArticle('margenes')"><div class="cat">Ensayo</div><h3>El margen como espacio de resistencia editorial</h3><p>El espacio en blanco no es ausencia: es decisión compositiva que comunica calma, jerarquía y respeto por el lector.</p><div class="meta"><span>Javier Ríos</span><span>8 min</span></div></div><div class="card" onclick="showArticle('color')"><div class="cat">Opinión</div><h3>Por qué el diseño editorial rechaza el color excesivo</h3><p>Una defensa de la paleta cromática limitada como estrategia de claridad y rigor en la comunicación visual.</p><div class="meta"><span>María Elena Soto</span><span>6 min</span></div></div><div class="card" onclick="showArticle('latam')"><div class="cat">Entrevista</div><h3>Diseño iberoamericano: voces desde el sur global</h3><p>Conversación con cinco directores de diseño de México, Argentina, Brasil y España sobre identidad y perspectiva.</p><div class="meta"><span>Equipo Margen*</span><span>22 min</span></div></div><div class="card" onclick="showArticle('negocios')"><div class="cat">Diseño y Negocios</div><h3>Estrategia de marca en tiempos de fragmentación digital</h3><p>Cómo mantener coherencia visual cuando el consumidor interactúa con tu marca en veinte plataformas diferentes.</p><div class="meta"><span>Pedro Álvarez</span><span>14 min</span></div></div></div></div><section><h2>Proyectos destacados</h2><p>Selección editorial de trabajos que definen el estado del diseño contemporáneo.</p><div class="grid"><div class="card" onclick="showArticle('proyecto1')"><div class="cat">Arquitectura</div><h3>Museo de Arte Moderno de Medellín</h3><p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad y su transformación cultural.</p><div class="meta"><span>Estudio Aalto</span><span>Colombia</span></div></div><div class="card" onclick="showArticle('proyecto2')"><div class="cat">Editorial</div><h3>Revista Código: sistema tipográfico modular</h3><p>Un sistema de tipografía variable que adapta su densidad según el formato de publicación sin perder identidad.</p><div class="meta"><span>Taller Tipográfico</span><span>México</span></div></div><div class="card" onclick="showArticle('proyecto3')"><div class="cat">Digital</div><h3>Archivo Digital de Diseño Iberoamericano</h3><p>Plataforma de documentación histórica que preserva y contextualiza el legado del diseño en la región.</p><div class="meta"><span>Fundación ADDI</span><span>Argentina</span></div></div></div></section></div>
-<div class="page" id="page-article"><div class="article"><button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button><div class="a-head"><div class="a-cat" id="articleCategory">Ensayo</div><h1 class="a-tit" id="articleTitle">La tipografía como arquitectura del pensamiento</h1><div class="a-meta"><span id="articleAuthor">Por Javier Ríos</span><span>&middot;</span><span id="articleDate">15 de julio, 2026</span><span>&middot;</span><span id="articleTime">12 min de lectura</span></div></div><div class="a-body" id="articleBody"><p>La tipografía no es decoración. Es arquitectura invisible que sostiene el pensamiento. Cuando elegimos una fuente, no estamos eligiendo una estética: estamos construyendo la estructura cognitiva por la cual el lector accederá al contenido.</p><p>En la tradición editorial, esta verdad ha sido conocida desde Gutenberg, pero en la era digital ha adquirido una urgencia nueva. Las pantallas imponen restricciones que el papel no conoce: resolución variable, distancias de lectura impredecibles, contextos de uso fragmentados.</p><div class="a-img">Ilustración: Sistema modular tipográfico</div><p class="a-cap">Figura 1. Estructura de retícula tipográfica de 12 columnas aplicada a lectura digital.</p><h2>La retícula como pensamiento</h2><p>La retícula de 12 columnas no es una convención arbitraria. Es la expresión matemática de una intuición editorial: que el contenido necesita tanto orden como flexibilidad.</p><blockquote>"El diseño editorial es un acto de comunicación ética. No es decoración. No es tecnología por la tecnología. Es la arquitectura invisible que permite que el pensamiento fluya sin ruido."</blockquote><p>Cuando aplicamos esta retícula a la tipografía, algo interesante ocurre: los márgenes dejan de ser espacios muertos y se convierten en espacios de respiración.</p><h2>El asterisco como llamada</h2><p>En la tradición académica, el asterisco (*) funciona como una llamada que invita a descender a notas al pie, a investigar más, a profundizar. En Margen*, este símbolo no es decorativo: es estructural.</p><p>Cada decisión tipográfica en esta plataforma responde a esta lógica. La tipografía serif para cuerpo de texto porque su estructura de trazos guía el ojo horizontalmente. La sans-serif para navegación porque su claridad geométrica acelera la comprensión.</p><p>No son decisiones de moda. Son decisiones de rigor. Y en un mundo saturado de información, el rigor es la forma más radical de belleza.</p></div></div></div>
-<div class="page" id="page-revista"><div class="hero"><h1>Revista</h1><p>Ediciones de la revista iberoamericana de diseño</p><div></div></div><section><div class="grid"><div class="card" onclick="showArticle('numero12')"><div class="cat">Número 12 · 2026</div><h3>Diseño y Sostenibilidad</h3><p>Edición dedicada a explorar cómo el diseño puede ser agente de cambio frente a la crisis climática.</p><div class="meta"><span>Edición vigente</span><span>Julio 2026</span></div></div><div class="card" onclick="showArticle('numero11')"><div class="cat">Número 11 · 2026</div><h3>Tipografía y Poder</h3><p>Las formas de las letras como vehículo de autoridad, resistencia y transformación social.</p><div class="meta"><span>Archivo</span><span>Mayo 2026</span></div></div><div class="card" onclick="showArticle('numero10')"><div class="cat">Número 10 · 2026</div><h3>Diseño desde Iberoamérica</h3><p>Voces, proyectos y perspectivas que definen el panorama del diseño en la región.</p><div class="meta"><span>Archivo</span><span>Marzo 2026</span></div></div></div></section></div>
-<div class="page" id="page-articulos"><div class="hero"><h1>Artículos</h1><p>Explorar por temáticas</p><div></div></div><section><div class="grid"><div class="card" onclick="showArticle('ensayos')"><div class="cat">Categoría</div><h3>Ensayos</h3><p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p></div><div class="card" onclick="showArticle('investigacion')"><div class="cat">Categoría</div><h3>Investigación</h3><p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p></div><div class="card" onclick="showArticle('opinion')"><div class="cat">Categoría</div><h3>Opinión</h3><p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p></div><div class="card" onclick="showArticle('ia')"><div class="cat">Categoría</div><h3>IA + Diseño</h3><p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p></div><div class="card" onclick="showArticle('negocios')"><div class="cat">Categoría</div><h3>Diseño y Negocios</h3><p>Gestión, estrategia e innovación en el sector del diseño.</p></div><div class="card" onclick="showArticle('entrevistas')"><div class="cat">Categoría</div><h3>Entrevistas</h3><p>Conversaciones con los referentes del diseño iberoamericano y global.</p></div></div></section></div>
-<div class="page" id="page-proyectos"><div class="hero"><h1>Proyectos Destacados</h1><p>Selección editorial de proyectos</p><div></div></div><section><div class="grid"><div class="card" onclick="showArticle('proyecto1')"><div class="cat">Arquitectura</div><h3>Museo de Arte Moderno de Medellín</h3><p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad.</p><div class="meta"><span>Estudio Aalto</span><span>Colombia</span></div></div><div class="card" onclick="showArticle('proyecto2')"><div class="cat">Editorial</div><h3>Revista Código: sistema tipográfico modular</h3><p>Sistema de tipografía variable que adapta su densidad según el formato.</p><div class="meta"><span>Taller Tipográfico</span><span>México</span></div></div><div class="card" onclick="showArticle('proyecto3')"><div class="cat">Digital</div><h3>Archivo Digital de Diseño Iberoamericano</h3><p>Plataforma de documentación histórica del diseño en la región.</p><div class="meta"><span>Fundación ADDI</span><span>Argentina</span></div></div></div></section></div>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+<div class="hero"><h1>Unimos la academia con el<br>pensamiento creativo.</h1><p>Revista Iberoamericana de Diseño</p><div></div></div>
+<div id="featured-container"></div>
+<section id="articulos-recientes"><h2>Artículos recientes</h2><p>Reflexión, investigación y pensamiento crítico sobre diseño desde Iberoamérica.</p><div class="grid" id="grid-articulos"></div></section>
+<section id="proyectos-destacados"><h2>Proyectos destacados</h2><p>Selección editorial de trabajos que definen el estado del diseño contemporáneo.</p><div class="grid" id="grid-proyectos"></div></section>
+</div>
+
+<!-- ARTÍCULO -->
+<div class="page" id="page-articulo"><div class="article"><button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button><div class="a-head"><div class="a-cat" id="art-cat"></div><h1 class="a-tit" id="art-tit"></h1><div class="a-meta" id="art-meta"></div></div><div id="art-hero"></div><div class="a-body" id="art-body"></div><div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--b)"></div></div></div>
+
+<!-- OTRAS PÁGINAS -->
+<div class="page" id="page-revista"><div class="hero"><h1>Revista</h1><p>Ediciones de la revista iberoamericana de diseño</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Número 12 · 2026</div><h3>Diseño y Sostenibilidad</h3><p>Edición dedicada a explorar cómo el diseño puede ser agente de cambio frente a la crisis climática.</p><div class="meta"><span>Edición vigente</span><span>Julio 2026</span></div></div><div class="card"><div class="cat">Número 11 · 2026</div><h3>Tipografía y Poder</h3><p>Las formas de las letras como vehículo de autoridad, resistencia y transformación social.</p><div class="meta"><span>Archivo</span><span>Mayo 2026</span></div></div><div class="card"><div class="cat">Número 10 · 2026</div><h3>Diseño desde Iberoamérica</h3><p>Voces, proyectos y perspectivas que definen el panorama del diseño en la región.</p><div class="meta"><span>Archivo</span><span>Marzo 2026</span></div></div></div></section></div>
+<div class="page" id="page-articulos"><div class="hero"><h1>Artículos</h1><p>Explorar por temáticas</p><div></div></div><section><div class="grid"><div class="card" onclick="showPage('articulos')"><div class="cat">Categoría</div><h3>Ensayos</h3><p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p></div><div class="card"><div class="cat">Categoría</div><h3>Investigación</h3><p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Opinión</h3><p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p></div><div class="card"><div class="cat">Categoría</div><h3>IA + Diseño</h3><p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p></div><div class="card"><div class="cat">Categoría</div><h3>Diseño y Negocios</h3><p>Gestión, estrategia e innovación en el sector del diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Entrevistas</h3><p>Conversaciones con los referentes del diseño iberoamericano y global.</p></div></div></section></div>
+<div class="page" id="page-proyectos"><div class="hero"><h1>Proyectos Destacados</h1><p>Selección editorial de proyectos</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Arquitectura</div><h3>Museo de Arte Moderno de Medellín</h3><p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad.</p><div class="meta"><span>Estudio Aalto</span><span>Colombia</span></div></div><div class="card"><div class="cat">Editorial</div><h3>Revista Código: sistema tipográfico modular</h3><p>Sistema de tipografía variable que adapta su densidad según el formato.</p><div class="meta"><span>Taller Tipográfico</span><span>México</span></div></div><div class="card"><div class="cat">Digital</div><h3>Archivo Digital de Diseño Iberoamericano</h3><p>Plataforma de documentación histórica del diseño en la región.</p><div class="meta"><span>Fundación ADDI</span><span>Argentina</span></div></div></div></section></div>
 <div class="page" id="page-nosotros"><div class="hero"><h1>Nosotros</h1><p>La revista Margen*</p><div></div></div><div class="article"><div class="a-body"><p>Margen* es una plataforma editorial digital dedicada al diseño iberoamericano. Nacimos de la convicción de que el diseño editorial es un acto de comunicación ética, no decoración. Que la claridad es un valor supremo. Y que la perspectiva desde Iberoamérica enriquece el diálogo global sobre diseño.</p><h2>Misión, visión y valores</h2><p>Nuestra misión es unir la academia con el pensamiento creativo. Publicamos ensayos, investigaciones, entrevistas y proyectos que mantienen rigor académico sin sacrificar accesibilidad. Creemos que la complejidad puede comunicarse con claridad, no con jerga.</p><p>Nuestra visión es construir el archivo intelectual más completo del diseño iberoamericano contemporáneo. Un espacio donde convergen la precisión suiza con la sofisticación editorial anglosajona, adaptada al contexto de la región.</p><h2>Equipo editorial</h2><p>El equipo de Margen* está formado por diseñadores, investigadores, académicos y periodistas especializados. Cada edición es curada colectivamente, con procesos de revisión por pares que garantizan la calidad del contenido.</p><h2>Consejo editorial</h2><p>Nuestro comité académico reúne a referentes del diseño de México, Argentina, Brasil, España, Colombia y Chile. Su función es orientar la línea editorial y garantizar que cada publicación mantenga los estándares de rigor que definen a Margen*.</p></div></div></div>
 <div class="page" id="page-newsletter"><div class="hero"><h1>Newsletter</h1><p>Suscripción y novedades</p><div></div></div><div class="article" style="text-align:center;max-width:560px"><div class="a-body" style="text-align:center"><p style="text-align:center">Recibe cada semana una selección curada de artículos, proyectos y reflexiones sobre diseño iberoamericano. Sin spam, sin ruido. Solo lo que importa.</p><div style="margin:40px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><input type="email" placeholder="Tu correo electrónico" style="padding:14px 20px;border:1px solid var(--b);font-size:15px;width:280px;font-family:var(--n);outline:none"><button class="sub-btn" style="padding:14px 28px;font-size:13px">Suscribirse</button></div><p style="font-size:13px;color:var(--tm);text-align:center">Puedes cancelar en cualquier momento. Respetamos tu privacidad.</p></div></div></div>
 <div class="page" id="page-contacto"><div class="hero"><h1>Contacto</h1><p>Comunicación directa</p><div></div></div><div class="article" style="max-width:600px"><div class="a-body"><p>Para consultas editoriales, propuestas de colaboración, prensa o cualquier otro asunto, utiliza el formulario a continuación.</p><div style="margin-top:40px"><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Nombre</label><input type="text" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Correo electrónico</label><input type="email" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Asunto</label><input type="text" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:32px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Mensaje</label><textarea style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none;min-height:160px;resize:vertical"></textarea></div><button class="sub-btn" style="padding:14px 32px;font-size:13px">Enviar mensaje</button></div></div></div></div>
 <div class="page" id="page-convocatorias"><div class="hero"><h1>Convocatorias</h1><p>Oportunidades abiertas</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Abierta</div><h3>Beca de Investigación en Diseño Editorial 2026</h3><p>Convocatoria para investigadores iberoamericanos interesados en explorar la evolución del diseño editorial en la era digital.</p><div class="meta"><span>Cierre: 30 de agosto</span><span>Investigación</span></div></div><div class="card"><div class="cat">Abierta</div><h3>Residencia Creativa: Tipografía y Territorio</h3><p>Residencia de tres meses en Barcelona para diseñadores tipográficos interesados en la relación entre letra y lugar.</p><div class="meta"><span>Cierre: 15 de septiembre</span><span>Residencia</span></div></div><div class="card"><div class="cat">Próxima</div><h3>Premio Margen* al Diseño Iberoamericano</h3><p>Reconocimiento anual a proyectos de diseño que demuestren rigor editorial e innovación desde la región.</p><div class="meta"><span>Apertura: 1 de octubre</span><span>Premio</span></div></div></div></section></div>
 <div class="page" id="page-cuenta"><div class="hero"><h1>Mi Cuenta</h1><p>Zona personal del usuario</p><div></div></div><div class="article" style="max-width:480px;text-align:center"><div class="a-body" style="text-align:center"><p style="text-align:center">Inicia sesión para acceder a tu zona personal, guardar artículos y gestionar tu suscripción.</p><div style="margin:40px 0;text-align:left"><div style="margin-bottom:20px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Correo electrónico</label><input type="email" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Contraseña</label><input type="password" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><button class="sub-btn" style="width:100%;padding:14px;font-size:13px">Iniciar sesión</button></div><p style="font-size:13px;color:var(--tm)">¿No tienes cuenta? <a style="color:var(--t);text-decoration:underline;cursor:pointer">Regístrate</a></p></div></div></div>
-<footer><div class="f-grid"><div class="f-col"><h4>Sobre Margen*</h4><button onclick="showPage('nosotros')">Información institucional</button><button onclick="showPage('nosotros')">Misión y visión</button><button onclick="showPage('nosotros')">Valores</button></div><div class="f-col"><h4>Equipo</h4><button onclick="showPage('nosotros')">Editorial y colaboradores</button><button onclick="showPage('nosotros')">Consejo editorial</button><button onclick="showPage('nosotros')">Colaboradores</button></div><div class="f-col"><h4>Contacto</h4><button onclick="showPage('contacto')">Datos y formulario</button><button onclick="showPage('contacto')">Prensa</button><button onclick="showPage('contacto')">Publicidad</button></div><div class="f-col"><h4>Políticas</h4><button>Privacidad</button><button>Términos</button><button>Aviso legal</button></div><div class="f-col"><h4>ISSN</h4><button>Registro y datos</button></div><div class="f-col"><h4>Redes sociales</h4><button>Instagram</button><button>Twitter</button><button>LinkedIn</button></div></div><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--s);font-style:italic">Revista Iberoamericana de Diseño</span></div></footer>
+
+<footer><div class="f-grid"><div class="f-col"><h4>Sobre Margen*</h4><button onclick="showPage('nosotros')">Información institucional</button><button onclick="showPage('nosotros')">Misión y visión</button><button onclick="showPage('nosotros')">Valores</button></div><div class="f-col"><h4>Equipo</h4><button onclick="showPage('nosotros')">Editorial y colaboradores</button><button onclick="showPage('nosotros')">Consejo editorial</button><button onclick="showPage('nosotros')">Colaboradores</button></div><div class="f-col"><h4>Contacto</h4><button onclick="showPage('contacto')">Datos y formulario</button><button onclick="showPage('contacto')">Prensa</button><button onclick="showPage('contacto')">Publicidad</button></div><div class="f-col"><h4>Políticas</h4><button>Privacidad</button><button>Términos</button><button>Aviso legal</button></div><div class="f-col"><h4>ISSN</h4><button>Registro y datos</button></div><div class="f-col"><h4>Redes sociales</h4><button>Instagram</button><button>Twitter</button><button>LinkedIn</button></div></div><div class="f-bot"><span>&copy; 2026 Margen* — Todos los derechos reservados</span><span style="font-family:var(--s);font-style:italic">Revista Iberoamericana de Diseño</span></div></footer>
+
 <script>
-function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('nav button').forEach(a=>a.classList.remove('active'));const p=document.getElementById('page-'+id);if(p)p.classList.add('active');const n=document.getElementById('nav-'+id);if(n)n.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});document.getElementById('readingProgress').style.width='0%'}
-function toggleMenu(){document.getElementById('menuOverlay').classList.toggle('active')}
-function showArticle(id){showPage('article');const t={tipografia:'La tipografía como arquitectura del pensamiento',ia:'Inteligencia artificial y la crisis de la autoría creativa',swiss:'Más allá del estilo suizo: legado y evolución',margenes:'El margen como espacio de resistencia editorial',color:'Por qué el diseño editorial rechaza el color excesivo',latam:'Diseño iberoamericano: voces desde el sur global',negocios:'Estrategia de marca en tiempos de fragmentación digital'};const c={tipografia:'Ensayo destacado',ia:'IA + Diseño',swiss:'Investigación',margenes:'Ensayo',color:'Opinión',latam:'Entrevista',negocios:'Diseño y Negocios'};if(t[id]){document.getElementById('articleTitle').textContent=t[id];document.getElementById('articleCategory').textContent=c[id]||'Artículo'}}
-window.addEventListener('scroll',function(){const a=document.getElementById('page-article');if(a&&a.classList.contains('active')){const s=window.scrollY,d=document.body.scrollHeight-window.innerHeight,p=(s/d)*100;document.getElementById('readingProgress').style.width=p+'%'}})
+// ===== MOTOR EDITORIAL: LEE articulos.json =====
+let ARTICULOS = [];
+let ARTICULO_DESTACADO = null;
+
+async function cargarArticulos() {
+  try {
+    const res = await fetch('articulos.json');
+    const data = await res.json();
+    ARTICULOS = data.articulos || [];
+    ARTICULO_DESTACADO = ARTICULOS.find(a => a.destacado) || ARTICULOS[0];
+    renderizarHome();
+  } catch(e) {
+    console.error('Error cargando artículos:', e);
+  }
+}
+
+function renderizarHome() {
+  // Renderizar artículo destacado
+  const feat = document.getElementById('featured-container');
+  if (ARTICULO_DESTACADO && feat) {
+    const imgHtml = ARTICULO_DESTACADO.imagen 
+      ? `<div class="f-img"><img src="${ARTICULO_DESTACADO.imagen}" alt="${ARTICULO_DESTACADO.imagen_alt || ''}"></div>` 
+      : '';
+    feat.innerHTML = `
+      <div class="featured">
+        ${imgHtml}
+        <div>
+          <div class="f-lab">${ARTICULO_DESTACADO.categoria}${ARTICULO_DESTACADO.subcategoria ? ' — ' + ARTICULO_DESTACADO.subcategoria : ''}</div>
+          <h2 class="f-tit">${ARTICULO_DESTACADO.titulo}</h2>
+          <p class="f-exc">${ARTICULO_DESTACADO.extracto}</p>
+          <button class="f-cta" onclick="mostrarArticulo('${ARTICULO_DESTACADO.id}')">Leer editorial completo &rarr;</button>
+        </div>
+      </div>`;
+  }
+
+  // Renderizar grid de artículos (máx 6, excluyendo el destacado)
+  const grid = document.getElementById('grid-articulos');
+  if (grid) {
+    const noDestacados = ARTICULOS.filter(a => !a.destacado).slice(0, 6);
+    grid.innerHTML = noDestacados.map(a => `
+      <div class="card" onclick="mostrarArticulo('${a.id}')">
+        <div class="cat">${a.categoria}</div>
+        <h3>${a.titulo}</h3>
+        <p>${a.extracto}</p>
+        <div class="meta"><span>${a.autor}</span><span>${a.tiempo_lectura}</span></div>
+      </div>
+    `).join('');
+  }
+}
+
+function mostrarArticulo(id) {
+  const art = ARTICULOS.find(a => a.id === id);
+  if (!art) return;
+
+  // Construir contenido
+  let bodyHtml = '';
+  art.contenido.forEach(bloque => {
+    switch(bloque.tipo) {
+      case 'parrafo':
+        bodyHtml += `<p>${bloque.texto}</p>`;
+        break;
+      case 'cita':
+        bodyHtml += `<blockquote>${bloque.texto}</blockquote>`;
+        break;
+      case 'subtitulo':
+        bodyHtml += `<h2>${bloque.texto}</h2>`;
+        break;
+      case 'imagen':
+        bodyHtml += `<div class="a-img">${bloque.texto}</div>`;
+        break;
+    }
+  });
+
+  // Notas al pie
+  let notasHtml = '';
+  if (art.notas && art.notas.length > 0) {
+    notasHtml = '<h2>Notas</h2>' + art.notas.map(n => 
+      `<p><sup>${n.numero}</sup> ${n.texto}${n.url ? ' <a href="' + n.url + '" style="color:var(--t2)" target="_blank">' + n.url.replace(/^https?:\/\//,'') + '</a>' : ''}</p>`
+    ).join('');
+  }
+
+  // Hero image
+  let heroHtml = '';
+  if (art.imagen) {
+    heroHtml = `<div class="a-hero-img"><img src="${art.imagen}" alt="${art.imagen_alt || ''}"></div>`;
+  }
+
+  // Llenar página
+  document.getElementById('art-cat').textContent = art.categoria + (art.subcategoria ? ' — ' + art.subcategoria : '');
+  document.getElementById('art-tit').textContent = art.titulo;
+  document.getElementById('art-meta').innerHTML = `<span>${art.autor}</span><span>&middot;</span><span>${art.fecha}</span><span>&middot;</span><span>${art.tiempo_lectura} de lectura</span>`;
+  document.getElementById('art-hero').innerHTML = heroHtml;
+  document.getElementById('art-body').innerHTML = bodyHtml;
+  document.getElementById('art-notas').innerHTML = notasHtml;
+
+  showPage('articulo');
+}
+
+// ===== NAVEGACIÓN =====
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav button').forEach(a=>a.classList.remove('active'));
+  const p=document.getElementById('page-'+id);
+  if(p)p.classList.add('active');
+  const n=document.getElementById('nav-'+id);
+  if(n)n.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.getElementById('readingProgress').style.width='0%';
+}
+function toggleMenu(){
+  document.getElementById('menuOverlay').classList.toggle('active');
+}
+
+// Barra de progreso
+window.addEventListener('scroll',function(){
+  const a=document.querySelector('.page.active .article');
+  if(a){
+    const s=window.scrollY,d=document.body.scrollHeight-window.innerHeight,p=(s/d)*100;
+    document.getElementById('readingProgress').style.width=p+'%';
+  }
+});
+
+// Iniciar
+cargarArticulos();
 </script>
 </body>
 </html>
