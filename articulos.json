@@ -1,242 +1,1087 @@
-{
-  "articulos": [
-    {
-      "id": "urgencia",
-      "slug": "urgencia-de-los-margenes",
-      "titulo": "La Urgencia de los Márgenes: Por Qué Revistas como Margen Son Indispensables para el Diseño Actual",
-      "autor": "Claudia Martínez Capitán de Margen*",
-      "categoria": "Nota Editorial",
-      "subcategoria": "Edición 0 · Nacimiento",
-      "fecha": "2026-07-21",
-      "tiempo_lectura": "6 min",
-      "extracto": "El diseño, hoy, se asfixia. La homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. La aparición de una publicación como Margen no es solo un alivio, es una necesidad imperiosa.",
-      "imagen": "margen-hero.jpg",
-      "imagen_alt": "El margen como espacio de decisión compositiva",
-      "destacado": true,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "El diseño, hoy, se asfixia. Seamos directos: la homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. Por eso, la aparición de una publicación como Revista Margen no es solo un alivio, es una necesidad imperiosa. Su propuesta editorial, que eleva la tipografía a la categoría de \"arquitectura invisible\" y concibe el diseño como un \"acto de comunicación ética\", se erige como una brújula para quienes buscamos ir más allá de lo obvio y desafiar las narrativas establecidas. La verdadera fuerza de Margen reside en su capacidad para cultivar una <strong>multiplicidad de voces y pensamientos</strong>, un antídoto crucial contra la tentación de convertir el diseño en un \"club de privilegiados\"."},
-        {"tipo": "parrafo", "texto": "La democratización del diseño no es una utopía; es una obligación<sup>1</sup>. Durante demasiado tiempo, el discurso del diseño ha permanecido enclaustrado en círculos cerrados, a menudo definidos por geografías, instituciones o figuras de autoridad. Esta endogamia intelectual, si bien puede producir resultados notables en nichos específicos, corre el peligro de asfixiar la innovación genuina y de ignorar las perspectivas que brotan de contextos menos visibles. Una revista que busca y amplifica deliberadamente las ideas que habitan en los <strong>márgenes</strong> —aquellas que cuestionan lo establecido, que surgen de experiencias diversas o que proponen enfoques no convencionales— es, a mi entender, vital para romper esta dinámica. Es precisamente en esos espacios, a menudo desatendidos, donde se forjan las ideas más frescas y disruptivas, las que realmente pueden impulsar la evolución de nuestra disciplina."},
-        {"tipo": "parrafo", "texto": "La pluralidad de voces no es un mero capricho democrático; es una condición <em>sine qua non</em> para la vitalidad del diseño. Cuando permitimos que diferentes perspectivas dialoguen, el debate se enriquece, los dogmas se tambalean y se abren nuevas avenidas para la experimentación y la crítica. Revista Margen, al ofrecer una plataforma para estas reflexiones diversas, contribuye activamente a desmantelar la idea de que el diseño es un coto privado de unos pocos elegidos. Por el contrario, lo presenta como un campo de disputa intelectual, de pensamiento crítico y de producción cultural accesible y permeable a múltiples interpretaciones<sup>2</sup>."},
-        {"tipo": "cita", "texto": "Las 'buenas ideas' rara vez germinan en el centro de la convención. Con frecuencia, son el fruto de una mirada lateral, de una pregunta incómoda o de una experimentación audaz que se atreve a explorar lo que yace fuera del foco principal."},
-        {"tipo": "parrafo", "texto": "Revista Margen, desde su propio nombre, ya nos sugiere esta vocación: siempre hay algo valioso, algo revelador, en el margen. Es ahí donde la tipografía se revela como arquitectura cognitiva, donde la retícula se transforma en pensamiento y donde el diseño, en su expresión más rigurosa y ética, halla su belleza más radical. Por todo esto, la existencia y el apoyo a publicaciones como Margen son cruciales para asegurar que el diseño siga siendo una disciplina dinámica, inclusiva y, sobre todo, pertinente para los desafíos que nos depara el futuro."}
-      ],
-      "notas": [
-        {"numero": 1, "texto": "Emerge Studio. \"La democratización del diseño: un futuro más inclusivo y sostenible.\" <em>Emerge Studio</em>.", "url": "https://emergestudio.design/language/es/la-democratizacion-del-diseno-un-futuro-mas-inclusivo-y-sostenible/"},
-        {"numero": 2, "texto": "Victor Margolin. \"El diseño también es un campo de disputa, pensamiento crítico y producción cultural.\" <em>Instagram</em>.", "url": "https://www.instagram.com/p/DQMVxyFABBW/"}
-      ]
-    },
-    {
-      "id": "arquitectura",
-      "slug": "arquitectura-invisible-del-pensamiento",
-      "titulo": "La Arquitectura Invisible del Pensamiento: Una Mirada Crítica al Diseño Editorial",
-      "autor": "Claudia Martínez Capitán de Margen*",
-      "categoria": "Ensayo",
-      "subcategoria": "",
-      "fecha": "2026-07-21",
-      "tiempo_lectura": "5 min",
-      "extracto": "El diseño editorial trasciende la mera estética. Es una arquitectura invisible que no solo da forma, sino que sostiene el pensamiento.",
-      "imagen": "",
-      "imagen_alt": "",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "El diseño editorial, en su esencia, trasciende la mera estética. Lo concibo como una <strong>arquitectura invisible</strong> que no solo da forma, sino que sostiene el pensamiento. La propuesta de Revista Margen, al destacar la tipografía como un cimiento cognitivo, me invita a una reflexión profunda sobre el rigor y la ética que subyacen a cada decisión de diseño. No se trata de una simple decoración; la elección de una fuente o la configuración de una retícula es, en realidad, un acto de construcción que determina la interacción del lector con el contenido y su asimilación."},
-        {"tipo": "parrafo", "texto": "La era digital ha exacerbado la relevancia de esta perspectiva. Las pantallas, con su resolución fluctuante y contextos de lectura fragmentados, nos obligan a una comprensión más aguda de cómo el diseño puede facilitar o, por el contrario, obstaculizar la comunicación. Tomemos la <strong>retícula de 12 columnas</strong>: su función va más allá de la organización superficial. La veo como la manifestación matemática de una intuición editorial fundamental: la necesidad de un equilibrio entre orden y flexibilidad. Este marco no solo estructura el contenido, sino que redefine los márgenes, tradicionalmente vistos como espacios inertes, transformándolos en <strong>espacios de respiración</strong> vitales para el flujo cognitivo. Son estos silencios visuales los que, en mi experiencia, permiten que el pensamiento se desarrolle sin interferencias, un pilar de la comunicación ética en el diseño editorial."},
-        {"tipo": "cita", "texto": "El diseño editorial es un acto de comunicación ética. No es decoración. No es tecnología por la tecnología. Es la arquitectura invisible que permite que el pensamiento fluya sin ruido."},
-        {"tipo": "parrafo", "texto": "Desde esta óptica, el diseño se consolida como un <strong>acto de comunicación ética</strong><sup>1</sup>. No es una cuestión de seguir tendencias efímeras o de priorizar la tecnología por su novedad, sino de un compromiso inquebrantable con la claridad, la legibilidad y la experiencia del usuario. La distinción entre una tipografía serif para el cuerpo de texto, diseñada para guiar el ojo horizontalmente, y una sans-serif para la navegación, que busca acelerar la comprensión, no es una elección estilística arbitraria, sino una decisión de rigor funcional. Este rigor, como bien subraya Revista Margen, representa la forma más contundente de belleza en un entorno digital que, con demasiada frecuencia, valora la inmediatez por encima de la sustancia."},
-        {"tipo": "parrafo", "texto": "La ética del diseño editorial contemporáneo, a mi juicio, conlleva una responsabilidad profunda: la de edificar interfaces y publicaciones que no solo sean atractivas, sino que funcionen como conductos transparentes para el conocimiento. Márgenes, tipografía y retícula no son elementos disociados; son componentes interconectados de una estructura que, cuando se orquesta con conciencia y precisión, permite que el pensamiento se despliegue en toda su plenitud. En última instancia, el diseño editorial es el custodio de la legibilidad y el catalizador de la comprensión, una arquitectura discreta pero formidable que moldea nuestra interacción con el universo de las ideas."}
-      ],
-      "notas": [
-        {"numero": 1, "texto": "Ricardo Victoria Uribe. \"La ética del Diseño: Hacia un sistema más sustentable y responsable.\" <em>ResearchGate</em>.", "url": "https://www.researchgate.net/profile/Ricardo_Victoria_Uribe/publication/274638707_La_etica_del_Diseno_Hacia_un_sistema_mas_sustentable_y_responsable/links/5524610c0cf2caf11bfcc72e.pdf"}
-      ]
-    },
-    {
-      "id": "club-toby",
-      "slug": "club-de-toby",
-      "titulo": "El club de Toby tiene nombre de diseñador",
-      "autor": "Claudia Martínez Capitán de Margen*",
-      "categoria": "Opinión",
-      "subcategoria": "",
-      "fecha": "2026-07-21",
-      "tiempo_lectura": "6 min",
-      "extracto": "Una reflexión sobre cómo las tendencias de diseño se vuelven identidades vacías, y cómo el rigor tipográfico se confunde con el postureo estético.",
-      "imagen": "",
-      "imagen_alt": "",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "Hay un tipo de diseñador que no diseña: posa. No resuelve problemas: escoge tipografías. No investiga: cura feeds. Y en algún momento de los últimos cinco años, ese perfil dejó de ser una anomalía para convertirse en estándar. El diseño como performance. La estética como identidad. La herramienta como personalidad."},
-        {"tipo": "parrafo", "texto": "El problema no es que existan estos diseñadores. El problema es que el sistema los premia. Las redes sociales, los premios, las escuelas, las agencias: todos han construido una narrativa donde el diseño es lo que se ve, no lo que hace. Y en ese escenario, el rigor se vuelve invisible. La retícula no es sexy. La jerarquía tipográfica no tiene likes. El margen generoso no viraliza."},
-        {"tipo": "cita", "texto": "El diseño no es lo que se ve. El diseño es lo que funciona. Y lo que funciona, a veces, no se ve."},
-        {"tipo": "parrafo", "texto": "Margen* nace de esta frustración. De la certeza de que hay un diseño que no se fotografía bien pero que cambia la forma en que leemos, pensamos y comunicamos. Un diseño que no busca aplausos sino claridad. Que no persigue tendencias sino que construye estructuras. Que no es para el club de Toby, sino para quienes entienden que el margen es donde ocurre el pensamiento."}
-      ],
-      "notas": []
-    },
-    {
-      "id": "objeto-olvida",
-      "slug": "objeto-que-no-se-olvida",
-      "titulo": "El objeto que no se olvida",
-      "autor": "José Pérez",
-      "categoria": "Opinión",
-      "subcategoria": "",
-      "fecha": "2026-07-18",
-      "tiempo_lectura": "7 min",
-      "extracto": "Sobre los objetos que trascienden su función y se convierten en memoria, en identidad, en resistencia contra la obsolescencia programada.",
-      "imagen": "placeholder-opinion.jpg",
-      "imagen_alt": "Objeto de diseño industrial atemporal",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "Hay objetos que no se diseñan para durar. Se diseñan para vender. Y luego hay objetos que no se diseñan para vender. Se diseñan para durar. Para convertirse en parte de la vida de alguien. Para ser el cuchillo con el que tu abuela cortaba el pan, la silla donde tu padre leía, la lámpara que iluminó tus primeros dibujos."},
-        {"tipo": "parrafo", "texto": "El diseño industrial contemporáneo ha olvidado esta distinción. Ha apostado por la novedad sobre la permanencia, por la estética sobre la funcionalidad, por el precio bajo sobre la calidad. El resultado es un mundo lleno de cosas que no significan nada. Objetos que no dejan huella porque nunca tuvieron intención."},
-        {"tipo": "cita", "texto": "Un objeto bien diseñado no necesita explicación. Se explica solo, con el tiempo, con el uso, con el cariño que le devuelve quien lo usa."},
-        {"tipo": "parrafo", "texto": "En Iberoamérica, esta tradición de objetos con memoria es particularmente fuerte. Desde la cerámica de Talavera hasta el mobiliario de madera tropical, pasando por los textiles indígenas que resisten siglos: aquí sabemos que el diseño no es invención, es continuación. No es ruptura, es diálogo con lo que vino antes."},
-        {"tipo": "parrafo", "texto": "Margen* defiende este tipo de diseño. El diseño que no se olvida. El que envejece bien. El que no necesita ser reemplazado cada temporada porque su valor no está en la novedad sino en la pertinencia. El diseño que, como los mejores libros, se lee una vez y se relee toda la vida."}
-      ],
-      "notas": []
-    },
-    {
-      "id": "vestido-nadie-usa",
-      "slug": "vestido-que-nadie-usa",
-      "titulo": "El vestido que nadie usa",
-      "autor": "Elena Becerra Salvat",
-      "categoria": "Ensayo",
-      "subcategoria": "",
-      "fecha": "2026-07-15",
-      "tiempo_lectura": "14 min",
-      "extracto": "Un análisis de la moda como sistema de exclusiones, donde lo que se diseña no siempre se usa, y lo que se usa no siempre se diseña para ser usado.",
-      "imagen": "placeholder-ensayo.jpg",
-      "imagen_alt": "Vestido de alta costura en maniquí",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "En el centro de la pasarela, un vestido que cuesta más que un coche. Nadie lo usará nunca. No está diseñado para ser usado. Está diseñado para ser visto, fotografiado, comentado, olvidado. Es la metáfora perfecta de una industria que ha perdido el contacto con su razón de ser: vestir cuerpos reales en contextos reales."},
-        {"tipo": "parrafo", "texto": "La moda, en su expresión más mediática, ha dejado de ser diseño para convertirse en espectáculo. Y en ese tránsito, ha abandonado a quienes la necesitan. La mujer que busca un vestido para ir a trabajar. El hombre que necesita una chaqueta que no se destiña en la primera lavada. La persona que quiere verse bien sin endeudarse."},
-        {"tipo": "subtitulo", "texto": "El cuerpo como problema"},
-        {"tipo": "parrafo", "texto": "La moda contemporánea no diseña para cuerpos: diseña contra ellos. Las tallas son una ficción estadística. Los materiales son elegidos por cómo se ven en foto, no por cómo se sienten en piel. Los cortes priorizan la silueta sobre el movimiento. El resultado es un vestido que nadie usa porque nadie puede usarlo."},
-        {"tipo": "cita", "texto": "El buen diseño de moda no es el que se ve mejor en la pasarela. Es el que se siente mejor en el cuerpo, el que dura más allá de la temporada, el que no necesita explicación para existir."},
-        {"tipo": "parrafo", "texto": "En contraste, el diseño de moda iberoamericano está construyendo alternativas. Desde el upcycling en Buenos Aires hasta el textil artesanal en Oaxaca, pasando por los colectivos de moda sostenible en Barcelona: hay un movimiento que entiende que vestir es un acto político, y que el diseño de moda debe ser políticamente consciente."},
-        {"tipo": "parrafo", "texto": "Margen* publica este ensayo como parte de su compromiso con un diseño que no mira hacia otro lado. Que reconoce que la moda es, antes que nada, una necesidad humana. Y que el diseño que ignora esta verdad no es diseño: es decoración para una elite que ya tiene demasiado."}
-      ],
-      "notas": []
-    },
-    {
-      "id": "emprendimiento-barato",
-      "slug": "emprendimiento-barato",
-      "titulo": "El emprendimiento barato",
-      "autor": "Martín Escalante",
-      "categoria": "Diseño y Negocios",
-      "subcategoria": "",
-      "fecha": "2026-07-12",
-      "tiempo_lectura": "7 min",
-      "extracto": "Un análisis crítico sobre la mitología del emprendimiento creativo y sus costos ocultos para el diseñador independiente.",
-      "imagen": "",
-      "imagen_alt": "",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "Emprender es fácil, dicen. Solo necesitas una laptop, wifi y actitud. Lo que no dicen es que también necesitas ahorros, contactos, privilegio y la capacidad de sobrevivir sin ingresos estables durante meses, a veces años. El emprendimiento creativo, en su versión más romantizada, oculta una verdad incómoda: es un lujo que pocos pueden permitirse."},
-        {"tipo": "parrafo", "texto": "En el diseño, esta mitología es particularmente dañina. Se vende la idea de que cualquier diseñador con talento puede montar su estudio, conseguir clientes internacionales y vivir de su pasión. La realidad es que la mayoría de los estudios independientes cierran antes de los dos años. No por falta de talento: por falta de estructura, de capital, de educación empresarial, de redes de apoyo."},
-        {"tipo": "cita", "texto": "El diseño no es un hobby que se monetiza. Es una profesión que requiere inversión, planificación y una comprensión real del mercado en el que opera."},
-        {"tipo": "parrafo", "texto": "La solución no es desalentar el emprendimiento. Es honestarlo. Es reconocer que emprender en diseño requiere más que creatividad: requiere conocimiento de negocios, gestión de proyectos, finanzas, marketing, derecho contractual. Requiere, en otras palabras, un diseñador que también sea empresario. Y esa dualidad no se enseña en la mayoría de las escuelas de diseño."},
-        {"tipo": "parrafo", "texto": "Margen* abre esta conversación porque creemos que el futuro del diseño iberoamericano pasa por la profesionalización del ejercicio independiente. No por la glorificación del sufrimiento creativo, sino por la construcción de estructuras sostenibles donde el diseñador pueda vivir dignamente de su trabajo."}
-      ],
-      "notas": []
-    },
-    {
-      "id": "historia-diseno-mexico",
-      "slug": "historia-diseno-grafico-mexico",
-      "titulo": "Historia del diseño gráfico en México: de la imprenta colonial a la era digital",
-      "autor": "Claudia Martínez Capitán de Margen*",
-      "categoria": "Investigación",
-      "subcategoria": "",
-      "fecha": "2026-07-10",
-      "tiempo_lectura": "16 min",
-      "extracto": "Un recorrido por los hitos, personajes y contextos que definieron el diseño gráfico mexicano desde el siglo XVI hasta nuestros días.",
-      "imagen": "placeholder-investigacion.jpg",
-      "imagen_alt": "Archivo histórico de diseño gráfico mexicano",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "La historia del diseño gráfico en México no comienza en el siglo XX, como suele contarse. Comienza en el siglo XVI, cuando los impresores europeos llegaron a la Nueva España con prensas, tipos móviles y la convicción de que la palabra impresa era un instrumento de evangelización. Lo que no previeron fue que esa tecnología se encontraría con una tradición visual indígena milenaria, dando origen a una de las fusiones tipográficas más fascinantes de la historia americana."},
-        {"tipo": "parrafo", "texto": "Los primeros libros impresos en México —como la Doctrina Christiana de 1539— no fueron simples traducciones europeas. Fueron objetos híbridos donde la tipografía gótica convivía con glifos nahuas, donde el margen europeo se encontraba con el espacio compositivo mesoamericano. Este diálogo entre tradiciones nunca cesó: simplemente se transformó."},
-        {"tipo": "subtitulo", "texto": "El siglo XX: modernismo y revolución"},
-        {"tipo": "parrafo", "texto": "Si hay una figura que define el diseño gráfico mexicano del siglo XX, es José Guadalupe Posada. Sus calaveras, sus broadsides, su uso del metal tipo para crear imágenes populares: todo esto estableció un lenguaje visual que sigue vigente. Posada no era un diseñador en el sentido contemporáneo. Era un artesano, un impresor, un comunicador visual que entendía que el diseño no es para las elites: es para el pueblo."},
-        {"tipo": "parrafo", "texto": "La Revolución Mexicana radicalizó esta convicción. Los murales de Rivera, Siqueiros y Orozco no fueron solo pintura: fueron diseño de comunicación a escala monumental. La tipografía política de los años veinte y treinta, los carteles de la Liga de Escritores y Artistas Revolucionarios (LEAR), la identidad visual del Estado mexicano: todo esto formó parte de un proyecto de diseño gráfico consciente, político, popular."},
-        {"tipo": "subtitulo", "texto": "La era digital: fragmentación y reconstrucción"},
-        {"tipo": "parrafo", "texto": "La llegada de la computadora personal en los años ochenta y noventa transformó el diseño gráfico mexicano de formas impredecibles. Por un lado, democratizó las herramientas: cualquiera con una Mac y un software de Adobe podía diseñar. Por otro, homogeneizó los resultados: el diseño mexicano de los noventa a menudo parecía indistinguible del diseño estadounidense o europeo."},
-        {"tipo": "cita", "texto": "La pregunta para el diseño gráfico mexicano contemporáneo no es si puede competir globalmente. Es si puede ser mexicano sin ser folclórico, global sin ser genérico."},
-        {"tipo": "parrafo", "texto": "Hoy, el diseño gráfico mexicano está en un momento de reconstrucción identitaria. Diseñadores como Manuel Guerrero, Gabriela Rodriguez, y colectivos como Taller de Diseño Gráfico están explorando formas de recuperar la tradición tipográfica mexicana sin caer en la nostalgia o el kitsch. La pregunta que Margen* plantea es: ¿hacia dónde va esta reconstrucción? ¿Será un diseño que dialoga con su pasado o uno que lo exhibe como mercancía?"}
-      ],
-      "notas": [
-        {"numero": 1, "texto": "Johann Heinrich von Kirchner. \"La imprenta en México: primeros impresos, 1539-1600.\" <em>UNAM</em>.", "url": ""},
-        {"numero": 2, "texto": "Patrick Frank. \"Posada's Broadsheets: Mexican Popular Imagery, 1890-1910.\" <em>University of New Mexico Press</em>.", "url": ""}
-      ]
-    },
-    {
-      "id": "ia-autoria",
-      "slug": "puede-la-ia-ser-autora",
-      "titulo": "¿Puede la IA ser autora? Una mirada desde el diseño gráfico",
-      "autor": "Kimi (IA) en conversación con Margen*",
-      "categoria": "IA + Diseño",
-      "subcategoria": "",
-      "fecha": "2026-07-08",
-      "tiempo_lectura": "8 min",
-      "extracto": "Una exploración sobre los límites éticos y conceptuales de la generación automática en el campo del diseño gráfico.",
-      "imagen": "placeholder-ia.jpg",
-      "imagen_alt": "Visualización conceptual de inteligencia artificial y creatividad",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "La pregunta no es si la IA puede diseñar. La pregunta es si el diseño generado por algoritmos puede ser considerado un acto creativo en el sentido tradicional. Esta distinción no es filosófica: tiene consecuencias legales, económicas y culturales inmediatas."},
-        {"tipo": "parrafo", "texto": "Cuando Midjourney produce una imagen a partir de un prompt, ¿quién es el autor? ¿El usuario que escribió el prompt? ¿Los ingenieros que entrenaron el modelo? ¿Los millones de artistas cuyas obras alimentaron el dataset sin su consentimiento? La respuesta no es simple porque la pregunta asume una noción de autoría que quizás ya no aplica."},
-        {"tipo": "cita", "texto": "La autoría no es un acto de producción, sino de intención. Sin intención, no hay autoría. Sin autoría, no hay responsabilidad ética."},
-        {"tipo": "subtitulo", "texto": "El dataset como territorio colonial"},
-        {"tipo": "parrafo", "texto": "Los modelos de IA se entrenan con datasets que incluyen millones de imágenes sin licencia. Esto no es un bug: es una característica del sistema. El diseño generado por IA, en su forma actual, depende de una apropiación masiva de trabajo creativo humano. Los artistas cuyas obras alimentan estos modelos no reciben compensación, no tienen control, ni siquiera son informados."},
-        {"tipo": "parrafo", "texto": "Para Margen*, esta pregunta no es abstracta. Si publicamos una imagen generada por IA, ¿estamos legitimando un sistema de extracción? ¿O estamos explorando legítimamente una nueva herramienta? La respuesta, como siempre, está en el rigor de la pregunta. No en la negación tecnofóbica, ni en la adopción tecnoutópica."},
-        {"tipo": "parrafo", "texto": "Nuestra posición es clara: la IA es una herramienta, no un autor. Puede generar variaciones, optimizar procesos, explorar posibilidades formales. Pero no puede tener intención, no puede asumir responsabilidad ética, no puede entender el contexto cultural en el que se inserta una pieza de diseño. El diseñador que use IA sin reflexionar sobre estas limitaciones no está siendo innovador: está siendo negligente."}
-      ],
-      "notas": []
-    },
-    {
-      "id": "dibujar-horrible",
-      "slug": "dibujar-horrible-tambien-es-dibujar",
-      "titulo": "Dibujar horrible también es dibujar: cómo los ilustradores mexicanos de historieta construyen carreras desde lo común",
-      "autor": "Valentina Pizarro Montalvo, Diseño de Experiencia del Usuario",
-      "categoria": "Reseña",
-      "subcategoria": "",
-      "fecha": "2026-07-22",
-      "tiempo_lectura": "7 min",
-      "extracto": "No nacieron en familias de artistas. No estudiaron en academias prestigiosas. Pero hoy sus viñetas circulan en ferias de Guadalajara, en galerías de París, en librerías de Tokio. La historieta mexicana no la hacen superhéroes: la hacen personas comunes que decidieron que contar historias valía la pena.",
-      "imagen": "",
-      "imagen_alt": "",
-      "destacado": false,
-      "contenido": [
-        {"tipo": "parrafo", "texto": "En algún momento de los últimos años, la historieta mexicana dejó de ser un género menor para convertirse en uno de los espacios creativos más vibrantes de Iberoamérica. No gracias a editoriales grandes ni a inversión estatal. Gracias a personas que, en su mayoría, comenzaron dibujando en cuadernos escolares, en paredes de su casa, en los márgenes de libros de texto."},
-        {"tipo": "parrafo", "texto": "Valentina Pizarro Montalvo —diseñadora de experiencia del usuario con quien comparto mesa desde hace años— me dijo una vez algo que resume todo esto: «En UX hablamos mucho de iteración, de probar y fallar. Pero los ilustradores de historieta llevan décadas haciendo eso sin llamarlo design thinking. Dibujan, publican, escuchan, vuelven a dibujar. Es el método científico con plumones». Ella tiene razón. Y lo que sigue es una constatación de campo: cómo ilustradores mexicanos que nadie habría apostado por ellos construyeron carreras desde lo común."},
-        {"tipo": "subtitulo", "texto": "Luis Castillejos: de Veracruz a Webtoons"},
-        {"tipo": "parrafo", "texto": "Luis Castillejos, también conocido como Imosh13, es de Veracruz. No de la Ciudad de México, no de Guadalajara, no de Monterrey. De Veracruz. Empezó publicando en plataformas digitales como Webtoons, donde el formato vertical y la gratuidad eliminan barreras de entrada. No tenía editorial, no tenía distribuidor, no tenía agente. Tenía historias."},
-        {"tipo": "parrafo", "texto": "Su obra <em>Un cuerpo de miel</em>, editada por Sallybooks, cuenta la historia de Miel, una abeja que busca descansar tras una vida de trabajo. Es un cómic sobre la soledad, la muerte y la amistad, con elementos de fantasía y horror ligero. No es lo que uno esperaría de un ilustrador mexicano emergente: no hay calaveras, no hay luchadores, no hay folklore obligatorio. Hay algo más difícil: una voz propia."},
-        {"tipo": "parrafo", "texto": "Lo que hace a Castillejos interesante no es su técnica —que es sólida— sino su trayectoria. No estudió en una escuela de arte reconocida. No ganó una beca del FONCA de entrada. Publicó en internet, acumuló lectores, y eso le abrió puertas. Es un modelo que la historieta mexicana está explorando con cada vez más frecuencia: el de la legitimación por audiencia, no por institución."},
-        {"tipo": "subtitulo", "texto": "Edgar Clement: el autodidacta que inventó la novela gráfica mexicana"},
-        {"tipo": "parrafo", "texto": "Edgar Clement nació en la Ciudad de México en 1967. Es autodidacta. No tiene título de arte. Empezó publicando en <em>El Búho</em>, suplemento cultural del periódico <em>Excélsior</em>, y en 1992 cofundó <em>Gallito Comics</em>, una revista que se convirtió en referencia obligada para la historieta independiente mexicana."},
-        {"tipo": "parrafo", "texto": "En 1994, con una beca del Fondo Nacional para la Cultura y las Artes, publicó <em>Operación Bolívar</em>, considerada la primera verdadera novela gráfica mexicana. Es una obra de fantasía, mitología y crítica social que mezcla motivos prehispánicos con narrativa no convencional. No se parece a nada que se hubiera hecho antes en México. Clement no estaba imitando a los cómics norteamericanos ni a la bande dessinée francesa: estaba inventando un lenguaje propio."},
-        {"tipo": "parrafo", "texto": "Después vinieron <em>La Malinche</em>, <em>Kerubim y otros cuentos</em>, <em>Los perros salvajes</em>. Residencias en Canadá, en París, en Berkeley. Pero lo notable no es el éxito: es la persistencia. Clement sigue siendo, en esencia, un dibujante que publica lo que quiere contar, sin importar si el mercado lo pide. Esa independencia, que en otros campos sería arrogancia, en la historieta es supervivencia."},
-        {"tipo": "subtitulo", "texto": "Mónica Quant: la autobiografía como método"},
-        {"tipo": "parrafo", "texto": "Mónica Quant es de Toluca, Estado de México. Su obra más conocida, <em>Un día más</em>, publicada por Editorial Fauna Nociva en 2019, es una autobiografía gráfica con muy poco texto que nació después del fin de una relación larga y una experiencia psicodélica. No es ficción: es memoria convertida en viñeta."},
-        {"tipo": "parrafo", "texto": "Lo que hace a Quant interesante es que no se considera ilustradora de élite. Es fundadora de <em>Basura infinita</em>, un proyecto comunitario dedicado a la impresión de cómics y fanzines. Su lema, implícito en todo lo que hace, es que la historieta no necesita permiso. Puedes ser de Toluca, puedes no tener estudios formales, puedes contar tu ruptura amorosa con dibujos de palitos: si la historia resuena, funciona."},
-        {"tipo": "parrafo", "texto": "Esa democratización es lo que distingue a la historieta mexicana contemporánea de otras escenas. No es que no haya talento técnico: es que el talento técnico no es requisito de entrada. Lo que cuenta es la urgencia de contar."},
-        {"tipo": "subtitulo", "texto": "Inés Estrada: del rock'n'roll al cómic de ciencia ficción"},
-        {"tipo": "parrafo", "texto": "Inés Estrada es ilustradora, dibujante, y dueña de GATOSHOP, una tienda en línea que vende cómics alternativos, zines, libros y stickers de artistas locales e internacionales. Su última novela gráfica, <em>Alienation</em>, es ciencia ficción: una bailarina erótica en espacios virtuales que se enfrenta a dilemas sobre la humanidad en un futuro tecnológico."},
-        {"tipo": "parrafo", "texto": "Estrada representa algo que la historieta mexicana está descubriendo: que no hay que elegir entre lo local y lo global. Puedes vender en tu tienda online productos de México y Japón. Puedes contar historias sobre identidad mexicana y sobre futuros distópicos. Puedes ser comercial y alternativa al mismo tiempo. Lo que antes se veía como contradicción, hoy es estrategia."},
-        {"tipo": "subtitulo", "texto": "Héctor Santarriaga: el que nunca dejó de autopublicar"},
-        {"tipo": "parrafo", "texto": "Héctor Santarriaga es director de Nostromo Ediciones y cofundador de Pura Pinche Fortaleza Cómics. Es también miembro del Sistema Nacional de Creadores de Arte desde 2016. Pero antes de todo eso, fue un dibujante que decidió que si nadie le publicaba, él se publicaría solo."},
-        {"tipo": "parrafo", "texto": "Su bibliografía es extensa: <em>H3rmanos</em>, <em>Coda: La bailarina, el hipopótamo y el muro</em>, <em>Luz eterna</em>, <em>Cuervo eléctrico</em>, <em>Sueños rotos</em>, <em>Gila: El sol negro</em>, <em>Bajo la piel de la bruja</em>. Géneros diversos —cyberpunk, terror, denuncia social, realismo mágico— pero un hilo conductor: la convicción de que la autopublicación no es segunda opción, sino camino definitivo. Santarriaga no esperó a que una editorial grande le diera luz verde. Construyó su propia editorial, su propia distribución, su propia audiencia."},
-        {"tipo": "parrafo", "texto": "Eso es lo que la historieta mexicana tiene y que otras disciplinas del diseño envidian: una infraestructura de independencia. No necesitas un sello editorial tradicional. Necesitas una impresora, una mesa de trabajo, y la disciplina de terminar lo que empiezas."},
-        {"tipo": "subtitulo", "texto": "Ricos Jugos: el espacio físico que lo hace comunidad"},
-        {"tipo": "parrafo", "texto": "No todos los ilustradores trabajan solos. En Guadalajara, Aranzazu Pérez y Rafael Rodríguez fundaron en 2017 Ricos Jugos, una tienda que vende fanzines, historietas contemporáneas y —sí— jugos frescos. Su lema: «Dibujar horrible también es dibujar»."},
-        {"tipo": "parrafo", "texto": "Ese espacio representa algo que los ilustradores mexicanos entienden y que el diseño institucional olvida: la comunidad importa tanto como el producto. Ricos Jugos no es solo una tienda: es un lugar donde puedes entrar, pedir un jugo, hojear un fanzine, conocer a alguien que dibuja como tú. Es la versión física de lo que Webtoons es en digital: una puerta de entrada sin filtros."},
-        {"tipo": "subtitulo", "texto": "Lo que la historieta mexicana enseña al diseño"},
-        {"tipo": "parrafo", "texto": "Valentina Pizarro Montalvo, cuando me habla de su trabajo en UX, suele usar una frase que ahora entiendo mejor: «El usuario no es un número: es una persona que quiere algo». Los ilustradores de historieta mexicana lo saben intuitivamente. No dibujan para mercados. Dibujan para alguien específico: un primo, un exnovio, un vecino, un yo futuro. Y en esa especificidad encuentran lo universal."},
-        {"tipo": "parrafo", "texto": "El diseño gráfico mexicano podría aprender de esto. Demasiado a menudo, el diseñador mexicano diseña para un público abstracto —\"el consumidor\", \"el usuario\", \"el target\"— y pierde la conexión con el alguien real que usará lo que hace. Los ilustradores de historieta no tienen ese problema: saben exactamente para quién dibujan, porque lo conocen. Es su hermana, su compañero de cuarto, su yo de quince años."},
-        {"tipo": "parrafo", "texto": "También podría aprender de la persistencia. Santarriaga lleva décadas autopublicando. Clement sigue dibujando sin importar el mercado. Quant fundó un colectivo en lugar de esperar una oportunidad. Castillejos publicó en internet durante años antes de que una editorial lo notara. No hay atajos. Hay constancia."},
-        {"tipo": "parrafo", "texto": "Y podría aprender, sobre todo, de la libertad. La historieta mexicana contemporánea no tiene un estilo único. Hay quien dibuja con línea fina y quien dibuja con mancha gruesa. Hay quien usa color digital y quien usa acuarela. Hay quien cuenta historias de fantasía y quien cuenta autobiografías. No hay canon, no hay moda obligatoria, no hay \"lo que se debe hacer\". Hay solo lo que cada uno necesita contar."},
-        {"tipo": "parrafo", "texto": "Eso, en un mundo donde el diseño global tiende a la homogeneización, es un acto de resistencia. Dibujar horrible también es dibujar. Dibujar sin permiso también es dibujar. Dibujar desde Toluca, desde Veracruz, desde una tienda de jugos en Guadalajara, también es dibujar. Y a veces, es dibujar mejor."}
-      ],
-      "notas": []
-    }
-  ]
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margen* — Revista Iberoamericana de Diseño</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-fondo: #F8F7F4;
+            --color-texto: #1A1A1A;
+            --color-texto-secundario: #6B6B6B;
+            --color-borde: #E5E5E5;
+            --color-acento: #C41E3A;
+            --color-acento-hover: #9E1830;
+            --color-categoria: #8B7355;
+            --fuente-titulos: 'Playfair Display', Georgia, serif;
+            --fuente-cuerpo: 'Inter', -apple-system, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navegación */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(248, 247, 244, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--color-borde);
+            padding: 1rem 0;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-texto);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        .logo span { color: var(--color-acento); }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-texto-secundario);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--color-texto); }
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0; right: 0;
+            height: 2px;
+            background: var(--color-acento);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(180deg, var(--color-fondo) 0%, #F0EDE8 100%);
+        }
+        .hero-inner { max-width: 800px; }
+        .hero h1 {
+            font-family: var(--fuente-titulos);
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-acento);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Secciones generales */
+        .seccion {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        .seccion-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .seccion-header h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+        .seccion-header p {
+            font-size: 1.125rem;
+            color: var(--color-texto-secundario);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Artículos recientes */
+        .articulos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        .articulo-card {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .articulo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .articulo-imagen {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #E8E4DF 0%, #D4CFC8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            color: var(--color-texto-secundario);
+            font-style: italic;
+        }
+        .articulo-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .articulo-contenido { padding: 1.75rem; }
+        .articulo-categoria {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-categoria);
+            margin-bottom: 0.75rem;
+        }
+        .articulo-titulo {
+            font-family: var(--fuente-titulos);
+            font-size: 1.35rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        .articulo-extracto {
+            font-size: 0.9375rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .articulo-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8125rem;
+            color: var(--color-texto-secundario);
+            border-top: 1px solid var(--color-borde);
+            padding-top: 1rem;
+        }
+        .articulo-autor { font-weight: 500; }
+        .articulo-fecha { font-style: italic; }
+
+        /* Ediciones */
+        .ediciones-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .edicion-card {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+        .edicion-card:hover { transform: translateY(-4px); }
+        .edicion-numero {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-acento);
+            margin-bottom: 1rem;
+        }
+        .edicion-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .edicion-card p {
+            font-size: 0.9375rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .edicion-estado {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+            background: var(--color-fondo);
+            color: var(--color-texto-secundario);
+        }
+        .edicion-estado.vigente {
+            background: var(--color-acento);
+            color: white;
+        }
+
+        /* Categorías */
+        .categorias-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .categoria-card {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .categoria-card:hover {
+            border-color: var(--color-texto);
+            transform: translateY(-2px);
+        }
+        .categoria-label {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-texto-secundario);
+            margin-bottom: 0.75rem;
+        }
+        .categoria-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .categoria-card p {
+            font-size: 0.875rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+        }
+
+        /* Proyectos */
+        .proyectos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .proyecto-card {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .proyecto-card:hover { transform: translateY(-4px); }
+        .proyecto-imagen {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #E8E4DF 0%, #D4CFC8 100%);
+        }
+        .proyecto-contenido { padding: 1.5rem; }
+        .proyecto-tag {
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-categoria);
+            margin-bottom: 0.5rem;
+        }
+        .proyecto-card h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .proyecto-card p {
+            font-size: 0.875rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .proyecto-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8125rem;
+            color: var(--color-texto-secundario);
+        }
+
+        /* ===== NOSOTROS — NUEVO DISEÑO ===== */
+        .nosotros-seccion {
+            background: linear-gradient(180deg, #F0EDE8 0%, var(--color-fondo) 100%);
+            padding: 6rem 0;
+        }
+        .nosotros-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .nosotros-intro {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        .nosotros-intro h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+        .nosotros-intro .subtitulo {
+            font-size: 1.125rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nosotros-bloque {
+            margin-bottom: 4rem;
+        }
+        .nosotros-bloque h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--color-texto);
+        }
+        .nosotros-bloque p {
+            font-size: 1rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .nosotros-bloque p strong {
+            color: var(--color-texto);
+            font-weight: 600;
+        }
+
+        .nosotros-lista {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .nosotros-lista li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.875rem;
+            font-size: 1rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.7;
+        }
+        .nosotros-lista li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--color-acento);
+            font-weight: 600;
+        }
+
+        .nosotros-manifiesto {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 3rem;
+        }
+        .nosotros-manifiesto h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .nosotros-manifiesto p {
+            font-size: 1rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .nosotros-manifiesto p:last-child {
+            margin-bottom: 0;
+            font-family: var(--fuente-titulos);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-texto);
+            margin-top: 2rem;
+        }
+
+        .nosotros-firma {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--color-borde);
+        }
+        .nosotros-firma .nombre {
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .nosotros-firma .cargo {
+            font-size: 0.9375rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--color-texto);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .newsletter-inner { max-width: 600px; margin: 0 auto; }
+        .newsletter h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .newsletter p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.875rem 1.25rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-size: 0.9375rem;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+        .newsletter-form button {
+            padding: 0.875rem 1.75rem;
+            background: var(--color-acento);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .newsletter-form button:hover { background: var(--color-acento-hover); }
+
+        /* Contacto */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contacto-form label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--color-texto);
+        }
+        .contacto-form input,
+        .contacto-form textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--color-borde);
+            background: white;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.2s ease;
+        }
+        .contacto-form input:focus,
+        .contacto-form textarea:focus {
+            outline: none;
+            border-color: var(--color-texto);
+        }
+        .contacto-form textarea { min-height: 150px; resize: vertical; }
+        .contacto-form button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-texto);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .contacto-form button:hover { background: var(--color-acento); }
+
+        /* Convocatorias */
+        .convocatorias-lista { max-width: 800px; margin: 0 auto; }
+        .convocatoria-item {
+            background: white;
+            border: 1px solid var(--color-borde);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: transform 0.2s ease;
+        }
+        .convocatoria-item:hover { transform: translateX(4px); }
+        .convocatoria-estado {
+            flex-shrink: 0;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+        }
+        .convocatoria-estado.abierta {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        .convocatoria-estado.proxima {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        .convocatoria-contenido h3 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .convocatoria-contenido p {
+            font-size: 0.9375rem;
+            color: var(--color-texto-secundario);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        .convocatoria-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.8125rem;
+            color: var(--color-texto-secundario);
+        }
+
+        /* Cuenta */
+        .cuenta-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .cuenta-form input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--color-borde);
+            background: white;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+        }
+        .cuenta-form button {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-texto);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--fuente-cuerpo);
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+        .cuenta-form .link {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--color-texto-secundario);
+        }
+        .cuenta-form .link a {
+            color: var(--color-acento);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--color-borde);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--color-texto-secundario);
+            font-size: 0.875rem;
+        }
+        .footer-logo {
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-texto);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .ediciones-grid,
+            .categorias-grid,
+            .proyectos-grid { grid-template-columns: 1fr; }
+            .contacto-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .newsletter-form { flex-direction: column; }
+            .articulos-grid { grid-template-columns: 1fr; }
+            .seccion { padding: 4rem 1.5rem; }
+            .nosotros-manifiesto { padding: 2rem 1.5rem; }
+            .nosotros-intro h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">Margen<span>*</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-inner">
+            <span class="hero-tag">Revista Iberoamericana de Diseño</span>
+            <h1>Unimos la academia con el pensamiento creativo.</h1>
+            <p>Reflexión, investigación y pensamiento crítico sobre diseño desde Iberoamérica. Sin jerga, sin ruido. Solo lo que importa.</p>
+        </div>
+    </section>
+
+    <!-- Artículos recientes -->
+    <section class="seccion" id="articulos-recientes">
+        <div class="seccion-header">
+            <h2>Artículos recientes</h2>
+            <p>Reflexión, investigación y pensamiento crítico sobre diseño desde Iberoamérica.</p>
+        </div>
+        <div class="articulos-grid" id="articulos-grid">
+            <div class="articulo-card" style="text-align:center; padding:3rem; color:var(--color-texto-secundario);">
+                Cargando artículos...
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section class="seccion" id="proyectos">
+        <div class="seccion-header">
+            <h2>Proyectos destacados</h2>
+            <p>Selección editorial de trabajos que definen el estado del diseño contemporáneo.</p>
+        </div>
+        <div class="proyectos-grid">
+            <article class="proyecto-card">
+                <div class="proyecto-imagen"></div>
+                <div class="proyecto-contenido">
+                    <div class="proyecto-tag">Arquitectura</div>
+                    <h3>Museo de Arte Moderno de Medellín</h3>
+                    <p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad.</p>
+                    <div class="proyecto-meta">
+                        <span>Estudio Aalto</span>
+                        <span>Colombia</span>
+                    </div>
+                </div>
+            </article>
+            <article class="proyecto-card">
+                <div class="proyecto-imagen"></div>
+                <div class="proyecto-contenido">
+                    <div class="proyecto-tag">Editorial</div>
+                    <h3>Revista Código: sistema tipográfico modular</h3>
+                    <p>Sistema de tipografía variable que adapta su densidad según el formato.</p>
+                    <div class="proyecto-meta">
+                        <span>Taller Tipográfico</span>
+                        <span>México</span>
+                    </div>
+                </div>
+            </article>
+            <article class="proyecto-card">
+                <div class="proyecto-imagen"></div>
+                <div class="proyecto-contenido">
+                    <div class="proyecto-tag">Digital</div>
+                    <h3>Archivo Digital de Diseño Iberoamericano</h3>
+                    <p>Plataforma de documentación histórica del diseño en la región.</p>
+                    <div class="proyecto-meta">
+                        <span>Fundación ADDI</span>
+                        <span>Argentina</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Ediciones -->
+    <section class="seccion" style="background: linear-gradient(180deg, var(--color-fondo) 0%, #F0EDE8 100%);">
+        <div class="seccion-header">
+            <h2>Ediciones de la revista iberoamericana de diseño</h2>
+        </div>
+        <div class="ediciones-grid">
+            <article class="edicion-card">
+                <div class="edicion-numero">Número 12 · 2026</div>
+                <h3>Diseño y Sostenibilidad</h3>
+                <p>Edición dedicada a explorar cómo el diseño puede ser agente de cambio frente a la crisis climática.</p>
+                <span class="edicion-estado vigente">Edición vigente</span>
+                <span class="edicion-estado">Julio 2026</span>
+            </article>
+            <article class="edicion-card">
+                <div class="edicion-numero">Número 11 · 2026</div>
+                <h3>Tipografía y Poder</h3>
+                <p>Las formas de las letras como vehículo de autoridad, resistencia y transformación social.</p>
+                <span class="edicion-estado">Archivo</span>
+                <span class="edicion-estado">Mayo 2026</span>
+            </article>
+            <article class="edicion-card">
+                <div class="edicion-numero">Número 10 · 2026</div>
+                <h3>Diseño desde Iberoamérica</h3>
+                <p>Voces, proyectos y perspectivas que definen el panorama del diseño en la región.</p>
+                <span class="edicion-estado">Archivo</span>
+                <span class="edicion-estado">Marzo 2026</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="seccion" id="articulos">
+        <div class="seccion-header">
+            <h2>Artículos</h2>
+            <p>Explorar por temáticas</p>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>Ensayos</h3>
+                <p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>Investigación</h3>
+                <p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>Opinión</h3>
+                <p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>IA + Diseño</h3>
+                <p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>Diseño y Negocios</h3>
+                <p>Gestión, estrategia e innovación en el sector del diseño.</p>
+            </div>
+            <div class="categoria-card">
+                <div class="categoria-label">Categoría</div>
+                <h3>Entrevistas</h3>
+                <p>Conversaciones con los referentes del diseño iberoamericano y global.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOSOTROS — CONTENIDO NUEVO ===== -->
+    <section class="nosotros-seccion" id="nosotros">
+        <div class="nosotros-inner">
+
+            <div class="nosotros-intro">
+                <h2>Nosotros</h2>
+                <p class="subtitulo">La revista Margen* — Unimos la academia con el pensamiento creativo.</p>
+            </div>
+
+            <!-- Quién soy -->
+            <div class="nosotros-bloque">
+                <h3>Quién soy</h3>
+                <p>Me llamo <strong>Claudia Martínez</strong>. He sido diseñadora gráfica, publicista, productora de cine, editora, docente, emprendedora y, ahora, fundadora de esta revista. No es una trayectoria lineal. No creo que las trayectorias lineares existan.</p>
+                <p>Empecé en las agencias de publicidad de los noventa: SSC&B Lintas, Panamericana Ogilvy & Mather, J. Walter Thompson. Aprendí a vender ideas antes de saber qué eran las ideas. Después pasé al cine: Columbia Pictures, TriStar Films, United International Pictures, 20th Century Fox. Aprendí que una imagen no es solo lo que muestra, sino lo que oculta. Luego la editorial: Clío, HarperCollins. Aprendí que un libro no es un objeto: es un acuerdo entre quien escribe y quien lee.</p>
+                <p>En algún punto de ese camino decidí que necesitaba entender qué estaba haciendo, no solo hacerlo. Estudié mercadotecnia en el IMP. Luego diseño de la comunicación gráfica en la UAM-X. Luego una maestría en Ciencias y Artes para el Diseño. Luego un doctorado, también en la UAM, becaria del CONACyT. Mi tesis se convirtió en un libro: <em>Lenguaje de los objetos: hacia una semiótica del diseño industrial</em>. Ese libro me enseñó algo que la academia no siempre enseña: que el conocimiento no sirve si no se comparte.</p>
+                <p>He dado clase en más de quince universidades. Tec de Monterrey, UNITEC, La Salle, UAM, Universidad del Pedregal, WestHill, Tec Milenio, Janette Klein. He enseñado historia del diseño, semiótica, diseño emocional, experiencia de usuario, emprendimiento disruptivo, teoría del color, filosofía de la estética. He visto generaciones de estudiantes llegar con talento y frustrarse porque nadie les mostró cómo conectar ese talento con el pensamiento. He visto académicos brillantes publicar en revistas que nadie lee porque no saben hablarle a quien no es especialista. He visto diseñadores excelentes repetir fórmulas porque no tienen tiempo de pensar.</p>
+                <p>Y en algún momento, entre una clase y otra, entre un artículo y otro, se me ocurrió que alguien debía construir el puente. No yo sola. Pero alguien tenía que empezar.</p>
+            </div>
+
+            <!-- Por qué Margen* -->
+            <div class="nosotros-bloque">
+                <h3>Por qué Margen*</h3>
+                <p>Margen* no nació de una epifanía. Nació de una acumulación. De años viendo lo mismo desde ángulos distintos.</p>
+                <p>En las agencias, vi que el diseño se reducía a vender. En la academia, vi que el pensamiento se reducía a publicar. En la industria editorial, vi que el contenido se reducía a lo que cabía en un presupuesto. En ningún lado vi lo que yo necesitaba: un espacio donde el diseño se pensara con rigor, donde el pensamiento se comunicara con claridad, donde la perspectiva iberoamericana no fuera una nota al pie sino el texto principal.</p>
+                <p>La idea del nombre vino de una obsesión vieja. El margen, en diseño editorial, no es espacio vacío. Es donde respira el contenido. Es donde el lector deja su huella. El asterisco es una llamada: mira más abajo, hay algo más. Margen* es eso: un espacio que no se llena por llenar, que invita a profundizar, que asume que el lector es inteligente y que el contenido debe serlo también.</p>
+                <p>No quiero que Margen* sea una revista más. Quiero que sea el lugar donde un ensayo sobre tipografía mexicana coexista con una investigación sobre diseño emocional en Chile, donde una entrevista a una diseñadora de moda peruana dialogue con un análisis de la IA como herramienta creativa. Quiero que sea el espacio donde la academia no sea pedante y donde el pensamiento creativo no sea superficial.</p>
+                <p>Eso es lo que intentamos aquí.</p>
+            </div>
+
+            <!-- Misión -->
+            <div class="nosotros-bloque">
+                <h3>Misión</h3>
+                <p>Conectar la academia, la investigación y la práctica profesional mediante una plataforma editorial que difunda conocimiento, promueva el pensamiento crítico e impulse la innovación en el diseño iberoamericano.</p>
+                <p>No es una frase de marketing. Es una promesa. Cada texto que publicamos debe cumplir al menos una de estas tres funciones: informar con rigor, analizar con profundidad, o proponer con claridad. Si no hace ninguna de las tres, no pertenece a Margen*.</p>
+            </div>
+
+            <!-- Visión -->
+            <div class="nosotros-bloque">
+                <h3>Visión</h3>
+                <p>Ser la revista iberoamericana de diseño más influyente y reconocida por la calidad de sus contenidos, su rigor editorial y su capacidad para generar diálogo entre la academia, la industria y la sociedad.</p>
+                <p>No aspiramos a ser las más leídas. Aspiramos a ser las más necesarias. A ser la revista que un estudiante de diseño en Bogotá recomienda a su profesor. Que un investigador en Barcelona cita en su artículo. Que un profesional en São Paulo guarda para releer. Esa es la influencia que buscamos: la que dura.</p>
+            </div>
+
+            <!-- Valores -->
+            <div class="nosotros-bloque">
+                <h3>Valores</h3>
+                <ul class="nosotros-lista">
+                    <li><strong>Rigor académico.</strong> Publicamos textos que resisten la lectura atenta. No contenido superficial, no opiniones sin sustento, no citas de redes sociales como fuentes primarias.</li>
+                    <li><strong>Pensamiento crítico.</strong> No repetimos lo que otros dicen. Cuestionamos, contrastamos, proponemos. La crítica no es negatividad: es responsabilidad intelectual.</li>
+                    <li><strong>Innovación.</strong> No como sinónimo de tecnología. Como actitud: la disposición a pensar de otra manera, a conectar lo que no parece conectable, a arriesgarse a estar equivocados.</li>
+                    <li><strong>Colaboración.</strong> Margen* no es una voz solitaria. Es una conversación. Buscamos autores, ilustradores, fotógrafos, investigadores de toda Iberoamérica que quieran sumar su perspectiva.</li>
+                    <li><strong>Diversidad.</strong> De género, de geografía, de generación, de disciplina. Una revista que solo publica lo que ya conoce es un espejo, no una ventana.</li>
+                    <li><strong>Honestidad intelectual.</strong> Declaramos conflictos de interés. Corregimos errores públicamente. No publicamos contenido patrocinado disfrazado de editorial. La independencia no es un lujo: es una condición.</li>
+                    <li><strong>Responsabilidad social.</strong> El diseño no es neutral. Cada decisión de diseño tiene consecuencias. Publicamos textos que asumen esa responsabilidad y la discuten.</li>
+                </ul>
+            </div>
+
+            <!-- Manifiesto -->
+            <div class="nosotros-manifiesto">
+                <h3>Manifiesto</h3>
+                <p>Creemos que el diseño transforma realidades.</p>
+                <p>Creemos que el conocimiento debe compartirse, cuestionarse y evolucionar.</p>
+                <p>Creemos que la investigación es motor de innovación, no fin en sí misma.</p>
+                <p>Creemos que la creatividad encuentra su mayor valor cuando dialoga con la reflexión crítica.</p>
+                <p>Creemos en un diseño responsable, inclusivo y con impacto social.</p>
+                <p>Creemos que la academia y la práctica profesional no son mundos separados, sino complementarios.</p>
+                <p>Creemos que Iberoamérica tiene algo que decirle al mundo sobre diseño, y que el mundo no lo sabe todavía.</p>
+                <p>Por eso existe Margen*: un espacio editorial donde las ideas se encuentran, se confrontan y se convierten en conocimiento compartido.</p>
+                <p>Porque el diseño no solo se observa. También se piensa, se investiga y se comparte.</p>
+            </div>
+
+            <!-- Firma -->
+            <div class="nosotros-firma">
+                <div class="nombre">Claudia Martínez</div>
+                <div class="cargo">
+                    Capitán de Margen* — Revista Iberoamericana de Diseño<br>
+                    Mtra. en Ciencias y Artes para el Diseño, UAM<br>
+                    Doctoranda en Ciencias y Artes para el Diseño, UAM-X<br>
+                    Becaria CONACyT
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="newsletter">
+        <div class="newsletter-inner">
+            <h2>Newsletter</h2>
+            <p>Recibe cada semana una selección curada de artículos, proyectos y reflexiones sobre diseño iberoamericano. Sin spam, sin ruido. Solo lo que importa.</p>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.5); margin-bottom:1.5rem;">Puedes cancelar en cualquier momento. Respetamos tu privacidad.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico">
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion" id="contacto">
+        <div class="seccion-header">
+            <h2>Contacto</h2>
+            <p>Comunicación directa</p>
+        </div>
+        <div class="contacto-grid">
+            <div>
+                <p style="font-size:1rem; color:var(--color-texto-secundario); line-height:1.7; margin-bottom:2rem;">
+                    Para consultas editoriales, propuestas de colaboración, prensa o cualquier otro asunto, utiliza el formulario a continuación.
+                </p>
+            </div>
+            <form class="contacto-form">
+                <label>Nombre</label>
+                <input type="text" placeholder="Tu nombre">
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="tu@email.com">
+                <label>Asunto</label>
+                <input type="text" placeholder="Asunto del mensaje">
+                <label>Mensaje</label>
+                <textarea placeholder="Escribe tu mensaje..."></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Convocatorias -->
+    <section class="seccion" style="background: linear-gradient(180deg, var(--color-fondo) 0%, #F0EDE8 100%);" id="convocatorias">
+        <div class="seccion-header">
+            <h2>Convocatorias</h2>
+            <p>Oportunidades abiertas</p>
+        </div>
+        <div class="convocatorias-lista">
+            <div class="convocatoria-item">
+                <span class="convocatoria-estado abierta">Abierta</span>
+                <div class="convocatoria-contenido">
+                    <h3>Beca de Investigación en Diseño Editorial 2026</h3>
+                    <p>Convocatoria para investigadores iberoamericanos interesados en explorar la evolución del diseño editorial en la era digital.</p>
+                    <div class="convocatoria-meta">
+                        <span>Cierre: 30 de agosto</span>
+                        <span>Investigación</span>
+                    </div>
+                </div>
+            </div>
+            <div class="convocatoria-item">
+                <span class="convocatoria-estado abierta">Abierta</span>
+                <div class="convocatoria-contenido">
+                    <h3>Residencia Creativa: Tipografía y Territorio</h3>
+                    <p>Residencia de tres meses en Barcelona para diseñadores tipográficos interesados en la relación entre letra y lugar.</p>
+                    <div class="convocatoria-meta">
+                        <span>Cierre: 15 de septiembre</span>
+                        <span>Residencia</span>
+                    </div>
+                </div>
+            </div>
+            <div class="convocatoria-item">
+                <span class="convocatoria-estado proxima">Próxima</span>
+                <div class="convocatoria-contenido">
+                    <h3>Premio Margen* al Diseño Iberoamericano</h3>
+                    <p>Reconocimiento anual a proyectos de diseño que demuestren rigor editorial e innovación desde la región.</p>
+                    <div class="convocatoria-meta">
+                        <span>Apertura: 1 de octubre</span>
+                        <span>Premio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mi Cuenta -->
+    <section class="seccion" id="cuenta">
+        <div class="seccion-header">
+            <h2>Mi Cuenta</h2>
+            <p>Zona personal del usuario</p>
+        </div>
+        <div class="cuenta-form">
+            <p style="text-align:center; color:var(--color-texto-secundario); margin-bottom:2rem;">
+                Inicia sesión para acceder a tu zona personal, guardar artículos y gestionar tu suscripción.
+            </p>
+            <input type="email" placeholder="Correo electrónico">
+            <input type="password" placeholder="Contraseña">
+            <button type="submit">Iniciar sesión</button>
+            <p class="link">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">Margen*</div>
+        <p>Revista Iberoamericana de Diseño · 2026</p>
+    </footer>
+
+    <script>
+        // Motor editorial: carga artículos desde articulos.json
+        async function cargarArticulos() {
+            const grid = document.getElementById('articulos-grid');
+            try {
+                const respuesta = await fetch('articulos.json');
+                const datos = await respuesta.json();
+                const articulos = datos.articulos || datos;
+                
+                // Ordenar por fecha (más recientes primero) y tomar los 3 primeros
+                articulos.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+                const recientes = articulos.slice(0, 3);
+                
+                grid.innerHTML = recientes.map(art => {
+                    const extracto = art.extracto || (art.contenido ? art.contenido.substring(0, 180) + '...' : '');
+                    const fecha = art.fecha ? formatearFecha(art.fecha) : '';
+                    return `
+                        <article class="articulo-card" onclick="window.location.href='${art.url || '#'}'">
+                            <div class="articulo-imagen">
+                                ${art.imagen ? `<img src="${art.imagen}" alt="${art.titulo}" loading="lazy">` : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--fuente-titulos);font-size:1.1rem;color:var(--color-texto-secundario);font-style:italic;">${art.titulo}</div>`}
+                            </div>
+                            <div class="articulo-contenido">
+                                <div class="articulo-categoria">${art.categoria}</div>
+                                <h2 class="articulo-titulo">${art.titulo}</h2>
+                                <p class="articulo-extracto">${extracto}</p>
+                                <div class="articulo-meta">
+                                    <span class="articulo-autor">${art.autor}</span>
+                                    <span class="articulo-fecha">${fecha}</span>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error cargando artículos:', error);
+                grid.innerHTML = '<p style="text-align:center;color:var(--color-texto-secundario);">No se pudieron cargar los artículos.</p>';
+            }
+        }
+
+        function formatearFecha(fechaStr) {
+            try {
+                const fecha = new Date(fechaStr);
+                const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+                return `${meses[fecha.getMonth()]} ${fecha.getFullYear()}`;
+            } catch { return fechaStr; }
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarArticulos);
+    </script>
+
+</body>
+</html>
