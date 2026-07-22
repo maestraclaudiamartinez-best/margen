@@ -51,14 +51,6 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 .f-col a{display:block;font-size:13px;color:var(--tm);text-decoration:none;margin-bottom:10px}
 .f-col a:hover{color:var(--t)}
 .f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--b);font-size:12px;color:var(--tm)}
-.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(248,248,248,0.98);z-index:200;display:none;flex-direction:column;padding:80px 8%;overflow-y:auto}
-.overlay.active{display:flex}
-.ov-close{position:absolute;top:24px;right:4%;background:none;border:none;font-size:28px;cursor:pointer;color:var(--t);font-family:inherit}
-.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:1200px}
-.ov-col h3{font-family:var(--s);font-size:24px;font-weight:500;margin-bottom:20px}
-.ov-col a{display:block;font-size:15px;color:var(--t2);text-decoration:none;margin-bottom:14px}
-.ov-col a:hover{color:var(--t)}
-.ov-col .sub{font-size:12px;color:var(--tm);margin-top:-10px;margin-bottom:14px}
 .page{display:none;animation:fadeIn 0.4s}
 .page.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -80,17 +72,25 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 .mobile{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--t)}
 .a-hero-img{width:100%;margin:0 auto 48px;max-width:1400px;padding:0 4%}
 .a-hero-img img{width:100%;height:auto;display:block;border:1px solid var(--b)}
+/* FORMULARIO DE CONTACTO */
+.contact-form{max-width:600px;margin:0 auto;padding:0 4% 80px}
+.contact-form p{font-size:16px;line-height:1.7;color:var(--t2);margin-bottom:32px}
+.form-group{margin-bottom:24px}
+.form-group label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)}
+.form-group input,.form-group textarea{width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none;background:var(--w)}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--t)}
+.form-group textarea{min-height:160px;resize:vertical}
+.submit-btn{background:var(--t);color:var(--w);border:none;padding:14px 32px;font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:inherit}
+.submit-btn:hover{background:var(--t2)}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){.featured{grid-template-columns:1fr;gap:32px}.ov-grid{grid-template-columns:1fr}.f-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.featured{grid-template-columns:1fr;gap:32px}.f-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:1fr}nav{display:none}.hero h1{font-size:32px}.mobile{display:block}.actions .icon-btn span{display:none}.f-grid{grid-template-columns:repeat(2,1fr)}.f-bot{flex-direction:column;gap:8px;text-align:center}}
 </style>
 <base target="_blank">
 </head>
 <body>
 <div class="progress" id="readingProgress"></div>
-<header><div class="hi"><button class="mobile" onclick="toggleMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button><button class="logo" onclick="showPage('home')"><span>MARGEN</span><span>*</span></button><nav><button onclick="showPage('home')" class="active" id="nav-home">Inicio</button><button onclick="showPage('revista')" id="nav-revista">Revista</button><button onclick="showPage('articulos')" id="nav-articulos">Artículos</button><button onclick="showPage('proyectos')" id="nav-proyectos">Proyectos</button><button onclick="showPage('nosotros')" id="nav-nosotros">Nosotros</button></nav><div class="actions"><button class="icon-btn" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscador</span></button><button class="icon-btn" onclick="showPage('newsletter')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>Newsletter</span></button><button class="icon-btn" onclick="showPage('cuenta')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Mi cuenta</span></button><button class="sub-btn" onclick="showPage('newsletter')">Suscribirse</button></div></div></header>
-
-<div class="overlay" id="menuOverlay"><button class="ov-close" onclick="toggleMenu()">&times;</button><div class="ov-grid"><div class="ov-col"><h3>Revista</h3><a href="#" onclick="showPage('revista');toggleMenu();return false">Número actual</a><div class="sub">Edición vigente</div><a href="#" onclick="showPage('revista');toggleMenu();return false">Números anteriores</a><div class="sub">Archivo histórico</div></div><div class="ov-col"><h3>Artículos</h3><a href="#" onclick="showPage('articulos');toggleMenu();return false">Ensayos</a><div class="sub">Reflexión y pensamiento</div><a href="#" onclick="showPage('articulos');toggleMenu();return false">Investigación</a><div class="sub">Estudios y papers</div><a href="#" onclick="showPage('articulos');toggleMenu();return false">Opinión</a><div class="sub">Artículos de opinión</div><a href="#" onclick="showPage('articulos');toggleMenu();return false">IA + Diseño</a><div class="sub">Inteligencia artificial</div><a href="#" onclick="showPage('articulos');toggleMenu();return false">Diseño y Negocios</a><div class="sub">Gestión e innovación</div><a href="#" onclick="showPage('articulos');toggleMenu();return false">Entrevistas</a><div class="sub">Conversaciones</div></div><div class="ov-col"><h3>Plataforma</h3><a href="#" onclick="showPage('convocatorias');toggleMenu();return false">Convocatorias</a><div class="sub">Oportunidades abiertas</div><a href="#" onclick="showPage('proyectos');toggleMenu();return false">Proyectos Destacados</a><div class="sub">Selección editorial</div><a href="#" onclick="showPage('nosotros');toggleMenu();return false">Nosotros</a><div class="sub">La revista Margen*</div><a href="#" onclick="showPage('contacto');toggleMenu();return false">Contacto</a><div class="sub">Comunicación directa</div><a href="#" onclick="showPage('newsletter');toggleMenu();return false">Newsletter</a><div class="sub">Suscripción</div></div></div></div>
+<header><div class="hi"><button class="mobile" onclick="showPage('home')" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button><button class="logo" onclick="showPage('home')"><span>MARGEN</span><span>*</span></button><nav><button onclick="showPage('home')" class="active" id="nav-home">Inicio</button><button onclick="showPage('revista')" id="nav-revista">Revista</button><button onclick="showPage('articulos')" id="nav-articulos">Artículos</button><button onclick="showPage('proyectos')" id="nav-proyectos">Proyectos</button><button onclick="showPage('nosotros')" id="nav-nosotros">Nosotros</button></nav><div class="actions"><button class="icon-btn" onclick="showPage('contacto')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscador</span></button><button class="icon-btn" onclick="showPage('newsletter')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>Newsletter</span></button><button class="icon-btn" onclick="showPage('cuenta')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Mi cuenta</span></button><button class="sub-btn" onclick="showPage('newsletter')">Suscribirse</button></div></div></header>
 
 <!-- HOME -->
 <div class="page active" id="page-home">
@@ -127,14 +127,14 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 </section>
 </div>
 
-<!-- ARTÍCULO: PLANTILLA -->
+<!-- ARTÍCULO -->
 <div class="page" id="page-articulo"><div class="article"><button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button><div class="a-head"><div class="a-cat" id="art-cat"></div><h1 class="a-tit" id="art-tit"></h1><div class="a-meta" id="art-meta"></div></div><div id="art-hero"></div><div class="a-body" id="art-body"></div><div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--b)"></div></div></div>
 
 <!-- REVISTA -->
 <div class="page" id="page-revista"><div class="hero"><h1>Revista</h1><p>Ediciones de la revista iberoamericana de diseño</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Número 12 · 2026</div><h3>Diseño y Sostenibilidad</h3><p>Edición dedicada a explorar cómo el diseño puede ser agente de cambio frente a la crisis climática.</p><div class="meta"><span>Edición vigente</span><span>Julio 2026</span></div></div><div class="card"><div class="cat">Número 11 · 2026</div><h3>Tipografía y Poder</h3><p>Las formas de las letras como vehículo de autoridad, resistencia y transformación social.</p><div class="meta"><span>Archivo</span><span>Mayo 2026</span></div></div><div class="card"><div class="cat">Número 10 · 2026</div><h3>Diseño desde Iberoamérica</h3><p>Voces, proyectos y perspectivas que definen el panorama del diseño en la región.</p><div class="meta"><span>Archivo</span><span>Marzo 2026</span></div></div></div></section></div>
 
 <!-- ARTÍCULOS -->
-<div class="page" id="page-articulos"><div class="hero"><h1>Artículos</h1><p>Explorar por temáticas</p><div></div></div><section><div class="grid"><div class="card" onclick="showPage('articulos')"><div class="cat">Categoría</div><h3>Ensayos</h3><p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p></div><div class="card"><div class="cat">Categoría</div><h3>Investigación</h3><p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Opinión</h3><p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p></div><div class="card"><div class="cat">Categoría</div><h3>IA + Diseño</h3><p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p></div><div class="card"><div class="cat">Categoría</div><h3>Diseño y Negocios</h3><p>Gestión, estrategia e innovación en el sector del diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Entrevistas</h3><p>Conversaciones con los referentes del diseño iberoamericano y global.</p></div></div></section></div>
+<div class="page" id="page-articulos"><div class="hero"><h1>Artículos</h1><p>Explorar por temáticas</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Categoría</div><h3>Ensayos</h3><p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p></div><div class="card"><div class="cat">Categoría</div><h3>Investigación</h3><p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Opinión</h3><p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p></div><div class="card"><div class="cat">Categoría</div><h3>IA + Diseño</h3><p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p></div><div class="card"><div class="cat">Categoría</div><h3>Diseño y Negocios</h3><p>Gestión, estrategia e innovación en el sector del diseño.</p></div><div class="card"><div class="cat">Categoría</div><h3>Entrevistas</h3><p>Conversaciones con los referentes del diseño iberoamericano y global.</p></div></div></section></div>
 
 <!-- PROYECTOS -->
 <div class="page" id="page-proyectos"><div class="hero"><h1>Proyectos Destacados</h1><p>Selección editorial de proyectos</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Arquitectura</div><h3>Museo de Arte Moderno de Medellín</h3><p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad.</p><div class="meta"><span>Estudio Aalto</span><span>Colombia</span></div></div><div class="card"><div class="cat">Editorial</div><h3>Revista Código: sistema tipográfico modular</h3><p>Sistema de tipografía variable que adapta su densidad según el formato.</p><div class="meta"><span>Taller Tipográfico</span><span>México</span></div></div><div class="card"><div class="cat">Digital</div><h3>Archivo Digital de Diseño Iberoamericano</h3><p>Plataforma de documentación histórica del diseño en la región.</p><div class="meta"><span>Fundación ADDI</span><span>Argentina</span></div></div></div></section></div>
@@ -145,11 +145,32 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 <!-- NEWSLETTER -->
 <div class="page" id="page-newsletter"><div class="hero"><h1>Newsletter</h1><p>Suscripción y novedades</p><div></div></div><div class="article" style="text-align:center;max-width:560px"><div class="a-body" style="text-align:center"><p style="text-align:center">Recibe cada semana una selección curada de artículos, proyectos y reflexiones sobre diseño iberoamericano. Sin spam, sin ruido. Solo lo que importa.</p><div style="margin:40px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap"><input type="email" placeholder="Tu correo electrónico" style="padding:14px 20px;border:1px solid var(--b);font-size:15px;width:280px;font-family:var(--n);outline:none"><button class="sub-btn" style="padding:14px 28px;font-size:13px">Suscribirse</button></div><p style="font-size:13px;color:var(--tm);text-align:center">Puedes cancelar en cualquier momento. Respetamos tu privacidad.</p></div></div></div>
 
-<!-- CONTACTO -->
-<div class="page" id="page-contacto"><div class="hero"><h1>Contacto</h1><p>Comunicación directa</p><div></div></div><div class="article" style="max-width:600px"><div class="a-body"><p>Para consultas editoriales, propuestas de colaboración, prensa o cualquier otro asunto, utiliza el formulario a continuación.</p><form action="https://formspree.io/f/mzdnagkw" method="POST" style="margin-top:40px"><div style="margin-bottom:24px"><label for="nombre" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Nombre</label><input type="text" id="nombre" name="nombre" required style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label for="email" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Correo electrónico</label><input type="email" id="email" name="email" required style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label for="asunto" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Asunto</label><input type="text" id="asunto" name="asunto" required style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:32px"><label for="mensaje" style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Mensaje</label><textarea id="mensaje" name="mensaje" required style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none;min-height:160px;resize:vertical"></textarea></div><button type="submit" class="sub-btn" style="padding:14px 32px;font-size:13px">Enviar mensaje</button></form></div></div></div>
-
-<!-- CONVOCATORIAS -->
-<div class="page" id="page-convocatorias"><div class="hero"><h1>Convocatorias</h1><p>Oportunidades abiertas</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Abierta</div><h3>Beca de Investigación en Diseño Editorial 2026</h3><p>Convocatoria para investigadores iberoamericanos interesados en explorar la evolución del diseño editorial en la era digital.</p><div class="meta"><span>Cierre: 30 de agosto</span><span>Investigación</span></div></div><div class="card"><div class="cat">Abierta</div><h3>Residencia Creativa: Tipografía y Territorio</h3><p>Residencia de tres meses en Barcelona para diseñadores tipográficos interesados en la relación entre letra y lugar.</p><div class="meta"><span>Cierre: 15 de septiembre</span><span>Residencia</span></div></div><div class="card"><div class="cat">Próxima</div><h3>Premio Margen* al Diseño Iberoamericano</h3><p>Reconocimiento anual a proyectos de diseño que demuestren rigor editorial e innovación desde la región.</p><div class="meta"><span>Apertura: 1 de octubre</span><span>Premio</span></div></div></div></section></div>
+<!-- CONTACTO - FORMULARIO FORMSPREE -->
+<div class="page" id="page-contacto">
+<div class="hero"><h1>Contacto</h1><p>Comunicación directa</p><div></div></div>
+<div class="contact-form">
+<p>Para consultas editoriales, propuestas de colaboración, prensa o cualquier otro asunto, utiliza el formulario a continuación. Te responderemos a la brevedad.</p>
+<form action="https://formspree.io/f/mzdnagkw" method="POST">
+<div class="form-group">
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+</div>
+<div class="form-group">
+<label for="email">Correo electrónico</label>
+<input type="email" id="email" name="email" placeholder="tu@email.com" required>
+</div>
+<div class="form-group">
+<label for="asunto">Asunto</label>
+<input type="text" id="asunto" name="asunto" placeholder="¿De qué se trata?" required>
+</div>
+<div class="form-group">
+<label for="mensaje">Mensaje</label>
+<textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+</div>
+<button type="submit" class="submit-btn">Enviar mensaje</button>
+</form>
+</div>
+</div>
 
 <!-- CUENTA -->
 <div class="page" id="page-cuenta"><div class="hero"><h1>Mi Cuenta</h1><p>Zona personal del usuario</p><div></div></div><div class="article" style="max-width:480px;text-align:center"><div class="a-body" style="text-align:center"><p style="text-align:center">Inicia sesión para acceder a tu zona personal, guardar artículos y gestionar tu suscripción.</p><div style="margin:40px 0;text-align:left"><div style="margin-bottom:20px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Correo electrónico</label><input type="email" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--t2)">Contraseña</label><input type="password" style="width:100%;padding:14px 16px;border:1px solid var(--b);font-size:15px;font-family:var(--n);outline:none"></div><button class="sub-btn" style="width:100%;padding:14px;font-size:13px">Iniciar sesión</button></div><p style="font-size:13px;color:var(--tm)">¿No tienes cuenta? <a href="#" style="color:var(--t);text-decoration:underline">Regístrate</a></p></div></div></div>
@@ -157,7 +178,7 @@ footer{border-top:1px solid var(--b);padding:48px 4%;max-width:1400px;margin:0 a
 <footer><div class="f-grid"><div class="f-col"><h4>Sobre Margen*</h4><a href="#" onclick="showPage('nosotros');return false">Información institucional</a><a href="#" onclick="showPage('nosotros');return false">Misión y visión</a><a href="#" onclick="showPage('nosotros');return false">Valores</a></div><div class="f-col"><h4>Equipo</h4><a href="#" onclick="showPage('nosotros');return false">Editorial y colaboradores</a><a href="#" onclick="showPage('nosotros');return false">Consejo editorial</a><a href="#" onclick="showPage('nosotros');return false">Colaboradores</a></div><div class="f-col"><h4>Contacto</h4><a href="#" onclick="showPage('contacto');return false">Datos y formulario</a><a href="#" onclick="showPage('contacto');return false">Prensa</a><a href="#" onclick="showPage('contacto');return false">Publicidad</a></div><div class="f-col"><h4>Políticas</h4><a href="#">Privacidad</a><a href="#">Términos</a><a href="#">Aviso legal</a></div><div class="f-col"><h4>ISSN</h4><a href="#">Registro y datos</a></div><div class="f-col"><h4>Redes sociales</h4><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div></div><div class="f-bot"><span>&copy; 2026 Margen* — Todos los derechos reservados</span><span style="font-family:var(--s);font-style:italic">Revista Iberoamericana de Diseño</span></div></footer>
 
 <script>
-// ===== ARTÍCULOS INCRUSTADOS (funciona sin fetch) =====
+// ===== ARTÍCULOS =====
 const ARTICULOS = [
   {
     id: "urgencia",
@@ -287,80 +308,65 @@ const ARTICULOS = [
 
 // ===== NAVEGACIÓN =====
 function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('nav button').forEach(a=>a.classList.remove('active'));
-  const p=document.getElementById('page-'+id);
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('nav button').forEach(function(a){a.classList.remove('active');});
+  var p=document.getElementById('page-'+id);
   if(p)p.classList.add('active');
-  const n=document.getElementById('nav-'+id);
+  var n=document.getElementById('nav-'+id);
   if(n)n.classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
-  document.getElementById('readingProgress').style.width='0%';
-}
-
-function toggleMenu(){
-  document.getElementById('menuOverlay').classList.toggle('active');
+  var prog=document.getElementById('readingProgress');
+  if(prog)prog.style.width='0%';
 }
 
 // ===== MOSTRAR ARTÍCULO =====
 function mostrarArticulo(id){
-  const art = ARTICULOS.find(a => a.id === id);
-  if (!art) return;
+  var art=null;
+  for(var i=0;i<ARTICULOS.length;i++){
+    if(ARTICULOS[i].id===id){art=ARTICULOS[i];break;}
+  }
+  if(!art)return;
 
-  // Construir contenido
-  let bodyHtml = '';
-  art.contenido.forEach(bloque => {
-    switch(bloque.tipo) {
-      case 'parrafo':
-        bodyHtml += '<p>' + bloque.texto + '</p>';
-        break;
-      case 'cita':
-        bodyHtml += '<blockquote>' + bloque.texto + '</blockquote>';
-        break;
-      case 'subtitulo':
-        bodyHtml += '<h2>' + bloque.texto + '</h2>';
-        break;
-      case 'imagen':
-        bodyHtml += '<div class="a-img">' + bloque.texto + '</div>';
-        break;
+  var bodyHtml='';
+  for(var j=0;j<art.contenido.length;j++){
+    var b=art.contenido[j];
+    if(b.tipo==='parrafo')bodyHtml+='<p>'+b.texto+'</p>';
+    else if(b.tipo==='cita')bodyHtml+='<blockquote>'+b.texto+'</blockquote>';
+    else if(b.tipo==='subtitulo')bodyHtml+='<h2>'+b.texto+'</h2>';
+    else if(b.tipo==='imagen')bodyHtml+='<div class="a-img">'+b.texto+'</div>';
+  }
+
+  var notasHtml='';
+  if(art.notas&&art.notas.length>0){
+    notasHtml='<h2>Notas</h2>';
+    for(var k=0;k<art.notas.length;k++){
+      var n=art.notas[k];
+      notasHtml+='<p><sup>'+n.numero+'</sup> '+n.texto;
+      if(n.url)notasHtml+=' <a href="'+n.url+'" style="color:var(--t2)" target="_blank">'+n.url.replace(/^https?:\/\//,'')+'</a>';
+      notasHtml+='</p>';
     }
-  });
-
-  // Notas al pie
-  let notasHtml = '';
-  if (art.notas && art.notas.length > 0) {
-    notasHtml = '<h2>Notas</h2>';
-    art.notas.forEach(n => {
-      notasHtml += '<p><sup>' + n.numero + '</sup> ' + n.texto;
-      if (n.url) {
-        notasHtml += ' <a href="' + n.url + '" style="color:var(--t2)" target="_blank">' + n.url.replace(/^https?:\/\//,'') + '</a>';
-      }
-      notasHtml += '</p>';
-    });
   }
 
-  // Hero image
-  let heroHtml = '';
-  if (art.imagen) {
-    heroHtml = '<div class="a-hero-img"><img src="' + art.imagen + '" alt="' + (art.imagenAlt || '') + '"></div>';
-  }
+  var heroHtml='';
+  if(art.imagen)heroHtml='<div class="a-hero-img"><img src="'+art.imagen+'" alt="'+(art.imagenAlt||'')+'"></div>';
 
-  // Llenar página
-  document.getElementById('art-cat').textContent = art.categoria + (art.subcategoria ? ' — ' + art.subcategoria : '');
-  document.getElementById('art-tit').textContent = art.titulo;
-  document.getElementById('art-meta').innerHTML = '<span>' + art.autor + '</span><span>&middot;</span><span>' + art.fecha + '</span><span>&middot;</span><span>' + art.tiempo + ' de lectura</span>';
-  document.getElementById('art-hero').innerHTML = heroHtml;
-  document.getElementById('art-body').innerHTML = bodyHtml;
-  document.getElementById('art-notas').innerHTML = notasHtml;
+  document.getElementById('art-cat').textContent=art.categoria+(art.subcategoria?' — '+art.subcategoria:'');
+  document.getElementById('art-tit').textContent=art.titulo;
+  document.getElementById('art-meta').innerHTML='<span>'+art.autor+'</span><span>&middot;</span><span>'+art.fecha+'</span><span>&middot;</span><span>'+art.tiempo+' de lectura</span>';
+  document.getElementById('art-hero').innerHTML=heroHtml;
+  document.getElementById('art-body').innerHTML=bodyHtml;
+  document.getElementById('art-notas').innerHTML=notasHtml;
 
   showPage('articulo');
 }
 
 // Barra de progreso
 window.addEventListener('scroll',function(){
-  const a=document.querySelector('.page.active .article');
+  var a=document.querySelector('.page.active .article');
   if(a){
-    const s=window.scrollY,d=document.body.scrollHeight-window.innerHeight,p=(s/d)*100;
-    document.getElementById('readingProgress').style.width=p+'%';
+    var s=window.scrollY,d=document.body.scrollHeight-window.innerHeight,p=(s/d)*100;
+    var prog=document.getElementById('readingProgress');
+    if(prog)prog.style.width=p+'%';
   }
 });
 </script>
