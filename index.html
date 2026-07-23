@@ -618,6 +618,20 @@ function sendContact(){
     alert('Por favor, completa todos los campos');
   }
 }
+
+function nlSend(){
+  var email=document.getElementById('nl-email').value;
+  if(email){
+    window.location.href='mailto:revistadigitalmargen@gmail.com?subject=Suscripción Newsletter Margen&body=Email: '+encodeURIComponent(email);
+    document.getElementById('nl-msg').style.display='block';
+    document.getElementById('nl-email').value='';
+    setTimeout(function(){
+      document.getElementById('nl-msg').style.display='none';
+    },8000);
+  }else{
+    alert('Por favor ingresa tu correo');
+  }
+}
 </script>
 </body>
 </html>
