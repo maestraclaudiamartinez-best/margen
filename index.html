@@ -84,6 +84,19 @@ input:focus,textarea:focus{border-color:var(--m-t)!important}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.featured{grid-template-columns:1fr;gap:32px}.ov-grid{grid-template-columns:1fr}.f-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:640px){.grid{grid-template-columns:1fr}nav{display:none}.hero h1{font-size:32px}.mobile{display:block}.actions .icon-btn span{display:none}.f-grid{grid-template-columns:repeat(2,1fr)}.f-bot{flex-direction:column;gap:8px;text-align:center}}
+
+/* Article image sizing - override */
+.article .a-hero-img {
+  max-width: 600px !important;
+  margin: 0 auto 24px auto !important;
+  padding: 0 !important;
+}
+.article .a-hero-img img {
+  max-height: 300px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
 </style>
 <base target="_blank">
 </head>
