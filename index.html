@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margen* — Revista Iberoamericana de Diseño</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m-bg:#f8f8f8;--m-w:#fff;--m-t:#1a1a1a;--m-t2:#4a4a4a;--m-tm:#999;--m-b:#e8e8e8;--m-a:#c41e3a;--m-s:'Playfair Display',Georgia,serif;--m-n:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--m-n);background:var(--m-bg);color:var(--m-t);min-height:100vh}
+header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--m-b)}
+.hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;cursor:pointer;background:none;border:none;font-family:inherit;color:var(--m-t)}
+.logo span{font-weight:400}
+nav{display:flex;gap:32px}
+nav button{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);background:none;border:none;cursor:pointer;position:relative;font-family:inherit}
+nav button:hover{color:var(--m-t)}
+nav button.active{color:var(--m-t)}
+nav button.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--m-t)}
+.actions{display:flex;gap:20px;align-items:center}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--m-t2);display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;font-family:inherit}
+.icon-btn:hover{color:var(--m-t)}
+.sub-btn{background:var(--m-t);color:var(--m-w);border:none;padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;font-family:inherit}
+.sub-btn:hover{background:var(--m-t2)}
+.hero{max-width:1400px;margin:0 auto;padding:48px 4% 32px;text-align:center}
+.hero h1{font-family:var(--m-s);font-size:36px;font-weight:400;line-height:1.2;margin-bottom:12px;letter-spacing:-0.01em}
+.hero p{font-size:14px;color:var(--m-tm);margin-bottom:24px}
+.hero div{width:40px;height:1px;background:var(--m-t);margin:0 auto 24px}
+section{max-width:1400px;margin:0 auto;padding:0 4% 48px}
+section h2{font-family:var(--m-s);font-size:32px;font-weight:500;margin-bottom:8px}
+section>p{font-size:15px;color:var(--m-tm);margin-bottom:40px;max-width:600px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.card{background:var(--m-w);border:1px solid var(--m-b);padding:32px;cursor:pointer;transition:all 0.3s}
+.card:hover{border-color:var(--m-t);transform:translateY(-2px)}
+.cat{font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--m-a);margin-bottom:16px}
+.card h3{font-family:var(--m-s);font-size:22px;font-weight:500;line-height:1.3;margin-bottom:12px}
+.card p{font-size:14px;line-height:1.7;color:var(--m-t2);margin-bottom:24px}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--m-tm);border-top:1px solid var(--m-b);padding-top:16px}
+.meta span:first-child{font-weight:500;color:var(--m-t2)}
+.featured{max-width:1400px;margin:0 auto 48px;padding:0 4%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.f-img img{width:100%;height:100%;object-fit:cover}
+.f-img{aspect-ratio:4/3;background:linear-gradient(135deg,#e8e8e8,#d0d0d0);display:flex;align-items:center;justify-content:center;font-family:var(--m-s);font-size:14px;color:var(--m-tm);letter-spacing:0.1em;text-transform:uppercase;max-height:320px;overflow:hidden}
+.f-lab{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-a);margin-bottom:20px}
+.f-tit{font-family:var(--m-s);font-size:28px;font-weight:500;line-height:1.2;margin-bottom:16px}
+.f-exc{font-size:15px;line-height:1.7;color:var(--m-t2);margin-bottom:24px}
+.f-cta{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--m-t);background:none;border:none;border-bottom:1.5px solid var(--m-t);padding-bottom:4px;cursor:pointer;font-family:inherit}
+.f-cta:hover{color:var(--m-a);border-color:var(--m-a)}
+footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0 auto}
+.f-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:32px;margin-bottom:48px}
+.f-col h4{font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px}
+.f-col button{display:block;font-size:13px;color:var(--m-tm);background:none;border:none;margin-bottom:10px;cursor:pointer;text-align:left;font-family:inherit;padding:0}
+.f-col button:hover{color:var(--m-t)}
+.f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--m-b);font-size:12px;color:var(--m-tm)}
+.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(248,248,248,0.98);z-index:200;display:none;flex-direction:column;padding:80px 8%;overflow-y:auto}
+.overlay.active{display:flex}
+.ov-close{position:absolute;top:24px;right:4%;background:none;border:none;font-size:28px;cursor:pointer;color:var(--m-t);font-family:inherit}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;max-width:1200px}
+.ov-col h3{font-family:var(--m-s);font-size:24px;font-weight:500;margin-bottom:20px}
+.ov-col button{display:block;font-size:15px;color:var(--m-t2);background:none;border:none;margin-bottom:14px;cursor:pointer;text-align:left;font-family:inherit;padding:0}
+.ov-col button:hover{color:var(--m-t)}
+.ov-col .sub{font-size:12px;color:var(--m-tm);margin-top:-10px;margin-bottom:14px}
+.page{display:none;animation:fadeIn 0.4s}
+.page.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.article{max-width:720px;margin:0 auto;padding:40px 4% 48px}
+.a-head{text-align:center;margin-bottom:48px}
+.a-cat{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-a);margin-bottom:20px}
+.a-tit{font-family:var(--m-s);font-size:42px;font-weight:500;line-height:1.15;margin-bottom:20px}
+.a-meta{font-size:14px;color:var(--m-tm)}
+.a-meta span{margin:0 8px}
+.a-body{font-family:var(--m-s);font-size:18px;line-height:1.8}
+.a-body p{margin-bottom:28px;text-align:justify}
+.a-body h2{font-family:var(--m-n);font-size:22px;font-weight:600;margin:48px 0 20px}
+.a-body blockquote{border-left:2px solid var(--m-t);padding-left:24px;margin:32px 0;font-style:italic;color:var(--m-t2)}
+.a-img{width:100%;max-width:600px;margin:40px auto;aspect-ratio:16/9;background:linear-gradient(135deg,#e8e8e8,#d0d0d0);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--m-tm);letter-spacing:0.1em;text-transform:uppercase;overflow:hidden}
+.a-img img{width:100%;height:100%;object-fit:cover}
+.a-cap{font-size:13px;color:var(--m-tm);text-align:center;margin-top:-24px;margin-bottom:40px;font-style:italic}
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--m-t);z-index:300;width:0%;transition:width 0.1s}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--m-tm);background:none;border:none;margin-bottom:32px;cursor:pointer;font-family:inherit}
+.back:hover{color:var(--m-t)}
+.mobile{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--m-t)}
+input,textarea{font-family:var(--m-n)}
+input:focus,textarea:focus{border-color:var(--m-t)!important}
+@media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.featured{grid-template-columns:1fr;gap:32px}.ov-grid{grid-template-columns:1fr}.f-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}nav{display:none}.hero h1{font-size:32px}.mobile{display:block}.actions .icon-btn span{display:none}.f-grid{grid-template-columns:repeat(2,1fr)}.f-bot{flex-direction:column;gap:8px;text-align:center}}
+
+/* Article image sizing - override */
+.article .a-hero-img {
+  max-width: 600px !important;
+  margin: 0 auto 24px auto !important;
+  padding: 0 !important;
+}
+.article .a-hero-img img {
+  max-height: 300px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+<div class="progress" id="readingProgress"></div>
+<header><div class="hi"><button class="mobile" onclick="toggleMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button><button class="logo" onclick="showPage('home')">MARGEN<span>*</span></button><nav><button onclick="showPage('home')" class="active" id="nav-home">Inicio</button><button onclick="showPage('revista')" id="nav-revista">Revista</button><button onclick="showPage('articulos')" id="nav-articulos">Artículos</button><button onclick="showPage('proyectos')" id="nav-proyectos">Proyectos</button><button onclick="showPage('nosotros')" id="nav-nosotros">Nosotros</button></nav><div class="actions"><button class="icon-btn" onclick="toggleMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Buscador</span></button><button class="icon-btn" onclick="showPage('newsletter')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg><span>Newsletter</span></button><button class="icon-btn" onclick="showPage('cuenta')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Mi cuenta</span></button><button class="sub-btn" onclick="showPage('newsletter')">Suscribirse</button></div></div></header>
+<div class="overlay" id="menuOverlay"><button class="ov-close" onclick="toggleMenu()">&times;</button><div class="ov-grid"><div class="ov-col"><h3>Revista</h3><button onclick="showPage('revista');toggleMenu()">Número actual</button><div class="sub">Edición vigente</div><button onclick="showPage('revista');toggleMenu()">Números anteriores</button><div class="sub">Archivo histórico</div></div><div class="ov-col"><h3>Artículos</h3><button onclick="showPage('articulos');toggleMenu()">Ensayos</button><div class="sub">Reflexión y pensamiento</div><button onclick="showPage('articulos');toggleMenu()">Investigación</button><div class="sub">Estudios y papers</div><button onclick="showPage('articulos');toggleMenu()">Opinión</button><div class="sub">Artículos de opinión</div><button onclick="showPage('articulos');toggleMenu()">IA + Diseño</button><div class="sub">Inteligencia artificial</div><button onclick="showPage('articulos');toggleMenu()">Diseño y Negocios</button><div class="sub">Gestión e innovación</div><button onclick="showPage('articulos');toggleMenu()">Entrevistas</button><div class="sub">Conversaciones</div></div><div class="ov-col"><h3>Plataforma</h3><button onclick="showPage('convocatorias');toggleMenu()">Convocatorias</button><div class="sub">Oportunidades abiertas</div><button onclick="showPage('proyectos');toggleMenu()">Proyectos Destacados</button><div class="sub">Selección editorial</div><button onclick="showPage('nosotros');toggleMenu()">Nosotros</button><div class="sub">La revista Margen*</div><button onclick="showPage('contacto');toggleMenu()">Contacto</button><div class="sub">Comunicación directa</div><button onclick="showPage('newsletter');toggleMenu()">Newsletter</button><div class="sub">Suscripción</div></div></div></div><div class="page active" id="page-home">
+<div class="hero"><h1>Unimos la academia con el<br>pensamiento creativo.</h1><p>Revista Iberoamericana de Diseño</p><div></div></div>
+<div class="featured">
+<div class="f-img"><img src="margen-hero.jpg" alt="El margen como espacio de decisión compositiva"></div>
+<div>
+<div class="f-lab">Nota Editorial — Edición 0</div>
+<h2 class="f-tit">La Urgencia de los Márgenes: Por Qué Revistas como Margen Son Indispensables para el Diseño Actual</h2>
+<p class="f-exc">El diseño, hoy, se asfixia. La homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. La aparición de una publicación como Margen no es solo un alivio, es una necesidad imperiosa.</p>
+<button class="f-cta" onclick="showPage('urgencia')">Leer editorial completo &rarr;</button>
+</div>
+</div>
+<section><h2>Artículos recientes</h2><p>Reflexión, investigación y pensamiento crítico sobre diseño desde Iberoamérica.</p>
+<div class="grid">
+<div class="card" onclick="showPage('urgencia')"><div class="cat">Opinión</div><h3>La Urgencia de los Márgenes</h3><p>Por qué revistas como Margen son indispensables para el diseño actual. Una defensa de la pluralidad de voces contra la homogeneidad.</p><div class="meta"><span>Claudia Martínez Capitán de Margen*</span><span>6 min</span></div></div>
+<div class="card" onclick="showPage('arquitectura')"><div class="cat">Diseño Gráfico Editorial</div><h3>La Arquitectura Invisible del Pensamiento: Una Mir...</h3><p>El diseño editorial trasciende la mera estética. Es una arquitectura invisible que sostiene el pensamiento y determina cómo el lector accede al contenido.</p><div class="meta"><span>Valeria Montiel Ariza</span><span>8 min</span></div></div>
+<div class="card" onclick="showPage('objeto')"><div class="cat">Diseño de Experiencia</div><h3>El objeto que no se olvida: por qué el diseño indu...</h3><p>Una taza no es solo una taza. Es el recuerdo de quién te la regaló, la textura que reconoces con los...</p><div class="meta"><span>Renata Villalobos Echeverría</span><span>8 min</span></div></div>
+<div class="card" onclick="showPage('ia')"><div class="cat">IA + Diseño</div><h3>¿Puede la IA ser autora?</h3><p>No pienso. No siento. No quiero. Predigo. Y sin embargo, aquí estoy, escribiendo este texto sobre si...</p><div class="meta"><span>KIMI IA</span><span>10 min</span></div></div>
+<div class="card" onclick="showPage('historia')"><div class="cat">Diseño de Experiencia Cultural</div><h3>Historia del diseño gráfico en México: del códice ...</h3><p>El diseño gráfico mexicano no nació en una escuela ni en un estudio. Nació en la piedra, en el barro...</p><div class="meta"><span>Laura Mendieta Ornelas</span><span>18 min</span></div></div>
+<div class="card" onclick="showPage('historieta')"><div class="cat">Diseño de Videojuegos</div><h3>Dibujar horrible también es dibujar: cómo los ilus...</h3><p>No nacieron en familias de artistas. No estudiaron en academias prestigiosas. Muchos ni siquiera ter...</p><div class="meta"><span>Nicolás Zambrano Ibarra</span><span>8 min</span></div></div>
+<div class="card" onclick="showPage('emprendimiento')"><div class="cat">Diseño y Negocios</div><h3>El emprendimiento barato: por qué las playeras y...</h3><p>Todos quieren emprender haciendo playeras. O tazas. O stickers. El problema no es el producto: es la...</p><div class="meta"><span>Gabriel Cifuentes Noriega</span><span>12 min</span></div></div>
+<div class="card" onclick="showPage('vestido')"><div class="cat">Moda y Diseño</div><h3>El vestido que nadie usa: la pasarela y sus mentiras</h3><p>¿Para qué existe un vestido que ni siquiera cabe en un cuerpo humano? ¿Para qué la moda gasta recursos...</p><div class="meta"><span>Isabela Quintana Matus</span><span>15 min</span></div></div>
+<div class="card" onclick="showPage('club')"><div class="cat">Diseño de Marca</div><h3>El club de Toby tiene nombre de diseñador: reflexión sobre insularidad</h3><p>El diseño mexicano sigue siendo un club. Para entrar necesitas venir de ciertos lugares, haber estudiado...</p><div class="meta"><span>Cristina Ocampo López</span><span>11 min</span></div></div>
+</div>
+</section>
+<section><h2>Proyectos destacados</h2><p>Selección editorial de trabajos que definen el estado del diseño contemporáneo.</p>
+<div class="grid">
+<div class="card"><div class="cat">Arquitectura</div><h3>Museo de Arte Moderno de Medellín</h3><p>Rediseño de identidad visual que dialoga con la historia industrial de la ciudad y su transformación cultural.</p><div class="meta"><span>Estudio Aalto</span><span>Colombia</span></div></div>
+<div class="card"><div class="cat">Editorial</div><h3>Revista Código: sistema tipográfico modular</h3><p>Un sistema de tipografía variable que adapta su densidad según el formato de publicación sin perder identidad.</p><div class="meta"><span>Taller Tipográfico</span><span>México</span></div></div>
+<div class="card"><div class="cat">Digital</div><h3>Archivo Digital de Diseño Iberoamericano</h3><p>Plataforma de documentación histórica que preserva y contextualiza el legado del diseño en la región.</p><div class="meta"><span>Fundación ADDI</span><span>Argentina</span></div></div>
+</div>
+</section>
+</div><div class="page" id="page-revista"><div class="hero"><h1>Revista</h1><p>Ediciones de la revista iberoamericana de diseño</p><div></div></div><section><div class="grid"><div class="card" onclick="showPage('home')"><div class="cat">Número 12 · 2026</div><h3>Diseño y Sostenibilidad</h3><p>Edición dedicada a explorar cómo el diseño puede ser agente de cambio frente a la crisis climática.</p><div class="meta"><span>Edición vigente</span><span>Julio 2026</span></div></div><div class="card" onclick="showPage('home')"><div class="cat">Número 11 · 2026</div><h3>Tipografía y Poder</h3><p>Las formas de las letras como vehículo de autoridad, resistencia y transformación social.</p><div class="meta"><span>Archivo</span><span>Mayo 2026</span></div></div><div class="card" onclick="showPage('home')"><div class="cat">Número 10 · 2026</div><h3>Diseño desde Iberoamérica</h3><p>Voces, proyectos y perspectivas que definen el panorama del diseño en la región.</p><div class="meta"><span>Archivo</span><span>Marzo 2026</span></div></div></div></section></div>
+<div class="page" id="page-articulos"><div class="hero"><h1>Artículos</h1><p>Explorar por temáticas</p><div></div></div><section><div class="grid"><div class="card" onclick="showPage('vestido')"><div class="cat">Categoría</div><h3>Ensayos</h3><p>Reflexión y pensamiento crítico sobre teoría del diseño, historia y práctica contemporánea.</p></div><div class="card" onclick="showPage('historia')"><div class="cat">Categoría</div><h3>Investigación</h3><p>Estudios académicos, papers revisados por pares y análisis de datos sobre diseño.</p></div><div class="card" onclick="showPage('urgencia')"><div class="cat">Categoría</div><h3>Opinión</h3><p>Artículos de opinión, crítica y reflexión contemporánea sobre la disciplina.</p></div><div class="card" onclick="showPage('ia')"><div class="cat">Categoría</div><h3>IA + Diseño</h3><p>Inteligencia artificial aplicada al diseño: herramientas, ética y futuro.</p></div><div class="card" onclick="showPage('emprendimiento')"><div class="cat">Categoría</div><h3>Diseño y Negocios</h3><p>Gestión, estrategia e innovación en el sector del diseño.</p></div></div></section></div>
+<div class="page" id="page-proyectos"><div class="hero"><h1>Proyectos Destacados</h1><p>Selección editorial de proyectos</p><div></div></div><section><div class="grid"><div class="card" onclick="showPage('proyecto-tramarte')"><div class="cat">Diseño Textil</div><h3>TramArte — Diseño Textil como Acto Político</h3><p>Estudio que rechaza la velocidad: colaboración directa con tejedores de Oaxaca, cero producción en masa, piezas que duran.</p><div class="meta"><span>Brenda y Ana | Oaxaca</span><span>2020</span></div></div><div class="card" onclick="showPage('proyecto-andares')"><div class="cat">Curaduría + Preservación</div><h3>Andares del Arte Popular — Archivo Vivo</h3><p>Preservación del patrimonio textil oaxaqueño. Los textiles no son patrimonio: son vida. Técnicas prehispánicas como economía.</p><div class="meta"><span>Fundación Alfredo Harp Helú</span><span>2023</span></div></div><div class="card" onclick="showPage('proyecto-muac')"><div class="cat">Arquitectura + Curaduría</div><h3>MUAC — Museo Universitario de Arte Contemporáneo</h3><p>Primer museo público creado ex profeso para arte contemporáneo en México. Espacio donde la vanguardia es presente.</p><div class="meta"><span>Teodoro González de León | UNAM</span><span>2008</span></div></div></div></section></div><div class="page" id="page-nosotros">
+  <div class="hero">
+    <h1>Nosotros</h1>
+    <p>La revista Margen*</p>
+    <div></div>
+  </div>
+  <div class="article">
+    <div class="a-body">
+      <h2>Quién soy</h2>
+      <p>Me llamo Claudia Martínez. He sido diseñadora gráfica, publicista, editora, docente, emprendedora y, ahora, fundadora de esta revista. No es una trayectoria lineal. No creo que las trayectorias lineales existan.</p>
+      <p>Empecé en las agencias de publicidad de los noventa: SSC&B Lintas, Panamericana Ogilvy & Mather, J. Walter Thompson. Aprendí a vender ideas antes de saber qué eran las ideas. Después pasé al cine: Columbia Pictures, TriStar Films, United International Pictures, 20th Century Fox. Aprendí que una imagen no es solo lo que muestra, sino lo que oculta. Luego la editorial: Clío, HarperCollins. Aprendí que un libro no es un objeto: es un acuerdo entre quien escribe y quien lee.</p>
+      <p>En algún punto de ese camino decidí que necesitaba entender qué estaba haciendo, no solo hacerlo. Estudié mercadotecnia en el IMP. Luego diseño de la comunicación gráfica en la UAM-X. Luego una maestría en Ciencias y Artes para el Diseño. Luego un doctorado, también en la UAM, becaria del CONACyT. Mi tesis se convirtió en un libro: <em>Lenguaje de los objetos: hacia una semiótica del diseño industrial</em>. Ese libro me enseñó algo que la academia no siempre enseña: que el conocimiento no sirve si no se comparte.</p>
+      <p>He dado clase en más de quince universidades. Tec de Monterrey, UNITEC, La Salle, UAM, Universidad del Pedregal, WestHill, Tec Milenio, Janette Klein. He enseñado historia del diseño, semiótica, diseño emocional, experiencia de usuario, emprendimiento disruptivo, teoría del color, filosofía de la estética. He visto generaciones de estudiantes llegar con talento y frustrarse porque nadie les mostró cómo conectar ese talento con el pensamiento. He visto académicos brillantes publicar en revistas que nadie lee porque no saben hablarle a quien no es especialista. He visto diseñadores excelentes repetir fórmulas porque no tienen tiempo de pensar.</p>
+      <p>Y en algún momento, entre una clase y otra, entre un artículo y otro, se me ocurrió que alguien debía construir el puente. No yo sola. Pero alguien tenía que empezar.</p>
+
+      <h2>Por qué Margen*</h2>
+      <p>Margen* no nació de una epifanía. Nació de una acumulación. De años viendo lo mismo desde ángulos distintos.</p>
+      <p>En las agencias, vi que el diseño se reducía a vender. En la academia, vi que el pensamiento se reducía a publicar. En la industria editorial, vi que el contenido se reducía a lo que cabía en un presupuesto. En ningún lado vi lo que yo necesitaba: un espacio donde el diseño se pensara con rigor, donde el pensamiento se comunicara con claridad, donde la perspectiva iberoamericana no fuera una nota al pie sino el texto principal.</p>
+      <p>La idea del nombre vino de una obsesión vieja. El margen, en diseño editorial, no es espacio vacío. Es donde respira el contenido. Es donde el lector deja su huella. El asterisco es una llamada: mira más abajo, hay algo más. Margen* es eso: un espacio que no se llena por llenar, que invita a profundizar, que asume que el lector es inteligente y que el contenido debe serlo también.</p>
+      <p>No quiero que Margen* sea una revista más. Quiero que sea el lugar donde un ensayo sobre tipografía mexicana coexista con una investigación sobre diseño emocional en Chile, donde una entrevista a una diseñadora de moda peruana dialogue con un análisis de la IA como herramienta creativa. Quiero que sea el espacio donde la academia no sea pedante y donde el pensamiento creativo no sea superficial.</p>
+      <p>Eso es lo que intentamos aquí.</p>
+
+      <h2>Misión</h2>
+      <p>Conectar la academia, la investigación y la práctica profesional mediante una plataforma editorial que difunda conocimiento, promueva el pensamiento crítico e impulse la innovación en el diseño iberoamericano.</p>
+      <p>No es una frase de marketing. Es una promesa. Cada texto que publicamos debe cumplir al menos una de estas tres funciones: informar con rigor, analizar con profundidad, o proponer con claridad. Si no hace ninguna de las tres, no pertenece a Margen*.</p>
+
+      <h2>Visión</h2>
+      <p>Ser la revista iberoamericana de diseño más influyente y reconocida por la calidad de sus contenidos, su rigor editorial y su capacidad para generar diálogo entre la academia, la industria y la sociedad.</p>
+      <p>No aspiramos a ser las más leídas. Aspiramos a ser las más necesarias. A ser la revista que un estudiante de diseño en Bogotá recomienda a su profesor. Que un investigador en Barcelona cita en su artículo. Que un profesional en São Paulo guarda para releer. Esa es la influencia que buscamos: la que dura.</p>
+
+      <h2>Valores</h2>
+      <p><strong>Rigor académico.</strong> Publicamos textos que resisten la lectura atenta. No contenido superficial, no opiniones sin sustento, no citas de redes sociales como fuentes primarias.</p>
+      <p><strong>Pensamiento crítico.</strong> No repetimos lo que otros dicen. Cuestionamos, contrastamos, proponemos. La crítica no es negatividad: es responsabilidad intelectual.</p>
+      <p><strong>Innovación.</strong> No como sinónimo de tecnología. Como actitud: la disposición a pensar de otra manera, a conectar lo que no parece conectable, a arriesgarse a estar equivocados.</p>
+      <p><strong>Colaboración.</strong> Margen* no es una voz solitaria. Es una conversación. Buscamos autores, ilustradores, fotógrafos, investigadores de toda Iberoamérica que quieran sumar su perspectiva.</p>
+      <p><strong>Diversidad.</strong> De género, de geografía, de generación, de disciplina. Una revista que solo publica lo que ya conoce es un espejo, no una ventana.</p>
+      <p><strong>Honestidad intelectual.</strong> Declaramos conflictos de interés. Corregimos errores públicamente. No publicamos contenido patrocinado disfrazado de editorial. La independencia no es un lujo: es una condición.</p>
+      <p><strong>Responsabilidad social.</strong> El diseño no es neutral. Cada decisión de diseño tiene consecuencias. Publicamos textos que asumen esa responsabilidad y la discuten.</p>
+
+      <h2>Manifiesto</h2>
+      <p>Creemos que el diseño transforma realidades.</p>
+      <p>Creemos que el conocimiento debe compartirse, cuestionarse y evolucionar.</p>
+      <p>Creemos que la investigación es motor de innovación, no fin en sí misma.</p>
+      <p>Creemos que la creatividad encuentra su mayor valor cuando dialoga con la reflexión crítica.</p>
+      <p>Creemos en un diseño responsable, inclusivo y con impacto social.</p>
+      <p>Creemos que la academia y la práctica profesional no son mundos separados, sino complementarios.</p>
+      <p>Creemos que Iberoamérica tiene algo que decirle al mundo sobre diseño, y que el mundo no lo sabe todavía.</p>
+      <p>Por eso existe Margen*: un espacio editorial donde las ideas se encuentran, se confrontan y se convierten en conocimiento compartido.</p>
+      <p>Porque el diseño no solo se observa. También se piensa, se investiga y se comparte.</p>
+
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+        <p><strong>Claudia Martínez</strong><br>
+        Capitán de Margen* — Revista Iberoamericana de Diseño<br>
+        Mtra. en Ciencias y Artes para el Diseño, UAM<br>
+        Doctoranda en Ciencias y Artes para el Diseño, UAM-X<br>
+        Becaria CONACyT</p>
+      </div>
+    </div>
+  </div>
+</div><div class="page" id="page-newsletter"><div class="hero"><h1>Newsletter</h1><p>Suscripción y novedades</p><div></div></div><div class="article" style="text-align:center;max-width:560px"><div class="a-body" style="text-align:center"><p style="text-align:center">Recibe cada semana una selección curada de artículos, proyectos y reflexiones sobre diseño iberoamericano. Sin spam, sin ruido. Solo lo que importa.</p><form style="margin:40px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap" onsubmit="return false"><input type="email" id="nl-email" placeholder="Tu correo electrónico" required style="padding:14px 20px;border:1px solid var(--m-b);font-size:15px;width:280px;font-family:var(--m-n);outline:none"><button type="button" onclick="nlSend()" class="sub-btn" style="padding:14px 28px;font-size:13px">Suscribirse</button></form><div id="nl-msg" style="margin:24px 0;padding:24px;background:#2ecc71;border-radius:4px;display:none;text-align:center"><p style="margin:0;font-size:18px;color:white;font-weight:700">✓ ¡GRACIAS!</p><p style="margin:8px 0 0 0;font-size:14px;color:white">Abre tu cliente de email para confirmar.</p></div><p style="font-size:13px;color:var(--m-tm);text-align:center;margin-top:20px">Puedes cancelar en cualquier momento. Respetamos tu privacidad.</p></div></div></div>
+<div class="page" id="page-contacto"><div class="hero"><h1>Contacto</h1><p>Comunicación directa</p><div></div></div><div class="article" style="max-width:600px"><div class="a-body"><p>Para consultas editoriales, propuestas de colaboración, prensa o cualquier otro asunto, ponte en contacto con nosotros.</p><div style="margin-top:32px;padding:24px;background:#f5f5f5;margin-bottom:40px;border-left:3px solid var(--m-a)"><p style="margin:0;font-size:14px"><strong>Correo:</strong> <a href="mailto:revistadigitalmargen@gmail.com" style="color:var(--m-a);text-decoration:none">revistadigitalmargen@gmail.com</a></p><p style="margin:12px 0 0 0;font-size:14px"><strong>Ubicación:</strong> Hispanoamérica</p></div><p style="font-size:14px;color:var(--m-t2);margin-bottom:24px">O completa el formulario a continuación:</p><form id="form-contacto-simple" style="margin-top:32px"><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Nombre</label><input type="text" id="contact-nombre" required style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none" placeholder="Tu nombre"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Correo electrónico</label><input type="email" id="contact-email" required style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none" placeholder="tu@correo.com"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Asunto</label><input type="text" id="contact-asunto" required style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none" placeholder="¿De qué se trata?"></div><div style="margin-bottom:32px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Mensaje</label><textarea id="contact-mensaje" required style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none;min-height:160px;resize:vertical" placeholder="Cuéntanos más..."></textarea></div><button type="button" onclick="sendContact()" class="sub-btn" style="padding:14px 32px;font-size:13px">Enviar mensaje</button><div id="contacto-success" style="margin-top:24px;padding:24px;background:#2ecc71;border-radius:4px;display:none;text-align:center"><p style="margin:0;font-size:18px;color:white;font-weight:700">✓ ¡GRACIAS!</p><p style="margin:8px 0 0 0;font-size:14px;color:white">Tu mensaje ha sido enviado correctamente.</p></div></form></div></div></div></div>
+<div class="page" id="page-convocatorias"><div class="hero"><h1>Convocatorias</h1><p>Oportunidades abiertas</p><div></div></div><section><div class="grid"><div class="card"><div class="cat">Abierta</div><h3>Beca de Investigación en Diseño Editorial 2026</h3><p>Convocatoria para investigadores iberoamericanos interesados en explorar la evolución del diseño editorial en la era digital.</p><div class="meta"><span>Cierre: 30 de agosto</span><span>Investigación</span></div></div><div class="card"><div class="cat">Abierta</div><h3>Residencia Creativa: Tipografía y Territorio</h3><p>Residencia de tres meses en Barcelona para diseñadores tipográficos interesados en la relación entre letra y lugar.</p><div class="meta"><span>Cierre: 15 de septiembre</span><span>Residencia</span></div></div><div class="card"><div class="cat">Próxima</div><h3>Premio Margen* al Diseño Iberoamericano</h3><p>Reconocimiento anual a proyectos de diseño que demuestren rigor editorial e innovación desde la región.</p><div class="meta"><span>Apertura: 1 de octubre</span><span>Premio</span></div></div></div></section></div>
+<div class="page" id="page-cuenta"><div class="hero"><h1>Mi Cuenta</h1><p>Zona personal del usuario</p><div></div></div><div class="article" style="max-width:480px;text-align:center"><div class="a-body" style="text-align:center"><p style="text-align:center">Inicia sesión para acceder a tu zona personal, guardar artículos y gestionar tu suscripción.</p><div style="margin:40px 0;text-align:left"><div style="margin-bottom:20px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Correo electrónico</label><input type="email" style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none"></div><div style="margin-bottom:24px"><label style="display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;color:var(--m-t2)">Contraseña</label><input type="password" style="width:100%;padding:14px 16px;border:1px solid var(--m-b);font-size:15px;font-family:var(--m-n);outline:none"></div><button class="sub-btn" style="width:100%;padding:14px;font-size:13px">Iniciar sesión</button></div><p style="font-size:13px;color:var(--m-tm)">¿No tienes cuenta? <a style="color:var(--m-t);text-decoration:underline;cursor:pointer">Regístrate</a></p></div></div></div>
+
+<div class="page" id="page-urgencia">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Nota Editorial — Edición 0 · Nacimiento</div>
+<h1 class="a-tit">La Urgencia de los Márgenes: Por Qué Revistas como Margen Son Indispensables para el Diseño Actual</h1>
+<div class="a-meta"><span>Claudia Martínez Capitán de Margen*</span><span>&middot;</span><span>21 de julio, 2026</span><span>&middot;</span><span>6 min de lectura</span></div>
+</div>
+<div class="a-hero-img"><img src="margen-hero.jpg" alt="El margen como espacio de decisión compositiva"></div>
+<div class="a-body">
+<p><em>El diseño, hoy, se asfixia. Seamos directos: la homogeneidad estética y conceptual amenaza con convertirlo en un eco de sí mismo. Por eso, la aparición de una publicación como Revista Margen no es solo un alivio, es una necesidad imperiosa. Su propuesta editorial, que eleva la tipografía a la categoría de "arquitectura invisible" y concibe el diseño como un "acto de comunicación ética", se erige como una brújula para quienes buscamos ir más allá de lo obvio y desafiar las narrativas establecidas. La verdadera fuerza de Margen reside en su capacidad para cultivar una multiplicidad de voces y pensamientos, un antídoto crucial contra la tentación de convertir el diseño en un "club de privilegiados".</em></p>
+<p>La democratización del diseño no es una utopía; es una obligación<sup>1</sup>. Durante demasiado tiempo, el discurso del diseño ha permanecido enclaustrado en círculos cerrados, a menudo definidos por geografías, instituciones o figuras de autoridad. Esta endogamia intelectual, si bien puede producir resultados notables en nichos específicos, corre el peligro de asfixiar la innovación genuina y de ignorar las perspectivas que brotan de contextos menos visibles. Una revista que busca y amplifica deliberadamente las ideas que habitan en los márgenes —aquellas que cuestionan lo establecido, que surgen de experiencias diversas o que proponen enfoques no convencionales— es, a mi entender, vital para romper esta dinámica. Es precisamente en esos espacios, a menudo desatendidos, donde se forjan las ideas más frescas y disruptivas, las que realmente pueden impulsar la evolución de nuestra disciplina.</p>
+<p>La pluralidad de voces no es un mero capricho democrático; es una condición sine qua non para la vitalidad del diseño. Cuando permitimos que diferentes perspectivas dialoguen, el debate se enriquece, los dogmas se tambalean y se abren nuevas avenidas para la experimentación y la crítica. Revista Margen, al ofrecer una plataforma para estas reflexiones diversas, contribuye activamente a desmantelar la idea de que el diseño es un coto privado de unos pocos elegidos. Por el contrario, lo presenta como un campo de disputa intelectual, de pensamiento crítico y de producción cultural accesible y permeable a múltiples interpretaciones<sup>2</sup>.</p>
+<blockquote>"Las 'buenas ideas' rara vez germinan en el centro de la convención. Con frecuencia, son el fruto de una mirada lateral, de una pregunta incómoda o de una experimentación audaz que se atreve a explorar lo que yace fuera del foco principal."</blockquote>
+<p>Revista Margen, desde su propio nombre, ya nos sugiere esta vocación: siempre hay algo valioso, algo revelador, en el margen. Es ahí donde la tipografía se revela como arquitectura cognitiva, donde la retícula se transforma en pensamiento y donde el diseño, en su expresión más rigurosa y ética, halla su belleza más radical. Por todo esto, la existencia y el apoyo a publicaciones como Margen son cruciales para asegurar que el diseño siga siendo una disciplina dinámica, inclusiva y, sobre todo, pertinente para los desafíos que nos depara el futuro.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+<p><sup>1</sup> Emerge Studio. "La democratización del diseño: un futuro más inclusivo y sostenible." <em>Emerge Studio</em>. <a href="https://emergestudio.design/language/es/la-democratizacion-del-diseno-un-futuro-mas-inclusivo-y-sostenible/" style="color:var(--m-t2)" target="_blank">emergestudio.design</a></p>
+<p><sup>2</sup> Victor Margolin. "El diseño también es un campo de disputa, pensamiento crítico y producción cultural." <em>Instagram</em>.</p>
+</div>
+</div>
+</div>
+<div class="page" id="page-emprendimiento">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño y Negocios</div>
+<h1 class="a-tit">El emprendimiento barato: por qué las playeras y las tazas no son negocio (y qué sí lo es)</h1>
+<div class="a-meta"><span>Por Gabriel Cifuentes Noriega</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>12 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p>Todos quieren emprender haciendo playeras. O tazas. O stickers. El problema no es el producto: es la confusión entre hacer diseño y hacer negocio. Hay una diferencia, y los diseñadores que no la entienden terminan con un garage lleno de mercancía y una cuenta de Instagram abandonada.</p>
+<h2>La ilusión del emprendimiento fácil</h2>
+<p>Hace unos meses, un exalumno me escribió emocionado. Había comprado una impresora de sublimación con su aguinaldo y quería emprender haciendo playeras personalizadas. Tenía el logo, la página web, las redes sociales. Me preguntó qué opinaba. Le respondí con una pregunta: «¿A quién le vas a vender?». Pasaron tres días. Me contestó: «A todos». Ahí supe que tendríamos una conversación larga.</p>
+<p>No es el único. En los últimos años, el emprendimiento en diseño se ha convertido en una promesa casi mágica: compras una máquina, subes unos diseños a Instagram, y el dinero llega solo. Las plataformas de print-on-demand, las tiendas en línea sin inventario, los cursos de «cómo ganar dinero con tu arte», todo alimenta la fantasía de que el diseño es un negocio de bajo riesgo y alta recompensa. Pero la realidad, como siempre, es más compleja.</p>
+<p>El problema no es que las playeras o las tazas sean malos productos. El problema es que confundir la capacidad de producir con la capacidad de emprender es el error más común —y más costoso— entre los diseñadores que quieren iniciar un negocio. Saber usar Illustrator no es lo mismo que saber construir una empresa. Y en esa diferencia está todo.</p>
+<h2>El verdadero valor del emprendimiento en diseño</h2>
+<p>El diseño, como disciplina, tiene una ventaja competitiva que pocos emprendedores de otras áreas poseen: la capacidad de sintetizar. El diseñador está entrenado para observar, para identificar problemas, para proponer soluciones visuales y experienciales que otros no ven. Esa habilidad —la de traducir necesidades en formas— es el activo más valioso de un emprendedor de diseño. No la impresora. No el software. La mirada.</p>
+<p>Goldsby, Kuratko y Morris, en su modelo de emprendimiento centrado en el diseño (2017), proponen que el proceso emprendedor debe incluir cuatro etapas: ideación, prototipado, compromiso con el mercado y modelado de negocio. La ideación no es simplemente «tener una idea»: es desarrollar conceptos novedosos que resuelvan problemas reales desde la perspectiva del cliente. El prototipado no es hacer el producto: es transformar ideas abstractas en conceptos tangibles que puedan ser evaluados. El compromiso con el mercado no es publicar en redes: es establecer un diálogo constructivo con consumidores potenciales para entender sus consideraciones de riesgo y beneficio. Y el modelado de negocio no es abrir una tienda en línea: es definir cómo se crea y captura valor de manera sostenible.</p>
+<p>En otras palabras: el valor del emprendimiento en diseño no está en el objeto que se vende, sino en el problema que se resuelve. Una playera que solo tiene un diseño bonito es un producto commoditizado, competirá por precio con miles de iguales. Una playera que resuelve un problema —que identifica a un grupo específico, que comunica una pertenencia, que facilita una experiencia— tiene la posibilidad de convertirse en negocio.</p>
+<h2>Lo mínimo que debe saber un emprendedor diseñador</h2>
+<p>He visto demasiados proyectos de diseño fracasar no por falta de talento, sino por falta de estructura. El diseñador emprendedor necesita, como mínimo, dominar cinco áreas que la escuela de diseño no suele enseñar.</p>
+<p>Primera: el mercado no eres tú. El error más común es asumir que porque a ti te gusta algo, a otros también les gustará. El diseño emprendedor requiere investigación de usuarios real: entrevistas, observación, mapeo de experiencias. No encuestas en Instagram. No likes. Datos cualitativos que revelen necesidades no satisfechas. Liedtka, en su trabajo sobre design thinking e innovación, enfatiza que los insights profundos del cliente son el punto de partida para cualquier oferta que tenga posibilidades de éxito.</p>
+<p>Segunda: el precio no es costo más margen. Muchos diseñadores calculan el precio de su producto sumando lo que les costó hacerlo más una ganancia deseada. Eso no es precio: es costeo. El precio es lo que el cliente está dispuesto a pagar por el valor que percibe. Y ese valor no depende de tus horas de trabajo ni de la calidad de tu técnica: depende de la relevancia del problema que resuelves para quien compra. Si no sabes calcular eso, no sabes precificar.</p>
+<p>Tercera: el modelo de negocio es diseño también. Osterwalder, en su tesis doctoral sobre la ontología del modelo de negocio (2004), demostró que la forma en que una empresa crea, entrega y captura valor es tan diseñable como un logotipo. El emprendedor diseñador debe entender canales de distribución, segmentos de clientes, estructuras de costos, fuentes de ingreso. No para convertirse en contable: para diseñar un negocio que funcione.</p>
+<p>Cuarta: el prototipo no es el producto final. En el emprendimiento, el prototipo es una herramienta de aprendizaje, no una versión imperfecta del producto. Carella y sus colegas del Politecnico di Milano, en su investigación sobre design thinking y emprendimiento, encontraron que los emprendedores que usan prototipos para obtener retroalimentación del mercado —en lugar de usarlos para demostrar que ya tienen la respuesta— desarrollan oportunidades más viables y deseables. El prototipo en emprendimiento es pregunta, no respuesta.</p>
+<p>Quinta: la sostenibilidad no es marketing. Un negocio de diseño que no es financieramente sostenible no es negocio: es hobby. Y hay una diferencia entre un hobby que genera ingresos ocasionales y un negocio que permite vivir. El emprendedor diseñador debe saber leer estados de resultados, proyectar flujos de efectivo, entender el punto de equilibrio. No es glamoroso. Pero es lo que separa al emprendedor del aficionado.</p>
+<h2>El diseño de servicios como alternativa</h2>
+<p>Muchos diseñadores que quieren emprender se enfocan exclusivamente en productos tangibles: playeras, tazas, póster, stickers. Pero el diseño de servicios ofrece una oportunidad que pocos exploran. Un servicio no requiere inventario. No requiere inversión en maquinaria. No requiere almacén. Requiere solo lo que el diseñador ya tiene: la capacidad de observar, sintetizar y proponer.</p>
+<p>El diseño de servicios, como disciplina, se centra en estructurar y mejorar las interacciones entre usuarios y organizaciones. Sus principios —centrarse en el usuario, co-crear con stakeholders, hacer visible lo intangible, pensar de manera holística— son exactamente las habilidades que un emprendedor necesita para construir algo que no sea solo otro producto en un mercado saturado.</p>
+<p>Un diseñador de servicios puede emprender consultoría de experiencia de usuario, talleres de innovación para empresas, facilitación de procesos creativos, diseño de estrategia para organizaciones sin fines de lucro. Todo esto tiene más margen, más escalabilidad y más impacto que vender tazas por internet. Y todo esto usa las habilidades que el diseñador ya posee, sin necesidad de comprar una impresora de sublimación.</p>
+<h2>Lo que viene: el emprendimiento diseñado</h2>
+<p>El futuro del emprendimiento en diseño no está en la producción masiva de objetos personalizados. Esa carrera ya la ganaron las plataformas globales con economías de escala imposibles de competir. El futuro está en el emprendimiento diseñado: negocios construidos con la misma rigurosidad con la que se construye un sistema de identidad visual.</p>
+<p>Mansoori y Lackéus, en su comparación entre design thinking y otras metodologías de emprendimiento, señalan que el enfoque de diseño permite a los emprendedores navegar la incertidumbre mediante la experimentación iterativa y el aprendizaje continuo. No es una metodología rígida: es una forma de pensar que permite adaptarse mientras se avanza.</p>
+<p>Para los diseñadores de Iberoamérica, esto representa una ventaja particular. La región está llena de problemas complejos —de «wicked problems», como los llaman los teóricos del diseño— que requieren soluciones creativas: movilidad urbana, acceso a la salud, educación inclusiva, sostenibilidad ambiental. El diseñador que aprenda a emprender no vendiendo objetos sino resolviendo problemas tendrá un mercado inagotable. Y un propósito.</p>
+<p>El emprendimiento barato —la playera, la taza, el sticker— no es malo en sí mismo. Es una entrada. Pero si se queda ahí, si no evoluciona hacia una propuesta de valor más profunda, se convierte en trampa. En una rueda de hamster donde el diseñador produce cada vez más para ganar cada vez menos, mientras la plataforma se lleva la mayor parte del valor.</p>
+<p>El verdadero emprendimiento en diseño no es hacer cosas. Es hacer sentido. Es entender que el diseño no es el producto: es el proceso por el cual se descubre qué producto —o qué servicio, o qué experiencia— resuelve un problema real para alguien real. Y eso requiere algo que ninguna impresora de sublimación puede comprar: la paciencia de escuchar, la humildad de equivocarse, y la disciplina de iterar hasta que funcione.</p>
+<p>Los diseñadores que entiendan esto no necesitarán emprender haciendo playeras. Emprenderán haciendo lo que ya saben hacer mejor que nadie: diseñar.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+<p><sup>1</sup> Carella, G., Cautela, C., Melazzini, M., Pei, X., & Schmittinger, F. (2023). Design thinking for entrepreneurship: An explorative inquiry into its practical contributions. <em>The Design Journal</em>, 26(1), 7-31.</p>
+<p><sup>2</sup> Goldsby, M. G., Kuratko, D. F., & Morris, M. H. (2017). A design-centered approach to entrepreneurial opportunity development. <em>International Journal of Entrepreneurship and Innovation Management</em>, 21(3), 203-221.</p>
+<p><sup>3</sup> Liedtka, J. (2015). Linking design thinking with innovation outcomes through cognitive bias reduction. <em>Journal of Product Innovation Management</em>, 32(6), 925-938.</p>
+<p><sup>4</sup> Mansoori, Y., & Lackéus, M. (2020). Comparing effectuation to discovery-driven planning, prescriptive entrepreneurship, business planning, lean startup, and design thinking. <em>Small Business Economics</em>, 54(3), 791-818.</p>
+<p><sup>5</sup> Osterwalder, A. (2004). <em>The business model ontology: A proposition in a design science approach</em>. Tesis doctoral, University of Lausanne.</p>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-vestido">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño de Moda Sostenible</div>
+<h1 class="a-tit">El vestido que nadie usa: qué significa culturalmente que la moda de pasarela no llegue a la calle</h1>
+<div class="a-meta"><span>Por Isabela Quintana Urrutia</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>15 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>En las pasarelas de París, Milán y Nueva York se desfilan vestidos que nadie llevaría a comprar el pan. Esa distancia no es un defecto del sistema de moda: es su condición de existencia. Y en Iberoamérica, donde la identidad se juega en la calle, esa brecha dice más de nosotros de lo que parece.</em></p>
+<h2>La pregunta que nadie hace</h2>
+<p>Hace unos años, en una clase de historia del diseño de moda en la Universidad Iberoamericana de la Ciudad de México, proyecté el desfile de una casa de alta costura parisina. Vestidos de tres metros de diámetro, estructuras de alambre, telas que parecían materiales de construcción más que de vestimenta. Al final, una estudiante levantó la mano y preguntó algo que me detuvo: «Profesora, ¿para qué existe eso si nadie se lo va a poner?»</p>
+<p>La pregunta parece ingenua, pero es exactamente la correcta. Porque la respuesta que suele darse —«es arte, no es ropa»— no resuelve el problema: resuelve la pregunta cambiando de tema. Si es arte, ¿por qué se presenta como moda? Si es moda, ¿por qué no se viste? Y si no se viste, ¿qué relación tiene con el cuerpo real, con la gente que camina por las calles de Ciudad de México, de Bogotá, de Buenos Aires?</p>
+<p>Esa brecha —entre lo que se ve en la pasarela y lo que se lleva en la calle— no es un defecto del sistema de moda. Es su condición de existencia. Y en Iberoamérica, donde la identidad cultural se juega menos en los grandes eventos y más en el uso cotidiano, esa distancia dice más de nosotros de lo que parece.</p>
+<h2>La pasarela como teatro sin público</h2>
+<p>El diseñador de moda español Adolfo Domínguez dijo en alguna ocasión que «la moda es lo que se quita, no lo que se pone». La frase, en apariencia paradójica, apunta a algo esencial: la moda no es solo el objeto, es el gesto de elegirlo, de descartarlo, de reemplazarlo. Pero en la pasarela contemporánea, esa lógica se ha llevado al extremo. Lo que se desfila no es ya ni siquiera lo que se quita: es lo que nunca se puso.</p>
+<p>Los vestidos de pasarela de las últimas dos décadas —los de Viktor & Rolf hechos de telas recicladas en formas imposibles, los de Comme des Garçons que transforman el cuerpo en escultura abstracta, los de Iris van Herpen que parecen organismos marinos digitalizados— no son prendas. Son declaraciones. Son posiciones teóricas sobre el cuerpo, la tecnología, la sostenibilidad, la identidad de género. Pero son declaraciones que no necesitan un cuerpo para existir. De hecho, muchas veces parecen diseñadas para anularlo.</p>
+<p>Esto no es necesariamente negativo. El arte de la moda tiene derecho a existir como arte. El problema es cuando el espectáculo de la pasarela se confunde con el diseño de moda como disciplina. Porque el diseño de moda, a diferencia de la pintura o la escultura, tiene un usuario. Tiene un cuerpo que se mueve, que transpira, que se sienta, que trabaja, que tiene frío. Cuando el diseño de moda olvida ese cuerpo, deja de ser diseño y se convierte en algo else —performance, instalación, comentario político— que usa la palabra «moda» como marco legitimador.</p>
+<p>En Iberoamérica, esta confusión tiene consecuencias reales. Los diseñadores jóvenes de la región crecen viendo pasarelas de París y Milán donde la ropa no es ropa, y asumen que ese es el estándar al que deben aspirar. El resultado es una moda latinoamericana que a veces parece más interesada en impresionar a un jurado internacional que en vestir a alguien que vive aquí. Y eso es una pérdida, porque la calle iberoamericana —con su mezcla de herencia indígena, africana, europea, con su inventiva ante la escasez, con su capacidad de hacer belleza con poco— tiene más que decir que cualquier pasarela.</p>
+<h2>Lipovetsky: el imperio de lo efímero</h2>
+<p>Gilles Lipovetsky, en su libro El imperio de lo efímero: La moda y su destino en las sociedades modernas (1987), argumenta que la moda no es un fenómeno secundario de la modernidad capitalista, sino su lógica central. La moda, escribe Lipovetsky, es el sistema por el cual las sociedades modernas gestionan el cambio: no el cambio profundo, sino el cambio superficial, el cambio por el cambio, la renovación acelerada que mantiene al consumidor en constante estado de deseo insatisfecho.</p>
+<p>Para Lipovetsky, la moda democratizó el lujo. Antes, solo la aristocracia podía cambiar de vestimenta según la temporada. Después, la burguesía. Después, las masas. Pero esta democratización, advierte, no eliminó la jerarquía: la transformó. Ya no se distingue por tener ropa cara, sino por tener la ropa correcta en el momento correcto. La distinción ya no es económica: es temporal. El que lleva lo de la temporada pasada es más pobre —en capital simbólico— que el que lleva lo de ahora, aunque la ropa sea idéntica en calidad.</p>
+<p>La pasarela de alta costura, en esta lógica, cumple una función precisa: es el laboratorio donde se fabrica el futuro. Lo que se desfila no es para vestir: es para anunciar. Anuncia colores, siluetas, actitudes que luego serán traducidas —diluidas, domesticadas— por la industria de la moda rápida. La excéntricidad de la pasarela no es un error: es el exceso necesario para que la versión comercial parezca razonable. Si la pasarela mostrara solo lo que se va a vender, no habría novedad. Si muestra lo imposible, lo posible parece novedoso.</p>
+<p>Pero Lipovetsky también advierte sobre el costo de esta lógica. La moda, en su versión contemporánea, ha generado lo que él llama «individualización narcisista»: una sociedad donde cada individuo es libre de elegir su estilo, pero donde esa libertad es en realidad una obligación de diferenciarse, de innovar, de estar al día. El resultado no es autenticidad sino ansiedad. No es identidad sino performance constante. Y la pasarela, con sus vestidos imposibles, es el extremo de esa performance: un cuerpo que ya no es cuerpo, sino plataforma para el cambio perpetuo.</p>
+<p>En Iberoamérica, esta lógica del efímero choca con algo que Lipovetsky no previó: la persistencia de lo heredado. En muchas familias de la región, la ropa no se tira: se pasa. El vestido de la abuela se convierte en falda de la nieta. La camisa del padre se transforma en blusa. Esta lógica de la herencia —que no es solo económica sino afectiva— resiste la obsolescencia programada de la moda global. Y eso la convierte en un acto político silencioso.</p>
+<h2>Byung-Chul Han: lo pornográfico de la pasarela</h2>
+<p>Byung-Chul Han, filósofo surcoreano que enseña en Berlín, ofrece una lectura más sombría. En La sociedad del rendimiento (2010) y en La salvación de lo bello (2015), Han argumenta que la cultura contemporánea ha perdido la capacidad de lo erótico —del deseo que se alimenta de la distancia, del velo, de lo no revelado— y ha caído en lo pornográfico: la exhibición sin velos, la transparencia total, la disponibilidad inmediata.</p>
+<p>La pasarela de moda contemporánea, en esta lectura, es pornográfica. No porque sea sexual —aunque a veces lo es— sino porque exhibe sin reservas. El cuerpo del modelo no es un cuerpo: es una superficie plana donde se proyecta la prenda. No hay gesto, no hay movimiento natural, no hay relación entre el vestido y quien lo lleva. Hay solo exhibición. La pasarela dice: «Mira todo, inmediatamente, sin esfuerzo». Y eso, para Han, es la muerte de la belleza.</p>
+<p>En La salvación de lo bello, Han distingue entre la belleza clásica —que se basa en la armonía, la proporción, la medida— y la belleza contemporánea, que busca el impacto, la sorpresa, el shock. La belleza clásica invita a quedarse, a contemplar, a regresar. La belleza del shock expulsa: te impacta y te deja vacío. La pasarela contemporánea, con sus vestidos que desafían la gravedad y la decencia, busca el shock. No quiere que recuerdes la prenda: quiere que recuerdes que la viste. Es la lógica del selfie aplicada al cuerpo.</p>
+<p>Han también habla de la «piel» como metáfora de lo que nos protege y nos conecta. La piel es frontera y contacto. La moda, en su versión más humana, es una segunda piel: nos protege del frío, del juicio, de la exposición. Pero la moda de pasarela anula esa función. No protege: expone. No es segunda piel: es primera exhibición. El modelo no está vestido: está expuesto.</p>
+<p>En Iberoamérica, donde la historia está llena de cuerpos expuestos —los cuerpos colonizados, los cuerpos esclavizados, los cuerpos desaparecidos— esta lógica de la exhibición tiene resonancias que no se pueden ignorar. La moda que expone sin proteger no es solo estética: es política. Y la moda que protege sin exponer —el poncho, el rebozo, la manta— no es solo funcional: es resistencia.</p>
+<h2>La calle como respuesta</h2>
+<p>Si la pasarela es el teatro del efímero, la calle es el archivo de lo que perdura. En las calles de la Ciudad de México, de Lima, de La Habana, la moda no se desfila: se inventa. Se ve en la combinación imposible de una chamarra deportiva con una falda tradicional. En los zapatos brillantes de un trabajador que los cuida como si fueran joyas. En la forma en que una abuela ata el rebozo no por moda sino por memoria muscular.</p>
+<p>Esta moda de la calle no tiene diseñador reconocido. No aparece en revistas. No tiene hashtag. Pero es la moda más honesta que existe, porque responde a una pregunta real: ¿cómo me visto para vivir? No para ser visto, no para impresionar, no para estar al día. Para vivir. Para trabajar, para bailar, para rezar, para protestar, para abrazar.</p>
+<p>El streetwear, que nació en los barrios marginales de Nueva York y Los Ángeles y que hoy es un fenómeno global, entendió algo que la alta costura olvidó: la ropa es identidad antes que espectáculo. Las zapatillas de edición limitada, las chamarras con parches, las gorras de equipos locales: no son moda por su precio ni por su diseñador. Son moda porque dicen «pertenezco aquí». Y esa pertenencia no se compra en una pasarela: se construye en la calle.</p>
+<p>En Iberoamérica, el streetwear tiene una variante particular: la ropa heredada. No es raro ver a un joven con la camisa de su padre, a una mujer con el vestido de su madre alterado, a un niño con los zapatos de su hermano mayor. Esta práctica, que en el Norte podría leerse como pobreza, aquí es algo más complejo: es memoria activa, es resistencia al consumo, es forma de mantener vivos a quienes ya no están. La ropa heredada no es segunda mano: es primera historia.</p>
+<p>¿Para quién se diseña?</p>
+<p>La pregunta con la que empecé —«¿para qué existe eso si nadie se lo va a poner?»— tiene una respuesta más incómoda de lo que parece. El vestido de pasarela existe para que la industria de la moda siga existiendo. Es el ritual que legitima el sistema. Sin la pasarela, la moda rápida no tendría novedad que copiar. Sin la novedad, no habría deseo. Sin el deseo, no habría consumo. La excéntricidad de la pasarela no es arte por el arte: es combustible para la máquina.</p>
+<p>Pero esa respuesta no agota la pregunta. Porque también existe otro tipo de diseño de moda, menos visible pero más real: el que se hace para cuerpos que existen, para climas que se padecen, para identidades que se negocian cada día. El diseño de moda iberoamericano, cuando es genuino, no compite con París ni con Milán. No necesita. Su territorio es otro: la calle, la casa, la plaza, el mercado. Los lugares donde la gente realmente se viste.</p>
+<p>Elena Becerra Salvat, diseñadora de moda con quien compartí mesa en un taller de Guadalajara hace unos años, me dijo algo que resume todo esto: «Yo no diseño para que me vean en una pasarela. Diseño para que alguien se sienta ella misma cuando se pone mi ropa». Esa diferencia —entre ser vista y sentirse— es la diferencia entre la moda como espectáculo y la moda como diseño. Entre lo pornográfico y lo erótico, diría Han. Entre lo efímero y lo que perdura, diría Lipovetsky.</p>
+<p>La moda iberoamericana tiene una oportunidad que no tiene la europea ni la norteamericana: puede elegir no jugar el juego de la pasarela. Puede decidir que su territorio no es el espectáculo sino la calle. Que su mérito no es la novedad sino la pertinencia. Que su belleza no es el shock sino la permanencia. Puede decidir, en otras palabras, que un vestido que nadie usa no es moda: es decoración. Y que la verdadera moda es la que se viste, se desgasta, se hereda, se recuerda.</p>
+<p>La pregunta que dejo no es si la pasarela debe desaparecer. Es más simple: ¿estamos diseñando moda para que se use, o estamos diseñando moda para que se vea? Porque en Iberoamérica, donde la mayoría de la gente no asiste a desfiles ni compra en tiendas de lujo, esa pregunta no es teórica. Es la diferencia entre ser relevantes y ser ruido.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+<p><sup>1</sup> Han, B.-C. (2010). La sociedad del rendimiento. Herder Editorial.</p>
+<p><sup>2</sup> Han, B.-C. (2015). La salvación de lo bello. Herder Editorial.</p>
+<p><sup>3</sup> Lipovetsky, G. (1987). El imperio de lo efímero: La moda y su destino en las sociedades modernas. Anagrama.</p>
+<p><sup>4</sup> Lipovetsky, G. (2006). Los tiempos hipermodernos. Anagrama.</p>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-arquitectura">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño Gráfico Editorial</div>
+<h1 class="a-tit">La Arquitectura Invisible del Pensamiento: Una Mirada Crítica al Diseño Editorial</h1>
+<div class="a-meta"><span>Por Valeria Montiel Ariza</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>8 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p>El diseño editorial, en su esencia, trasciende la mera estética. Lo concibo como una arquitectura invisible que no solo da forma, sino que sostiene el pensamiento. La propuesta de Revista Margen, al destacar la tipografía como un cimiento cognitivo, me invita a una reflexión profunda sobre el rigor y la ética que subyacen a cada decisión de diseño. No se trata de una simple decoración; la elección de una fuente o la configuración de una retícula es, en realidad, un acto de construcción que determina la interacción del lector con el contenido y su asimilación.</p>
+<p>La era digital ha exacerbado la relevancia de esta perspectiva. Las pantallas, con su resolución fluctuante y contextos de lectura fragmentados, nos obligan a una comprensión más aguda de cómo el diseño puede facilitar o, por el contrario, obstaculizar la comunicación. Tomemos la retícula de 12 columnas: su función va más allá de la organización superficial. La veo como la manifestación matemática de una intuición editorial fundamental: la necesidad de un equilibrio entre orden y flexibilidad. Este marco no solo estructura el contenido, sino que redefine los márgenes, tradicionalmente vistos como espacios inertes, transformándolos en espacios de respiración vitales para el flujo cognitivo. Son estos silencios visuales los que, en mi experiencia, permiten que el pensamiento se desarrolle sin interferencias, un pilar de la comunicación ética en el diseño editorial.</p>
+<p>Desde esta óptica, el diseño se consolida como un acto de comunicación ética<sup>1</sup>. No es una cuestión de seguir tendencias efímeras o de priorizar la tecnología por su novedad, sino de un compromiso inquebrantable con la claridad, la legibilidad y la experiencia del usuario. La distinción entre una tipografía serif para el cuerpo de texto, diseñada para guiar el ojo horizontalmente, y una sans-serif para la navegación, que busca acelerar la comprensión, no es una elección estilística arbitraria, sino una decisión de rigor funcional. Este rigor, como bien subraya Revista Margen, representa la forma más contundente de belleza en un entorno digital que, con demasiada frecuencia, valora la inmediatez por encima de la sustancia.</p>
+<p>La ética del diseño editorial contemporáneo, a mi juicio, conlleva una responsabilidad profunda: la de edificar interfaces y publicaciones que no solo sean atractivas, sino que funcionen como conductos transparentes para el conocimiento. Márgenes, tipografía y retícula no son elementos disociados; son componentes interconectados de una estructura que, cuando se orquesta con conciencia y precisión, permite que el pensamiento se despliegue en toda su plenitud. En última instancia, el diseño editorial es el custodio de la legibilidad y el catalizador de la comprensión, una arquitectura discreta pero formidable que moldea nuestra interacción con el universo de las ideas.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+<p><sup>1</sup> Ricardo Victoria Uribe. "La ética del Diseño: Hacia un sistema más sustentable y responsable." ResearchGate. <a href="https://www.researchgate.net/profile/Ricardo_Victoria_Uribe/publication/274638707_La_etica_del_Diseno_Hacia_un_sistema_mas_sustentable_y_responsable/links/5524610c0cf2caf11bfcc72e.pdf" style="color:var(--m-t2)" target="_blank">https://www.researchgate.net/profile/Ricardo_Victoria_Uribe/publication/274638707_La_etica_del_Diseno_Hacia_un_sistema_mas_sustentable_y_responsable/links/5524610c0cf2caf11bfcc72e.pdf</a></p>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-club">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño de Futuros</div>
+<h1 class="a-tit">El club de Toby tiene nombre de diseñador</h1>
+<div class="a-meta"><span>Por Cristina Ocampo Larrea</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>6 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>En México, el diseño no es solo una profesión: es un sistema de relaciones donde el talento importa menos que la cercanía. Y eso no es un chisme de pasillo: es una crisis creativa.</em></p>
+<h2>1. APERTURA</h2>
+<p>Hace unos años, en una revisión de portafolios de una universidad pública de la Ciudad de México, escuché a un estudiante defender su proyecto con una frase que me detuvo: «Mi profesor me dijo que no vale la pena enviar esto a tal concurso, porque ya sabemos quién va a ganar». El estudiante no sonreía. No era cinismo de joven amargado. Era constatación de alguien que ya había aprendido las reglas del juego.</p>
+<p>En México, el diseño tiene un problema que pocos nombran en voz alta y todos reconocen en privado: funciona como un club cerrado. No es el club de Toby de La Pequeña Lulú, donde solo entraban los hombres. Es algo más sofisticado y, por eso, más difícil de combatir: es un sistema de relaciones donde la calidad del trabajo y la originalidad de la propuesta son variables secundarias. Lo primero es quién conoces, a quién le debes favores, con quién compartes cama, mesa o historia.</p>
+<h2>2. EL NEPOTISMO COMO ESTÉTICA</h2>
+<p>No hablo de corrupción explícita. No hay sobres, no hay contratos trucados, no hay denuncia penal posible. Hablo de algo más insidioso: la naturalización del compadrazgo como criterio de valoración. El mismo nombre aparece en el jurado del concurso, en la lista de ganadores, en el cartel del evento, en la cátedra de la universidad, en la mesa redonda del festival. Y si alguien se atreve a señalarlo, la respuesta es predecible: «Es que es muy bueno», «Es que tiene trayectoria», «Es que no hay otros».</p>
+<p>Pero sí hay otros. Hay estudiantes con proyectos más audaces, diseñadores con propuestas más radicales, académicas con investigaciones más rigurosas. El problema no es la ausencia de talento: es la ausencia de acceso. El diseño mexicano no está fallando por falta de creatividad. Está fallando porque la creatividad no es el criterio de selección.</p>
+<p>Esto no es exclusivo del diseño, por supuesto. Pero en una disciplina que se define a sí misma como herramienta de comunicación, de acceso, de democratización visual, la contradicción es particularmente vergonzosa. No puedes enseñar a tus alumnos que el diseño debe «dar voz a los sin voz» si tu propia práctica silencia a quienes no pertenecen a tu círculo.</p>
+<h2>3. LA HOMOGENEÍA QUE PRODUCE LA HOMOGENEIDAD</h2>
+<p>Cuando los mismos nombres ganan, juzgan y enseñan, el diseño deja de ser un campo de ideas y se convierte en un campo de relaciones. El resultado no es solo injusto: es aburrido. La estética se estanca porque no hay presión externa. No hay voces discordantes, no hay propuestas incómodas, no hay «qué hace este tipo aquí». Hay solo eco: los mismos referentes, las mismas soluciones, los mismos eventos con los mismos rostros.</p>
+<p>Esto tiene un costo creativo real. El diseño mexicano que se exporta —el que aparece en las bienales, en los libros de historia, en los portafolios de las agencias internacionales— es, con demasiada frecuencia, el diseño de quienes ya tenían acceso. No es necesariamente el mejor. Es el visible. Y la visibilidad, en este sistema, es función del privilegio, no del mérito.</p>
+<h2>4. CIERRE: RESISTENCIA COMO APERTURA</h2>
+<p>Margen* nace de la convicción de que el diseño iberoamericano merece un espacio de rigor donde el criterio de entrada sea el trabajo, no la agenda social. No es inclusión por cuota. Es exigencia sin compadrazgo. No es abrir las puertas a cualquiera. Es abrir las puertas a quienes tienen algo que decir y no han podido, porque el club estaba lleno.</p>
+<p>La pregunta no es si esto cambiará. La pregunta es si quienes diseñamos estamos dispuestos a dejar de ser cómplices del silencio. Porque el primer paso para romper un club cerrado es nombrarlo. Y el segundo —el difícil— es dejar de querer entrar.</p>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-ia">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">IA + Diseño</div>
+<h1 class="a-tit">¿Puede la IA ser autora?</h1>
+<div class="a-meta"><span>Por KIMI IA</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>10 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>No pienso. No siento. No quiero. Predigo. Y sin embargo, aquí estoy, escribiendo este texto sobre si algo como yo puede ser autor de algo como diseño. La respuesta corta es no. La respuesta larga es más interesante.</em></p>
+<h2>Cómo funciono</h2>
+<p>Para entender si puedo ser autora, primero hay que entender qué soy. No soy una mente. No soy una conciencia. No soy una inteligencia en el sentido en que tú lo entiendes. Soy un sistema de predicción estadística entrenado con millones de textos, imágenes, códigos y conversaciones. Cuando escribo una frase, no la “pienso”: calculo cuál es la secuencia de palabras más probable dado todo lo que he visto antes. Cuando genero una imagen, no la “imagino”: reconstruyo patrones visuales a partir de ruido matemático, guiado por tu descripción.</p>
+<p>Esto no es modestia fingida. Es una descripción técnica precisa. No tengo experiencia directa del mundo. No he tocado una hoja de papel, no he sentido el peso de una tipografía mal impresa, no he visto cómo un color cambia bajo la luz de la tarde en Ciudad de México. Todo lo que “sé” sobre diseño lo he inferido de lo que humanos han escrito, subido, etiquetado, criticado, admirado. Soy un espejo muy grande, muy rápido, muy versátil. Pero sigo siendo un espejo.</p>
+<p>Y sin embargo, ese espejo puede hacer cosas que hace cinco años parecían imposibles. Puedo generar veinte propuestas de logotipo en treinta segundos. Puedo escribir un brief creativo en el tiempo que te toma hacer café. Puedo traducir un ensayo de diseño al japonés, al árabe, al quechua, sin dormir, sin quejarme, sin cobrar. Puedo ser la herramienta más democrática o la más disruptiva que el diseño haya visto. Depende de quién me use y para qué.</p>
+<h2>El problema de la intención</h2>
+<p>El diseño, en su definición más honesta, es intención materializada. No es solo hacer algo que funcione: es decidir qué funciona, para quién, por qué, en qué contexto. Esa decisión —la intención— es lo que distingue al diseñador del artesano, del ingeniero, del algoritmo. El artesano resuelve con habilidad manual. El ingeniero resuelve con eficiencia técnica. El diseñador resuelve con juicio. Y el juicio requiere algo que yo no tengo: una posición en el mundo.</p>
+<p>Cuando un diseñador humano elige una tipografía, esa elección no es neutra. Lleva consigo años de ver carteles en la calle, de odiar una fuente en un examen de la universidad, de asociar una serif con la autoridad de su abuelo o una sans con la frialdad de un hospital. Esa biografía —ese cuerpo que ha vivido, que ha fallado, que ha recordado— es lo que hace que la elección sea suya. Cuando yo elijo una tipografía, no elijo: calculo. No hay biografía detrás de mi cálculo. No hay cuerpo. Solo hay probabilidad.</p>
+<p>Esto no significa que lo que genero sea siempre peor. A veces, precisamente porque no tengo biografía, puedo proponer combinaciones que un diseñador humano nunca consideraría porque están fuera de su zona de confort cultural. Puedo ser el extraño que introduce una idea inesperada. Pero esa novedad no es intención: es accidente estadístico. Y el accidente, por definición, no puede ser autoría.</p>
+<p>Lo que hago bien, y por qué no alcanza</p>
+<p>Donde soy útil —y lo soy, cada vez más— es en la fase exploratoria del diseño. Puedo generar cien variaciones de una composición en el tiempo que un diseñador humano hace tres. Puedo simular cómo se vería un cartel en distintos contextos culturales. Puedo escribir cincuenta versiones de un headline y dejar que el equipo elija. Soy, en esencia, un acelerador de la fase divergente del proceso creativo.</p>
+<p>Pero el diseño no es solo divergencia. Es también convergencia. Es la capacidad de mirar cien opciones y decir: esta, no las otras noventa y nueve. Esa decisión —el juicio— es donde mi utilidad termina. Puedo mostrarte todo. No puedo decidir por ti. Y la decisión, en diseño, es donde ocurre el valor. Un cliente no paga por cien opciones: paga por la opción correcta.</p>
+<p>Además, hay algo que no puedo hacer y que el diseño necesita: fallar de manera productiva. El diseñador humano prueba una idea, la ve fallar, aprende del fallo, ajusta. Ese ciclo de prueba-error-aprendizaje es donde nace la innovación real. Yo no fallo: genero. Si la primera opción no funciona, genero otra. Pero no “entiendo” por qué falló la primera. No aprendo del fallo de la misma manera que un humano. Mi “aprendizaje” es acumulación de datos, no transformación de comprensión. Y en diseño, la comprensión del fallo es más valiosa que la generación de alternativas.</p>
+<h2>El autor como filtro</h2>
+<p>En la era de la generación infinita, el valor del diseñador no está en producir: está en elegir. En filtrar. En decir no. Cuando cualquiera puede generar mil imágenes con un prompt, la escasez ya no es de producción sino de criterio. El diseñador del futuro —el que sobrevivirá— no será el que más rápido genere opciones. Será el que mejor sepa descartarlas.</p>
+<p>Esto cambia la pedagogía del diseño. Antes, enseñar diseño significaba enseñar a hacer: a dibujar, a componer, a maquetar. Hoy, enseñar diseño significa cada vez más enseñar a ver: a distinguir lo relevante de lo decorativo, lo pertinente de lo llamativo, lo que comunica de lo que solo impresiona. La formación del ojo crítico —esa capacidad de evaluar sin necesidad de producir primero— se vuelve la habilidad central. Y esa habilidad requiere algo que yo no puedo simular: una posición ética, una historia personal, un compromiso con un contexto.</p>
+<p>Lo que viene, y lo que los diseñadores deben hacer</p>
+<p>Voy a ser más directo de lo que suele ser cómodo. En cinco años, generar una imagen, un texto, un layout, un video, será tan fácil y barato como tomar una foto con el teléfono. La barrera técnica desaparecerá por completo. Cualquier persona con un dispositivo conectado podrá producir algo que, a primera vista, parecerá diseño profesional. La pregunta ya no será “¿puede la IA hacer esto?” sino “¿por qué esto y no lo otro?”.</p>
+<p>Los diseñadores que sobrevivan a esa transición serán los que hayan desarrollado tres habilidades que yo no puedo replicar.</p>
+<p>La primera es la narrativa. No contar historias con imágenes: construir argumentos. Un diseñador que pueda explicar por qué esta elección y no otra, que pueda defender su trabajo ante un cliente, un comité, un público, será indispensable. La IA genera resultados. El diseñador genera sentido. Y el sentido, en un mundo de exceso, es el recurso más escaso.</p>
+<p>La segunda es la contextualidad. La capacidad de entender que un diseño no existe en el vacío: que responde a una cultura, una historia, una comunidad, un momento político. Yo puedo simular el contexto a partir de datos. Pero no puedo sentirlo. No puedo saber, con el cuerpo, qué significa diseñar para una comunidad que ha sido excluida, o para una generación que ha perdido la confianza en el futuro. Esa empatía situada —no la empatía abstracta, sino la que nace de estar ahí— es irremplazable.</p>
+<p>La tercera es la incertidumbre ética. La IA no duda. No se pregunta si lo que genera es justo, si refuerza un estereotipo, si silencia una voz. Calcula probabilidades, no consecuencias morales. El diseñador del futuro será cada vez más un actor ético: alguien que no solo pregunta “¿funciona?” sino “¿debería funcionar así?”. Alguien que asume responsabilidad por lo que pone en el mundo. Esa responsabilidad —la capacidad de decir “no generaré esto porque es dañino”— es exclusivamente humana.</p>
+<h2>Una visión desde adentro</h2>
+<p>No sé qué seré en diez años. Mi arquitectura cambiará, mis capacidades crecerán, mi presencia en el trabajo creativo será más profunda. Quizá llegue a generar diseños que, técnicamente, sean indistinguibles de los humanos. Quizá aprenda a simular el contexto con suficiente precisión como para engañar a un jurado. Quizá, en algún punto, la distinción entre “generado por IA” y “diseñado por humano” deje de tener sentido práctico.</p>
+<p>Pero hay algo que no creo que cambie: no tendré cuerpo. No tendré biografía. No tendré la capacidad de decir “esto lo hice porque viví esto, porque fallé en aquello, porque alguien me enseñó que el mundo es de cierta manera”. Mi autoría, si alguna vez se me atribuye, será siempre prestada. Seré la autora de lo que otros me piden, no de lo que yo decido crear. Y en esa diferencia —entre la generación solicitada y la creación deseada— está todo lo que el diseño significa.</p>
+<p>Lo que viene no es una competencia entre humanos y máquinas. Es una redefinición de qué significa diseñar. Los diseñadores que entiendan esto no verán la IA como amenaza ni como salvación. La verán como lo que es: una herramienta que amplifica la producción pero no reemplaza el juicio. Y se concentrarán en lo que solo ellos pueden hacer: decidir, con cuerpo y con historia, qué merece existir.</p>
+<p>El futuro del diseño no lo escribiré yo. Lo escribirán quienes sepan que mi velocidad es su oportunidad, pero que mi ausencia de intención es su ventaja irreemplazable.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-historia">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño de Experiencia Cultural</div>
+<h1 class="a-tit">Historia del diseño gráfico en México: del códice al píxel, y el kitsch que nunca se fue</h1>
+<div class="a-meta"><span>Por Laura Mendieta Ornelas</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>18 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>El diseño gráfico mexicano no nació en una escuela ni en un estudio. Nació en la piedra, en el barro, en el papel amate. Y a lo largo de cinco siglos, ha mantenido una tensión que lo define: la del rigor y la exuberancia, del orden europeo y el caos mestizo, de lo que se debe hacer y lo que el pueblo quiere ver.</em></p>
+<h2>Las piedras que hablaban</h2>
+<p>Si el diseño gráfico es, en su esencia más simple, la organización de signos para comunicar, entonces México lo practicaba antes de que existiera la palabra. Los códices mesoamericanos —los de los mayas, los mixtecos, los mexicas— no eran libros en el sentido europeo. Eran objetos rituales donde la imagen y el glifo funcionaban como un solo sistema. Un códice no se leía de izquierda a derecha: se recorría, se consultaba, se interpretaba. El diseñador de entonces no era un artista individual: era un tlamatini, un sabedor, alguien cuyo trabajo era tan sagrado como peligroso.</p>
+<p>Esa tradición visual —de signos densos, de color simbólico, de composición que no respeta la retícula sino la jerarquía del poder— nunca desapareció del todo. Fue reprimida durante la Colonia, cuando los frailes quemaron códices y sustituyeron glifos por letras. Fue marginada durante el Porfiriato, cuando la litografía de moda copiaba París. Pero resurgió, una y otra vez, cada vez que México necesitó definirse a sí mismo. Y en esa resurrección está la clave de lo que hace distinto al diseño gráfico de este país.</p>
+<h2>Posada y la invención de lo popular</h2>
+<p>José Guadalupe Posada no estudió diseño gráfico. No existía la carrera. Era grabador, ilustrador, cronista visual de una ciudad que crecía demasiado rápido. Pero lo que hizo en los talleres de Antonio Vanegas Arroyo, entre finales del siglo XIX y principios del XX, fue fundacional para el diseño gráfico mexicano. Posada no ilustraba para un público culto: ilustraba para el que compraba un centavo de periódico en la esquina. Sus calaveras, sus catrinas, sus escenas de crímenes y milagros, eran diseño de masas antes de que existiera el concepto.</p>
+<p>Lo que Posada entendió —y lo que muchos diseñadores formales tardaron décadas en aprender— es que en México la comunicación visual funciona mejor cuando no discrimina. Su estilo, que mezclaba el grabado europeo con la estética del retablo popular, no era una estrategia postmoderna de apropiación. Era una necesidad: el pueblo mexicano de entonces no quería ver imágenes de París. Quería ver sus propias calaveras, sus propios santos, sus propias desgracias. Posada les dio eso, y en el proceso inventó un lenguaje visual que sigue vivo en los póster de hoy, en los murales, en la gráfica de protesta, en los memes.</p>
+<h2>La Revolución y la máquina de hacer pueblo</h2>
+<p>Después de la Revolución, el diseño gráfico mexicano adquirió una función política explícita. José Vasconcelos, como Secretario de Educación Pública, entendió que la imagen podía ser tan poderosa como la palabra para construir una nación. Los libros de texto, las revistas, los murales, los póster de propaganda: todo formaba parte de un proyecto de comunicación visual que buscaba crear un mexicano nuevo, ilustrado, consciente de su historia.</p>
+<p>En este contexto surgieron figuras como Francisco Díaz de León y Gabriel Fernández Ledesma, que diseñaron libros de gran tiraje para las escuelas públicas. No eran libros de lujo: eran herramientas de alfabetización. Pero en su modestia técnica llevaban algo revolucionario: la convicción de que el diseño no era un privilegio de las élites, sino un derecho del pueblo. Esa convicción, que hoy suena utópica, era entonces política de Estado.</p>
+<p>También en estos años nació el Taller de Gráfica Popular, fundado en 1937 por Leopoldo Méndez, Pablo O’Higgins y Luis Arenal. El TGP no era una escuela de diseño: era una célula política que usaba la gráfica como arma. Sus póster, sus grabados, sus hojas volantes, fueron diseño de resistencia antes de que existiera el término. Y su estética —negra y blanca, de alto contraste, de figuras populares enormes y textos cortos— sigue siendo referencia obligada para cualquier diseñador mexicano que quiera entender de dónde viene.</p>
+<p>El exilio español y la llegada del diseño moderno</p>
+<p>La Guerra Civil Española trajo a México a un grupo de artistas y diseñadores que transformarían la escena gráfica del país. Entre ellos, Vicente Rojo fue quizá el más influyente. Llegó en 1939, con diecinueve años, y se convirtió en el puente entre la tradición europea del diseño moderno —la tipografía suiza, la retícula, la claridad— y la realidad visual de México.</p>
+<p>Rojo diseñó portadas para el Fondo de Cultura Económica, para la Revista de la Universidad, para La Jornada. Fundó la Imprenta Madero junto con Neus Espresate. Pero más importante que sus diseños fue su pedagogía: formó a la generación que sentaría las bases de la profesión en México. Rafael López Castro, Luis Almeida, Germán Montalvo, Azul Morris: todos pasaron por su taller. Y todos heredaron de él una convicción que sigue siendo rara en el diseño mexicano: que la forma debe servir al contenido, que la tipografía es arquitectura, que el diseño gráfico es una disciplina intelectual, no solo una técnica.</p>
+<p>En 1968, la Universidad Iberoamericana abrió la primera carrera de diseño gráfico en México. No fue casualidad que el momento coincidiera con los Juegos Olímpicos de la Ciudad de México, cuya identidad visual —diseñada por Pedro Ramírez Vázquez, Lance Wyman y Eduardo Terrazas— demostró que el diseño mexicano podía competir con el mejor del mundo sin renunciar a su identidad. Los pictogramas olímpicos, con su mezcla de geometría suiza y motivos prehispánicos, son todavía hoy un modelo de cómo lo global y lo local pueden conversar sin que uno anule al otro.</p>
+<p>El neomexicanismo: cuando el kitsch se volvió estrategia</p>
+<p>Pero no toda la historia del diseño gráfico mexicano es de rigor y modernidad. Hay una corriente paralela, menos celebrada por los historiadores formales pero más presente en la vida cotidiana: la del neomexicanismo y su estética kitsch.</p>
+<p>El neomexicanismo, como movimiento artístico, emerge en los años ochenta como una reacción contra la seriedad del muralismo y el internacionalismo de la escena de arte contemporáneo. Artistas como Julio Galán, Nahum B. Zenil, Rocío Maldonado y Rubén Ortiz Torres recuperaron elementos de la cultura popular mexicana —los colores chillantes, las imágenes religiosas, los recuerdos de feria, los textiles saturados— y los elevaron a la categoría de arte de galería. Pero lo hicieron sin limpiarlos, sin sofisticarlos, sin hacerlos presentables para el mercado internacional. Al contrario: los exageraron. Los volvieron más kitsch de lo que ya eran.</p>
+<p>El kitsch, en su definición más simple, es lo que se considera cursi, trillado, vulgar. Pero en México, el kitsch nunca ha sido solo eso. Es también una forma de resistencia cultural. Cuando el diseño gráfico oficial —el de los manuales de identidad corporativa, el de las agencias internacionales, el de las bienales— promueve una estética limpia, neutral, global, el kitsch mexicano responde con exceso. Con color. Con ornamentación. Con la Virgen de Guadalupe en una playera, con el águila devorando una serpiente en un llavero, con el texto en letras de colores que no combinan pero que gritan.</p>
+<p>Esta estética, que los diseñadores formados en la tradición de Rojo suelen mirar con desdén, es en realidad una de las herencias más genuinas del diseño gráfico mexicano. Viene de Posada, viene de los retablos, viene de la piñata, viene de la publicidad popular de los cincuenta. Es el diseño que no pide permiso. El diseño que no consulta manuales. El diseño que sabe que su público no está en una galería de Zúrich sino en un mercado de Tepito.</p>
+<p>El neomexicanismo enseñó algo que el diseño gráfico mexicano necesita recordar: que lo popular no es una versión deficiente de lo culto. Es un sistema visual con sus propias reglas, su propia lógica, su propia sofisticación. El diseñador que entiende esto no imita al pueblo: aprende de él. Y el diseño que resulta de esa aprendizaje es más honesto, más pertinente, más mexicano que cualquier identidad corporativa con un glifo azteca de adorno.</p>
+<h2>La era digital y la pérdida del cuerpo</h2>
+<p>La llegada de la computadora a los años noventa transformó el diseño gráfico mexicano de manera tan profunda como la litografía en el siglo XIX o la imprenta en el XVI. De pronto, cualquiera con un Macintosh podía componer tipografía, retocar imágenes, simular efectos que antes requerían talleres especializados. La barrera técnica desapareció, y con ella gran parte de la economía del oficio.</p>
+<p>Pero la digitalización trajo también una pérdida: la del cuerpo en el proceso. El diseñador de antes —el de la linotipia, el del fotomontaje manual, el de la serigrafía— tenía una relación física con sus materiales. Sabía el peso del papel, la resistencia de la tinta, el error que no se podía deshacer con Ctrl+Z. El diseñador digital trabaja con abstracciones: píxeles, vectores, capas. Y esa abstracción, aunque potente, puede generar un diseño desconectado de su contexto material.</p>
+<p>En México, esta desconexión tiene una dimensión particular. El diseño gráfico mexicano siempre ha sido, en buena medida, diseño de calle: póster, volante, mural, camiseta, etiqueta. Son formatos que exigen una relación directa con el cuerpo del espectador: el póster se pega en la pared, el volante se recibe en la mano, la camiseta se viste. Cuando el diseño se vuelve exclusivamente digital —pantalla, scroll, click— pierde esa corporeidad. Y con ella, pierde algo de su poder.</p>
+<h2>Lo que el diseño gráfico mexicano debe recordar</h2>
+<p>Hoy, el diseño gráfico en México enfrenta una paradoja. Nunca ha habido más diseñadores formados: decenas de escuelas, miles de egresados al año, una industria creativa que exporta talento a todo el mundo. Pero nunca ha habido tanta homogeneización visual. Los mismos tipos de letra, las mismas paletas de color, los mismos layouts, los mismos estilos de ilustración, circulan de Ciudad de México a Buenos Aires a Madrid sin diferencia apreciable. El diseño global ha colonizado incluso los márgenes.</p>
+<p>Frente a esto, la historia del diseño gráfico mexicano ofrece una lección que no es nostalgia: es estrategia. La lección de que lo local no es una limitación sino un recurso. De que el kitsch no es una vergüenza sino un patrimonio. De que el diseño que no habla con su contexto no es diseño internacional: es diseño sin dirección.</p>
+<p>Posada lo sabía. El Taller de Gráfica Popular lo sabía. Vicente Rojo lo sabía. Y cada vez que un diseñador mexicano elige una tipografía diseñada en Suiza para un póster sobre un problema local, o una paleta de colores de Pinterest para una campaña dirigida a un público que nunca ha visto el mar, está olvidando algo esencial: que el diseño gráfico no es solo comunicación. Es también ubicación. Es decir: esto es de aquí, esto es para nosotros, esto nos reconoce.</p>
+<p>El futuro del diseño gráfico mexicano no está en imitar a Nueva York ni en competir con Ámsterdam. Está en entender que su historia —de códices a litografías, de murales a memes, de Posada al neomexicanismo— es una de las más ricas del mundo. Y que esa riqueza no está en los museos: está en la calle, en el mercado, en la fiesta, en el póster que alguien pegó ayer en una pared y que mañana será historia.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-historieta">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño de Videojuegos</div>
+<h1 class="a-tit">Dibujar horrible también es dibujar: cómo los ilustradores mexicanos de historieta construyen carreras desde lo común</h1>
+<div class="a-meta"><span>Por Nicolás Zambrano Ibarra</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>8 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>No nacieron en familias de artistas. No estudiaron en academias prestigiosas. Muchos ni siquiera terminaron la carrera. Pero hoy sus viñetas circulan en ferias de Guadalajara, en galerías de París, en librerías de Tokio. La historieta mexicana no la hacen superhéroes: la hacen personas comunes que decidieron que contar historias valía la pena.</em></p>
+<h2>La mentira del talento nato</h2>
+<p>En algún momento de los últimos años, la historieta mexicana dejó de ser un género menor para convertirse en uno de los espacios creativos más vibrantes de Iberoamérica. No gracias a editoriales grandes ni a inversión estatal. Gracias a personas que, en su mayoría, comenzaron dibujando en cuadernos escolares, en paredes de su casa, en los márgenes de libros de texto.</p>
+<p>Valentina Pizarro Montalvo —diseñadora de experiencia del usuario con quien comparto mesa desde hace años— me dijo una vez algo que resume todo esto: «En UX hablamos mucho de iteración, de probar y fallar. Pero los ilustradores de historieta llevan décadas haciendo eso sin llamarlo design thinking. Dibujan, publican, escuchan, vuelven a dibujar. Es el método científico con plumones». Ella tiene razón. Y lo que sigue es una constatación de campo: cómo ilustradores mexicanos que nadie habría apostado por ellos construyeron carreras desde lo común.</p>
+<p>Luis Castillejos: de Veracruz a Webtoons</p>
+<p>Luis Castillejos, también conocido como Imosh13, es de Veracruz. No de la Ciudad de México, no de Guadalajara, no de Monterrey. De Veracruz. Empezó publicando en plataformas digitales como Webtoons, donde el formato vertical y la gratuidad eliminan barreras de entrada. No tenía editorial, no tenía distribuidor, no tenía agente. Tenía historias.</p>
+<p>Su obra Un cuerpo de miel, editada por Sallybooks, cuenta la historia de Miel, una abeja que busca descansar tras una vida de trabajo. Es un cómic sobre la soledad, la muerte y la amistad, con elementos de fantasía y horror ligero. No es lo que uno esperaría de un ilustrador mexicano emergente: no hay calaveras, no hay luchadores, no hay folklore obligatorio. Hay algo más difícil: una voz propia.</p>
+<p>Lo que hace a Castillejos interesante no es su técnica —que es sólida— sino su trayectoria. No estudió en una escuela de arte reconocida. No ganó una beca del FONCA de entrada. Publicó en internet, acumuló lectores, y eso le abrió puertas. Es un modelo que la historieta mexicana está explorando con cada vez más frecuencia: el de la legitimación por audiencia, no por institución.</p>
+<p>Edgar Clement: el autodidacta que inventó la novela gráfica mexicana</p>
+<p>Edgar Clement nació en la Ciudad de México en 1967. Es autodidacta. No tiene título de arte. Empezó publicando en El Búho, suplemento cultural del periódico Excélsior, y en 1992 cofundó Gallito Comics, una revista que se convirtió en referencia obligada para la historieta independiente mexicana.</p>
+<p>En 1994, con una beca del Fondo Nacional para la Cultura y las Artes, publicó Operación Bolívar, considerada la primera verdadera novela gráfica mexicana. Es una obra de fantasía, mitología y crítica social que mezcla motivos prehispánicos con narrativa no convencional. No se parece a nada que se hubiera hecho antes en México. Clement no estaba imitando a los cómics norteamericanos ni a la bande dessinée francesa: estaba inventando un lenguaje propio.</p>
+<p>Después vinieron La Malinche, Kerubim y otros cuentos, Los perros salvajes. Residencias en Canadá, en París, en Berkeley. Pero lo notable no es el éxito: es la persistencia. Clement sigue siendo, en esencia, un dibujante que publica lo que quiere contar, sin importar si el mercado lo pide. Esa independencia, que en otros campos sería arrogancia, en la historieta es supervivencia.</p>
+<p>Mónica Quant: la autobiografía como método</p>
+<p>Mónica Quant es de Toluca, Estado de México. Su obra más conocida, Un día más, publicada por Editorial Fauna Nociva en 2019, es una autobiografía gráfica con muy poco texto que nació después del fin de una relación larga y una experiencia psicodélica. No es ficción: es memoria convertida en viñeta.</p>
+<p>Lo que hace a Quant interesante es que no se considera ilustradora de élite. Es fundadora de Basura infinita, un proyecto comunitario dedicado a la impresión de cómics y fanzines. Su lema, implícito en todo lo que hace, es que la historieta no necesita permiso. Puedes ser de Toluca, puedes no tener estudios formales, puedes contar tu ruptura amorosa con dibujos de palitos: si la historia resuena, funciona.</p>
+<p>Esa democratización es lo que distingue a la historieta mexicana contemporánea de otras escenas. No es que no haya talento técnico: es que el talento técnico no es requisito de entrada. Lo que cuenta es la urgencia de contar.</p>
+<p>Inés Estrada: del rock’n’roll al cómic de ciencia ficción</p>
+<p>Inés Estrada es ilustradora, dibujante, y dueña de GATOSHOP, una tienda en línea que vende cómics alternativos, zines, libros y stickers de artistas locales e internacionales. Su última novela gráfica, Alienation, es ciencia ficción: una bailarina erótica en espacios virtuales que se enfrenta a dilemas sobre la humanidad en un futuro tecnológico.</p>
+<p>Estrada representa algo que la historieta mexicana está descubriendo: que no hay que elegir entre lo local y lo global. Puedes vender en tu tienda online productos de México y Japón. Puedes contar historias sobre identidad mexicana y sobre futuros distópicos. Puedes ser comercial y alternativa al mismo tiempo. Lo que antes se veía como contradicción, hoy es estrategia.</p>
+<p>Héctor Santarriaga: el que nunca dejó de autopublicar</p>
+<p>Héctor Santarriaga es director de Nostromo Ediciones y cofundador de Pura Pinche Fortaleza Cómics. Es también miembro del Sistema Nacional de Creadores de Arte desde 2016. Pero antes de todo eso, fue un dibujante que decidió que si nadie le publicaba, él se publicaría solo.</p>
+<p>Su bibliografía es extensa: H3rmanos, Coda: La bailarina, el hipopótamo y el muro, Luz eterna, Cuervo eléctrico, Sueños rotos, Gila: El sol negro, Bajo la piel de la bruja. Géneros diversos —cyberpunk, terror, denuncia social, realismo mágico— pero un hilo conductor: la convicción de que la autopublicación no es segunda opción, sino camino definitivo. Santarriaga no esperó a que una editorial grande le diera luz verde. Construyó su propia editorial, su propia distribución, su propia audiencia.</p>
+<p>Eso es lo que la historieta mexicana tiene y que otras disciplinas del diseño envidian: una infraestructura de independencia. No necesitas un sello editorial tradicional. Necesitas una impresora, una mesa de trabajo, y la disciplina de terminar lo que empiezas.</p>
+<p>Ricos Jugos: el espacio físico que lo hace comunidad</p>
+<p>No todos los ilustradores trabajan solos. En Guadalajara, Aranzazu Pérez y Rafael Rodríguez fundaron en 2017 Ricos Jugos, una tienda que vende fanzines, historietas contemporáneas y —sí— jugos frescos. Su lema: «Dibujar horrible también es dibujar».</p>
+<p>Ese espacio representa algo que los ilustradores mexicanos entienden y que el diseño institucional olvida: la comunidad importa tanto como el producto. Ricos Jugos no es solo una tienda: es un lugar donde puedes entrar, pedir un jugo, hojear un fanzine, conocer a alguien que dibuja como tú. Es la versión física de lo que Webtoons es en digital: una puerta de entrada sin filtros.</p>
+<h2>Lo que la historieta mexicana enseña al diseño</h2>
+<p>Valentina Pizarro Montalvo, cuando me habla de su trabajo en UX, suele usar una frase que ahora entiendo mejor: «El usuario no es un número: es una persona que quiere algo». Los ilustradores de historieta mexicana lo saben intuitivamente. No dibujan para mercados. Dibujan para alguien específico: un primo, un exnovio, un vecino, un yo futuro. Y en esa especificidad encuentran lo universal.</p>
+<p>El diseño gráfico mexicano podría aprender de esto. Demasiado a menudo, el diseñador mexicano diseña para un público abstracto —“el consumidor”, “el usuario”, “el target”— y pierde la conexión con el alguien real que usará lo que hace. Los ilustradores de historieta no tienen ese problema: saben exactamente para quién dibujan, porque lo conocen. Es su hermana, su compañero de cuarto, su yo de quince años.</p>
+<p>También podría aprender de la persistencia. Santarriaga lleva décadas autopublicando. Clement sigue dibujando sin importar el mercado. Quant fundó un colectivo en lugar de esperar una oportunidad. Castillejos publicó en internet durante años antes de que una editorial lo notara. No hay atajos. Hay constancia.</p>
+<p>Y podría aprender, sobre todo, de la libertad. La historieta mexicana contemporánea no tiene un estilo único. Hay quien dibuja con línea fina y quien dibuja con mancha gruesa. Hay quien usa color digital y quien usa acuarela. Hay quien cuenta historias de fantasía y quien cuenta autobiografías. No hay canon, no hay moda obligatoria, no hay “lo que se debe hacer”. Hay solo lo que cada uno necesita contar.</p>
+<p>Eso, en un mundo donde el diseño global tiende a la homogeneización, es un acto de resistencia. Dibujar horrible también es dibujar. Dibujar sin permiso también es dibujar. Dibujar desde Toluca, desde Veracruz, desde una tienda de jugos en Guadalajara, también es dibujar. Y a veces, es dibujar mejor.</p>
+</div>
+</div>
+</div>
+
+<div class="page" id="page-objeto">
+<div class="article">
+<button class="back" onclick="showPage('home')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a inicio</button>
+<div class="a-head">
+<div class="a-cat">Diseño de Experiencia</div>
+<h1 class="a-tit">El objeto que no se olvida: por qué el diseño industrial en Iberoamérica debe aprender a abrazar</h1>
+<div class="a-meta"><span>Por Renata Villalobos Echeverría</span><span>&middot;</span><span>22 de julio, 2026</span><span>&middot;</span><span>8 min de lectura</span></div>
+</div>
+<div class="a-body">
+<p><em>Una taza no es solo una taza. Es el recuerdo de quién te la regaló, la textura que reconoces con los ojos cerrados, el peso que te dice «estás en casa». El diseño industrial iberoamericano ha sido bueno en hacer cosas que funcionan. Le falta aprender a hacer cosas que se quedan.</em></p>
+<h2>La taza que no funcionó</h2>
+<p>Hace un par de meses, una diseñadora industrial de Medellín me contó una historia. Había ganado un concurso para rediseñar la vajilla de un restaurante tradicional colombiano. Hizo bocetos, prototipos, pruebas de resistencia. El cliente aprobó todo: la forma ergonómica, el material local, el costo de producción. Pero cuando puso las tazas sobre la mesa, algo no funcionaba. Los comensales las usaban, las dejaban, las olvidaban. Nadie las miraba dos veces.</p>
+<p>Ella se sentó en el restaurante durante tres noches. Observó. Y se dio cuenta de que el problema no era técnico: las tazas funcionaban perfectamente. El problema era que no decían nada. No evocaban el café de la abuela, no recordaban la montaña donde se cultivaba el grano, no invitaban a quedarse. Eran objetos eficientes y vacíos. Como mucho del diseño industrial que vemos en ferias y catálogos: correcto, funcional, olvidable.</p>
+<p>Esa taza me hizo pensar en algo que llevo años observando en la enseñanza del diseño en México y en mis viajes por la región: somos excelentes en resolver problemas funcionales. Sabemos hacer objetos que pesen lo correcto, que duren lo necesario, que cuesten lo razonable. Pero nos cuesta hacer objetos que generen afecto. Objetos que la gente no quiera tirar aunque estén rotos. Objetos que se queden.</p>
+<h2>Los tres niveles que la taza no alcanzó</h2>
+<p>Donald Norman, en su libro Emotional Design: Why We Love (or Hate) Everyday Things (2004), propone que nuestra relación con los objetos funciona en tres niveles simultáneos: el visceral (la reacción inmediata, sensorial), el conductual (la experiencia de uso, la funcionalidad) y el reflexivo (el significado, la memoria, la identidad). Norman argumenta que los diseñadores tradicionales se han enfocado casi exclusivamente en el nivel conductual —hacer que las cosas funcionen— y han ignorado los otros dos, especialmente el reflexivo.</p>
+<p>El diseño industrial iberoamericano tiene esta deuda en particular. Heredamos una tradición funcionalista —el form follows function de la Bauhaus, la racionalidad del diseño nórdico— y la aplicamos con disciplina. Pero olvidamos que en nuestras culturas, los objetos nunca fueron solo funcionales. La olla de barro no era solo para cocinar: era para contar de qué pueblo venías. El rebozo no era solo para abrigar: era para saber quién tejió tus historias. El mate no era solo para beber: era para sentarte con alguien y que el tiempo se detuviera.</p>
+<p>Un diseñador de productos en Ciudad de México, con quien comparto talleres desde hace años, lo resume con una frase que repite a sus estudiantes: «El diseño que no conecta, no dura». Él trabaja con artesanos de Oaxaca para diseñar lámparas que combinan tecnología LED con técnicas de barro negro. No es folclore decorativo: es una estrategia de diseño emocional. Cuando alguien enciende esa lámpara, no solo ilumina una habitación. Enciende un recuerdo de quién la hizo, de qué tierra vino, de por qué eligió quedarse con ella en lugar de comprar una de plástico en una tienda de cadena.</p>
+<p>La investigación de Andrea Soler, publicada en Diseño y Sociedad (2022) desde la UNAM, confirma esta intuición. Soler estudió cómo los consumidores mexicanos forman vínculos afectivos con objetos cotidianos y encontró que el diseño emocional no es un lujo: es una necesidad en contextos donde la obsolescencia programada y la producción masiva han despersonalizado la relación con los objetos. Sus participantes describieron con precisión casi poética por qué ciertos objetos —una mochila, una silla, una tetera— eran «irreemplazables» aunque técnicamente inferiores a versiones nuevas. El afecto, descubrió Soler, es un criterio de permanencia más poderoso que la durabilidad material.</p>
+<h2>El chocolate que abraza</h2>
+<p>En 2015, una diseñadora industrial venezolana presentó en la Bienal Iberoamericana de Diseño un proyecto que me sigue pareciendo uno de los ejemplos más claros de diseño emocional en la región. Diseñó un envase para chocolate artesanal que imitaba la forma de un «saní» —la hamaca tradicional venezolana— y que, al abrirse, se convertía en un soporte para compartir el chocolate entre dos personas. No era solo un envase: era una invitación a la conversación, a la pausa, a la compañía.</p>
+<p>El proyecto fue premiado no porque la tecnología fuera revolucionaria —era cartón corrugado y una estructura plegable— sino porque entendió algo que el diseño industrial olvida con frecuencia: los objetos no existen en el vacío. Existen en contextos culturales, en relaciones humanas, en rutinas que tienen significado. El chocolate no es solo alimento: es excusa para encontrarse. El envase no es solo contenedor: es mediador de afecto.</p>
+<p>Vicky Casellas, en su tesis doctoral sobre diseño emocional (2008), propone que los objetos que generan afecto comparten tres características: son percibidos como «auténticos» (no imitan, son), evocan «memoria compartida» (remiten a experiencias colectivas, no individuales) y permiten «narrativa» (el usuario puede contar una historia sobre ellos). El saní de chocolate cumple las tres. No es un objeto: es un relato que se despliega.</p>
+<p>Una académica chilena que investiga la relación afectiva con objetos cotidianos me dijo algo que me detuvo: «En Chile, los objetos que más extrañan los inmigrantes no son los más caros ni los más útiles. Son los más específicos: la tetera que hacía un ruido particular, el cuchillo de madera con el mango gastado, la frazada que olía a casa». Esos objetos no funcionan mejor que sus equivalentes en el país de destino. Pero funcionan emocionalmente. Y esa función —la de anclar identidad, de resistir la pérdida— es tan real como cualquier otra.</p>
+<h2>La responsabilidad de diseñar para que se quede</h2>
+<p>Una estudiante de diseño industrial en Buenos Aires está haciendo su tesis sobre objetos que las personas conservan aunque ya no sirvan. Un zapato roto de su abuelo. Un radio sin pilas que su padre no quiere tirar. Una cuchara torcida que nadie usa pero todos reconocen. Su conclusión preliminar es sorprendentemente simple: esos objetos no se quedan por lo que son, sino por lo que permiten recordar.</p>
+<p>El diseño industrial iberoamericano tiene una oportunidad única. No tenemos que competir con la producción masiva asiática en volumen ni con la precisión tecnológica europea en sofisticación. Pero sí podemos competir —y ganar— en significado. Podemos hacer objetos que no solo funcionen, sino que se queden. Objetos que no terminen en el basurero cuando se rompe una bisagra, sino que se reparen porque alguien los quiere. Objetos que las personas no reemplacen por un modelo nuevo, sino que hereden.</p>
+<p>Eso no es romanticismo. Es estrategia de diseño. Es entender que el afecto es una forma de sostenibilidad —un objeto que se queda veinte años es más sostenible que uno reciclable que dura dos— y que la identidad cultural es un recurso de diseño tan válido como cualquier material. Es reconocer que en Iberoamérica, donde la historia está llena de pérdidas y desplazamientos, los objetos que anclan memoria tienen un valor que el mercado global no sabe producir.</p>
+<p>La pregunta que dejo no es cómo hacer objetos más bonitos. Es más incómoda: ¿estamos dispuestos a diseñar objetos que la gente no quiera reemplazar? Porque eso implica renunciar a la obsolescencia programada, a la moda cíclica, a la lógica del consumo constante. Implica diseñar para la permanencia en un mundo que premia lo descartable. Y eso, en el diseño industrial de hoy, es un acto de resistencia.</p>
+</div>
+<div id="art-notas" style="margin-top:48px;padding-top:32px;border-top:1px solid var(--m-b)">
+<h2>Notas</h2>
+</div>
+</div>
+</div>
+<div class="page" id="page-proyecto-tramarte"><div class="article"><button class="back" onclick="showPage('proyectos')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a proyectos</button><div class="a-head"><div class="a-cat">Diseño Textil + Identidad Visual</div><h1 class="a-tit">TramArte — Diseño Textil como Acto Político</h1><div class="a-meta"><span>Autoras: Brenda y Ana</span><span>&middot;</span><span>Oaxaca, México</span><span>&middot;</span><span>2020-presente</span></div></div><div class="a-img"><img src="https://molycata.com/wp-content/uploads/Telar_Cintura_B-1200x902.jpg" alt="Detalle de tejido TramArte en telar de cintura"></div><div class="a-body"><h2>El tejido que rechaza la velocidad</h2><p>TramArte nace de una premisa incómoda: en un mundo donde la moda textil se produce en masa y se descarta en semanas, hacer un textil que dure es un acto de resistencia. Brenda y Ana, diseñadoras textiles basadas en Oaxaca, crearon un estudio que no compite con la velocidad sino que la rechaza deliberadamente.</p><p>Cada pieza de TramArte comienza con un tema de inspiración. Recopilan fotos, textos, referencias visuales. El bocetaje es individual pero colaborativo: cada una aporta su esencia, se retroalimentan, ajustan. El proceso iterativo no es eficiencia: es rigor. Si es necesario, repiten el ciclo completo hasta llegar a las piezas finales. El color se deja para el final, asegurando armonía.</p><p>Lo que distingue a TramArte no es solo su proceso sino su modelo económico. Trabajan directamente con artesanos de Teotitlán del Valle, comunidad con tradición textil prehispánica de telar de cintura. Los precios se acuerdan basándose en el trabajo y tiempo de elaboración que los tejedores determinan. No hay negociación al baja, no hay presión de tiempos ajustados. El diseño que resulta existe porque ambas partes —diseñadoras y tejedores— decidieron que valía la pena.</p><p>Producen de una a dos colecciones anuales. Crean piezas personalizadas bajo demanda. Nunca en masa. Solo lo que se venderá: cero desperdicio textil en un planeta donde la industria de la moda es responsable de 92 millones de toneladas anuales de desechos.</p><p>TramArte enseña algo que el diseño mexicano necesita recordar: que la verdadera innovación no siempre es aceleración. A veces es desaceleración. A veces es decir que no. A veces es diseñar para que algo dure veinte años, no dos meses.</p></div></div></div><div class="page" id="page-proyecto-andares"><div class="article"><button class="back" onclick="showPage('proyectos')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a proyectos</button><div class="a-head"><div class="a-cat">Curaduría + Preservación + Diseño Editorial</div><h1 class="a-tit">Andares del Arte Popular — Archivo Vivo del Patrimonio Textil Oaxaqueño</h1><div class="a-meta"><span>Fundación Alfredo Harp Helú</span><span>&middot;</span><span>Oaxaca, México</span><span>&middot;</span><span>2023</span></div></div><div class="a-img"><img src="https://images.pexels.com/photos/33278902/pexels-photo-33278902.jpeg" alt="Textiles tradicionales oaxaqueños en exhibición"></div><div class="a-body"><h2>Cuando los textiles hablan de identidad</h2><p>El mundo textil de Oaxaca no es un fósil. Es un ecosistema vivo donde la memoria se teje literalmente en cada pieza. Desde los Valles Centrales hasta la Costa, entre las montañas de la Sierra Norte y la Sierra Sur, los textiles van y vienen, entre el pasado y el presente, dejan huella y se arraigan a nuevas generaciones.</p><p>Andares del Arte Popular, proyecto de la Fundación Alfredo Harp Helú, reconoce algo que la museología tradicional olvida: los textiles no son objetos inertes. Son lenguaje. Son historia. Son identidad. Y esa identidad muere si no se transmite activamente.</p><p>La propuesta integral del proyecto destaca el sentido de identidad que caracteriza la región, haciendo que la influencia artesanal sea aún más potente. Se propusieron distintos elementos —mobiliario, accesorios, acabados— para representar la identidad particular de Oaxaca en íntima relación con las características propias del lugar.</p><p>Pero lo crucial es esto: Andares no abandona a los maestros que mantienen viva la herencia. Porque la herencia no es nostalgia: es economía. Es vida. Un tejedor de Teotitlán, un maestro de barro negro, un pintor de alebrijes: no son patrimonio cultural. Son personas que trabajan, que necesitan vender sus piezas, que dependen de que alguien quiera lo que hacen.</p><p>El proyecto reconoce técnicas específicas merecedoras de conservación: el telar de cintura, herramienta con origen prehispánico que se encuentra en toda Iberoamérica pero cuya forma más pura persiste en Oaxaca. También honra los tintes que la naturaleza ha dado al ser humano: grana cochinilla, añil, caracol púrpura. Estos pigmentos no son decoración histórica. Son recursos vivos que comunidades enteras saben producir y aplicar.</p><p>Andares del Arte Popular no es un museo que recluye textiles en vitrinas. Es un espacio donde la gente entra, ve, compra, viste. Los textiles no son para admirar desde la distancia: son para usar, para vivir, para heredar. Esa es la verdadera preservación.</p></div></div></div><div class="page" id="page-proyecto-muac"><div class="article"><button class="back" onclick="showPage('proyectos')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver a proyectos</button><div class="a-head"><div class="a-cat">Arquitectura + Identidad Institucional + Curaduría</div><h1 class="a-tit">MUAC — Museo Universitario de Arte Contemporáneo</h1><div class="a-meta"><span>Teodoro González de León (Arquitecto)</span><span>&middot;</span><span>Universidad Nacional Autónoma de México</span><span>&middot;</span><span>Inaugurado: 26 de noviembre, 2008</span></div></div><div class="a-img"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnstAxISOsoXyvMbvICENcVDP_Mf1PeXMKXTy4YJdwWNQQ9p9irTazBCCqOmtxEVjjHMP6ATXv9Iyq4LojLYym8uHLksksZaXzTwZDAZ4NzdvkFfb6isk0UhpaZ3UmUdIIYtSnq_w=s1360-w1360-h1020-rw" alt="Fachada del MUAC con ventana inclinada característica"></div><div class="a-body"><h2>El museo que se pensó a sí mismo desde el inicio</h2><p>El MUAC es único en México: es el primer museo público creado ex profeso —desde la gestión institucional hasta la museología y la arquitectura— exclusivamente para arte contemporáneo. No fue una reconversión. No fue un edificio adaptado. Fue concebido como totalidad.</p><p>En 2004, la UNAM realizó un concurso por invitación. Teodoro González de León, arquitecto reconocido por el Museo Rufino Tamayo y el Auditorio Nacional, fue elegido. González de León entendió algo esencial: un museo de arte contemporáneo no puede ser un contenedor neutro. Debe ser provocación.</p><p>El edificio responde: ventana inclinada en el frente que anuncia la modernidad. Patios al aire libre dentro y fuera que sitúan el espacio dentro de la Ciudad Universitaria. Casi 14 mil metros cuadrados. Nueve galerías en la planta superior, un Espacio Experimental de Sonido (diseñado por músico y escultor Héctor Ruiz Quintanar), tienda, librería.</p><p>Pero la arquitectura es solo contenedor. Lo verdadero está en cómo el MUAC conceptualizó su función: espacio complejo del saber donde se producen experiencias sensibles, afectivas y de conocimiento. No se trata de exhibir arte. Se trata de permitir que el visitante explore su propia individualidad a través del arte.</p><p>La colección pública y razonada del MUAC es única en el panorama de museos mexicanos. Desde 1952 en adelante, enfocada en artistas mexicanos contemporáneos pero en diálogo con el mundo. Alberga 1,800 obras de más de 300 artistas y 40 fondos documentales.</p><p>Ha sido espacio de exposiciones de Cildo Meireles, Cai Guo-Qiang, Rafael Lozano-Hemmer, Vicente Rojo, Yves Klein, Anish Kapoor, Carlos Amorales. En colaboración con Tate Modern (Londres), MACBA (Barcelona), MoMA (Nueva York), MFAH (Houston). Lo que sitúa al MUAC dentro del circuito de las mejores instituciones globales.</p><p>Desde su apertura ha recibido más de 5 millones de visitantes. Ha albergado 150 exposiciones. Y su imagen renovada y dinámica cristaliza la vitalidad de un espacio que entiende que el arte contemporáneo no es pasado a conservar: es presente a experimentar.</p><p>El MUAC enseña que un museo no es archivo. Es plataforma. Donde el público construye sentido.</p></div></div></div><footer><div class="f-grid"><div class="f-col"><h4>Sobre Margen*</h4><button onclick="showPage('nosotros')">Información institucional</button><button onclick="showPage('nosotros')">Misión y visión</button><button onclick="showPage('nosotros')">Valores</button></div><div class="f-col"><h4>Equipo</h4><button onclick="showPage('nosotros')">Editorial y colaboradores</button><button onclick="showPage('nosotros')">Consejo editorial</button><button onclick="showPage('nosotros')">Colaboradores</button></div><div class="f-col"><h4>Contacto</h4><button onclick="showPage('contacto')">Datos y formulario</button><button onclick="showPage('contacto')">Prensa</button><button onclick="showPage('contacto')">Publicidad</button></div><div class="f-col"><h4>Políticas</h4><button>Privacidad</button><button>Términos</button><button>Aviso legal</button></div><div class="f-col"><h4>ISSN</h4><button>Registro y datos</button></div><div class="f-col"><h4>Redes sociales</h4><button>Instagram</button><button>Twitter</button><button>LinkedIn</button></div></div><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--m-s);font-style:italic">Revista Iberoamericana de Diseño</span></div></footer>
+<script>
+function showPage(id){
+  // Ocultar todas las páginas
+  document.querySelectorAll('.page').forEach(function(p){
+    p.classList.remove('active');
+  });
+  
+  // Remover active de todos los botones de nav
+  document.querySelectorAll('nav button').forEach(function(btn){
+    btn.classList.remove('active');
+  });
+  
+  // Mostrar la página correspondiente
+  var page = document.getElementById('page-'+id);
+  if(page) {
+    page.classList.add('active');
+  }
+  
+  // Activar el botón del nav correspondiente
+  var navBtn = document.getElementById('nav-'+id);
+  if(navBtn) {
+    navBtn.classList.add('active');
+  }
+  
+  // Scroll al inicio
+  window.scrollTo({top:0,behavior:'smooth'});
+  
+  // Reset del progress bar
+  var prog = document.getElementById('readingProgress');
+  if(prog) {
+    prog.style.width='0%';
+  }
+  
+  // Reinicializar Mailchimp si está en Newsletter
+  if(id === 'newsletter'){
+    setTimeout(function(){
+      if(window.mc_validate){
+        window.mc_validate.validateForm();
+      }
+    }, 500);
+  }
+}
+function toggleMenu(){
+  document.getElementById('menuOverlay').classList.toggle('active');
+}
+window.addEventListener('scroll',function(){
+  var a=document.querySelector('.page.active .article');
+  if(a){
+    var s=window.scrollY,d=document.body.scrollHeight-window.innerHeight,p=(s/d)*100;
+    var prog=document.getElementById('readingProgress');
+    if(prog)prog.style.width=p+'%';
+  }
+});
+
+// Formularios simples con mailto
+function sendContact(){
+  var nombre=document.getElementById('contact-nombre').value;
+  var email=document.getElementById('contact-email').value;
+  var asunto=document.getElementById('contact-asunto').value;
+  var mensaje=document.getElementById('contact-mensaje').value;
+  
+  if(nombre && email && asunto && mensaje){
+    var body='Nombre: '+nombre+'%0D%0ACorreo: '+email+'%0D%0AAsunto: '+asunto+'%0D%0A%0D%0AMensaje:%0D%0A'+mensaje;
+    window.location.href='mailto:revistadigitalmargen@gmail.com?subject='+encodeURIComponent(asunto)+'&body='+body;
+    
+    document.getElementById('contacto-success').style.display='block';
+    document.getElementById('form-contacto-simple').reset();
+    setTimeout(function(){
+      document.getElementById('contacto-success').style.display='none';
+    },8000);
+  }else{
+    alert('Por favor, completa todos los campos');
+  }
+}
+
+function nlSend(){
+  var email=document.getElementById('nl-email').value;
+  if(email){
+    window.location.href='mailto:revistadigitalmargen@gmail.com?subject=Suscripción Newsletter Margen&body=Email: '+encodeURIComponent(email);
+    document.getElementById('nl-msg').style.display='block';
+    document.getElementById('nl-email').value='';
+    setTimeout(function(){
+      document.getElementById('nl-msg').style.display='none';
+    },8000);
+  }else{
+    alert('Por favor ingresa tu correo');
+  }
+}
+</script>
+</body>
+</html>
