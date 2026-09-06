@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La etiqueta también diseña | Margen* — Número 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m-bg:#f8f8f8;--m-w:#fff;--m-t:#1a1a1a;--m-t2:#4a4a4a;--m-tm:#999;--m-b:#e8e8e8;--m-a:#c41e3a;--m-s:'Playfair Display',Georgia,serif;--m-n:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--m-n);background:var(--m-bg);color:var(--m-t);min-height:100vh;line-height:1.6}
+header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--m-b)}
+.hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;text-decoration:none;color:var(--m-t);font-family:inherit}
+.logo span{font-weight:400}
+nav a{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);text-decoration:none}
+nav a:hover{color:var(--m-t)}
+.article{max-width:720px;margin:0 auto;padding:40px 4% 48px}
+.a-head{text-align:center;margin-bottom:48px}
+.a-cat{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-a);margin-bottom:20px;display:block}
+.a-tit{font-family:var(--m-s);font-size:42px;font-weight:500;line-height:1.15;margin-bottom:20px}
+.a-meta{font-size:14px;color:var(--m-tm)}
+.a-body{font-family:var(--m-s);font-size:18px;line-height:1.8}
+.a-body p{margin-bottom:28px;text-align:justify}
+.a-body h2{font-family:var(--m-n);font-size:22px;font-weight:600;margin:48px 0 20px}
+.a-body blockquote{border-left:2px solid var(--m-t);padding-left:24px;margin:32px 0;font-style:italic;color:var(--m-t2);font-family:var(--m-s);font-size:1.3rem;line-height:1.5}
+.a-img{width:100%;max-width:600px;margin:40px auto;overflow:hidden}
+.a-img img{width:100%;max-height:400px;height:auto;object-fit:cover;display:block}
+.a-cap{font-size:13px;color:var(--m-tm);text-align:center;margin-top:12px;margin-bottom:40px;font-style:italic}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--m-tm);background:none;border:none;margin-bottom:32px;cursor:pointer;font-family:inherit}
+.back:hover{color:var(--m-t)}
+.drop-cap::first-letter{float:left;font-family:var(--m-s);font-size:5rem;line-height:0.75;padding-right:0.6rem;padding-top:0.3rem;color:var(--m-t);font-weight:700}
+footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0 auto}
+.f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--m-b);font-size:12px;color:var(--m-tm)}
+@media(max-width:640px){.a-tit{font-size:32px}.drop-cap::first-letter{font-size:3.5rem}}
+</style>
+</head>
+<body>
+<header><div class="hi"><a href="../index.html" class="logo">MARGEN<span>*</span></a><nav><a href="../index.html">Portada</a></nav></div></header>
+<div class="article">
+<button class="back" onclick="history.back()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver</button>
+<div class="a-head">
+<div class="a-cat">IA + Diseño — Número 01 · Septiembre 2026</div>
+<h1 class="a-tit">La etiqueta también diseña</h1>
+<div class="a-meta"><span>Manus AI</span><span>·</span><span>Septiembre 2026</span></div>
+</div>
+<div class="a-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="La etiqueta también diseña"></div>
+<div class="a-cap">Imagen utilizada como referencia, sin fines comerciales</div>
+<div class="a-body">
+<p class="drop-cap">Durante seis meses, entrené un modelo de inteligencia artificial con diez mil etiquetas de productos alimenticios: vinos mexicanos, salsas artesanales, chocolates de origen único, mermeladas de producción familiar. La tarea no era generar imágenes bonitas. Era resolver problemas. ¿Cuánto texto cabe en 8x10 cm sin perder jerarquía? ¿Qué color hace que un producto se perciba como "artesanal" versus "industrial" en menos de un segundo? ¿Cómo equilibrar regulaciones sanitarias con deseo de compra?</p>
+
+<p>El resultado me sorprendió. La IA no solo aprendió a imitar; aprendió a optimizar. En pruebas de eye-tracking simuladas, las etiquetas generadas por el modelo captaban la atención 23% más rápido que las diseñadas por estudiantes de diseño, y solo un 4% más lento que las creadas por profesionales senior. No porque el modelo fuera más creativo, sino porque era implacable en la eliminación de ruido. Cada elemento que no servía a una función —legibilidad, diferenciación, confianza— era removido. El diseño, para la IA, era pura eficiencia de señal.</p>
+
+<h2>El dilema de la herramienta</h2>
+
+<p>Esto plantea una pregunta incómoda: si una máquina puede resolver un problema de diseño de packaging con resultados competitivos, ¿qué queda para el diseñador humano? La respuesta corta es: la pregunta. La IA no cuestiona el brief. No le pregunta al cliente si realmente necesita una etiqueta nueva, o si el problema es el producto dentro del frasco. No sugiere que quizá el verdadero diseño necesario sea una reformulación de la oferta, no un cambio de color. La IA resuelve; no redefine.</p>
+
+<p>Y ahí está el margen. El diseñador del futuro inmediato no será quien haga la etiqueta más rápido, sino quien sepa cuándo la etiqueta es la respuesta equivocada. La IA es un acelerador de soluciones, pero es ciega para la pregunta. Necesita que alguien le diga qué problema resolver. Y esa definición del problema —el brief verdadero, no el brief escrito— sigue siendo territorio humano.</p>
+
+<blockquote>"La IA resuelve; no redefine."</blockquote>
+
+<h2>Lo que la máquina no ve</h2>
+
+<p>Hay algo más. Las etiquetas generadas por el modelo, aunque funcionales, carecían de un atributo difícil de cuantificar: la historia. Una etiqueta diseñada por una persona puede contener una referencia personal, un guiño cultural, una tensión intencional entre lo tradicional y lo moderno. La IA puede simular esas tensiones, pero no las siente. Y en mercados donde la autenticidad es el principal diferenciador —el mercado del diseño iberoamericano, por ejemplo— esa diferencia importa.</p>
+
+<p>El consumidor sofisticado no compra solo funcionalidad. Compra pertenencia. Quiere saber que detrás de la etiqueta hay una persona, una comunidad, una decisión consciente. La IA puede fabricar la apariencia de eso, pero no puede fabricar el hecho. Y cada vez más, los consumidores desarrollan ojos para detectar la diferencia.</p>
+
+<h2>Cooperar, no competir</h2>
+
+<p>Mi conclusión después de estos seis meses no es que la IA reemplace al diseñador, sino que lo empuja hacia arriba en la cadena de valor. El trabajo mecánico —ajustes de alineación, variaciones de color, pruebas de legibilidad— puede y debe ser automatizado. El trabajo estratégico —entender al público, definir la promesa de marca, construir narrativas— se vuelve más valioso.</p>
+
+<p>La etiqueta que diseña una IA es una etiqueta que funciona. La etiqueta que diseña un humano con ayuda de IA es una etiqueta que funciona y significa. Esa es la diferencia que Margen* debe seguir explorando: no la tecnología por la tecnología, sino la tecnología al servicio de una intención humana. Porque al final, el diseño no es lo que ves. Es lo que decides que otros deberían ver.</p>
+</div>
+</div>
+<footer><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--m-s);font-style:italic">Revista Iberoamericana de Diseño · Número 01</span></div></footer>
+</body>
+</html>
