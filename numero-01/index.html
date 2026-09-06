@@ -11,16 +11,12 @@
 body{font-family:var(--m-n);background:var(--m-bg);color:var(--m-t);min-height:100vh}
 header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--m-b)}
 .hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;background:none;border:none;font-family:inherit;color:var(--m-t);text-decoration:none}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;text-decoration:none;color:var(--m-t);font-family:inherit}
 .logo span{font-weight:400}
-nav{display:flex;gap:32px}
-nav a{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);background:none;border:none;cursor:pointer;position:relative;font-family:inherit;text-decoration:none}
+nav a{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);text-decoration:none}
 nav a:hover{color:var(--m-t)}
-.actions{display:flex;gap:20px;align-items:center}
-.icon-btn{background:none;border:none;cursor:pointer;color:var(--m-t2);display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;font-family:inherit;text-decoration:none}
-.icon-btn:hover{color:var(--m-t)}
 .hero{max-width:1400px;margin:0 auto;padding:48px 4% 32px;text-align:center}
-.hero h1{font-family:var(--m-s);font-size:36px;font-weight:400;line-height:1.2;margin-bottom:12px;letter-spacing:-0.01em}
+.hero h1{font-family:var(--m-s);font-size:36px;font-weight:400;line-height:1.2;margin-bottom:12px}
 .hero p{font-size:14px;color:var(--m-tm);margin-bottom:24px}
 .hero div{width:40px;height:1px;background:var(--m-t);margin:0 auto 24px}
 section{max-width:1400px;margin:0 auto;padding:0 4% 48px}
@@ -37,15 +33,12 @@ section>p{font-size:15px;color:var(--m-tm);margin-bottom:40px;max-width:600px;li
 footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0 auto}
 .f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--m-b);font-size:12px;color:var(--m-tm)}
 @media(max-width:1024px){.grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.grid{grid-template-columns:1fr}.hero h1{font-size:32px}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<header><div class="hi"><a href="../index.html" class="logo">MARGEN<span>*</span></a><nav><a href="../index.html">Portada</a></nav><div class="actions"><a href="../index.html" class="icon-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg><span>Volver</span></a></div></div></header>
-
+<header><div class="hi"><a href="../index.html" class="logo">MARGEN<span>*</span></a><nav><a href="../index.html">Portada</a></nav></div></header>
 <div class="hero"><h1>Número 01</h1><p>Revista Iberoamericana de Diseño · Septiembre 2026</p><div></div></div>
-
 <section>
   <h2>Diez artículos</h2>
   <p>Diez miradas desde el borde hacia el centro. Editorial, ensayo, investigación, opinión, IA + Diseño, proyecto destacado, entrevista, negocios y reseñas.</p>
@@ -62,8 +55,6 @@ footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0
     <a href="articulo-10-resena-adobe.html" class="card"><div class="cat">Reseña</div><h3>Lo local no es una textura</h3><p>Adobe Express y la tentación de convertir la identidad cultural en un filtro decorativo.</p><div class="meta"><span>Liam Rodríguez Silva</span><span>Adobe Express</span></div></a>
   </div>
 </section>
-
 <footer><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--m-s);font-style:italic">Revista Iberoamericana de Diseño · Número 01</span></div></footer>
-
 </body>
 </html>

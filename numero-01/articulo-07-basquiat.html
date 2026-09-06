@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hablemos de Basquiat | Margen*</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hablemos de Basquiat | Margen* — Número 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m-bg:#f8f8f8;--m-w:#fff;--m-t:#1a1a1a;--m-t2:#4a4a4a;--m-tm:#999;--m-b:#e8e8e8;--m-a:#c41e3a;--m-s:'Playfair Display',Georgia,serif;--m-n:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--m-n);background:var(--m-bg);color:var(--m-t);min-height:100vh;line-height:1.6}
+header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--m-b)}
+.hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;text-decoration:none;color:var(--m-t);font-family:inherit}
+.logo span{font-weight:400}
+nav a{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);text-decoration:none}
+nav a:hover{color:var(--m-t)}
+.article{max-width:720px;margin:0 auto;padding:40px 4% 48px}
+.a-head{text-align:center;margin-bottom:48px}
+.a-cat{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-a);margin-bottom:20px;display:block}
+.a-tit{font-family:var(--m-s);font-size:42px;font-weight:500;line-height:1.15;margin-bottom:20px}
+.a-meta{font-size:14px;color:var(--m-tm)}
+.a-body{font-family:var(--m-s);font-size:18px;line-height:1.8}
+.a-body p{margin-bottom:28px;text-align:justify}
+.a-body h2{font-family:var(--m-n);font-size:22px;font-weight:600;margin:48px 0 20px}
+.a-body blockquote{border-left:2px solid var(--m-t);padding-left:24px;margin:32px 0;font-style:italic;color:var(--m-t2);font-family:var(--m-s);font-size:1.3rem;line-height:1.5}
+.a-img{width:100%;max-width:600px;margin:40px auto;overflow:hidden}
+.a-img img{width:100%;max-height:400px;height:auto;object-fit:cover;display:block}
+.a-cap{font-size:13px;color:var(--m-tm);text-align:center;margin-top:12px;margin-bottom:40px;font-style:italic}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--m-tm);background:none;border:none;margin-bottom:32px;cursor:pointer;font-family:inherit}
+.back:hover{color:var(--m-t)}
+.drop-cap::first-letter{float:left;font-family:var(--m-s);font-size:5rem;line-height:0.75;padding-right:0.6rem;padding-top:0.3rem;color:var(--m-t);font-weight:700}
+footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0 auto}
+.f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--m-b);font-size:12px;color:var(--m-tm)}
+@media(max-width:640px){.a-tit{font-size:32px}.drop-cap::first-letter{font-size:3.5rem}}
+</style>
 </head>
 <body>
+<header><div class="hi"><a href="../index.html" class="logo">MARGEN<span>*</span></a><nav><a href="../index.html">Portada</a></nav></div></header>
+<div class="article">
+<button class="back" onclick="history.back()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver</button>
+<div class="a-head">
+<div class="a-cat">Entrevista — Número 01 · Septiembre 2026</div>
+<h1 class="a-tit">Hablemos de Basquiat</h1>
+<div class="a-meta"><span>Margen*</span><span>·</span><span>Septiembre 2026</span></div>
+</div>
+<div class="a-img"><img src="3.jpg" alt="Hablemos de Basquiat"></div>
+<div class="a-cap">Jean-Michel Basquiat · Foto: Archivo de la fundación</div>
+<div class="a-body">
+<p class="drop-cap">Para esta entrevista, conversamos con tres voces: un historiador del arte afroamericano, un diseñador gráfico que trabajó en los archivos de la fundación Basquiat, y un tipógrafo mexicano que estudia la escritura en el trabajo del artista. Lo que sigue es una conversación editada sobre el diseño que existe dentro del caos de Jean-Michel Basquiat.</p>
 
-  <header class="site-header">
-    <a href="index.html" class="logo">MARGEN</a>
-    <nav>
-      <a href="index.html" class="nav-link">← Índice</a>
-    </nav>
-  </header>
+<h2>El grafismo como resistencia</h2>
+<p><strong>Margen*:</strong> ¿Es Basquiat un pintor que usa letras, o un diseñador que usa pintura?</p>
+<p><strong>Dr. Amos Richardson:</strong> Es una falsa dicotomía impuesta por la academia occidental. Basquiat no respetaba esas fronteras porque esas fronteras fueron construidas para excluirlo. Para él, la palabra, el símbolo, la figura y el color eran herramientas igualmente válidas de un mismo arsenal. Lo que llamamos "diseño" en su obra —la tipografía, la composición, el uso del copyright— no es accidental. Es estrategia. Cuando pinta "Copyright" sobre una corona, está hablando de quién posee la cultura negra. Eso es diseño de información con carga política.</p>
 
-  <article class="article-container">
-    <header class="article-header">
-      <span class="article-category">Entrevista</span>
-      <h1>Hablemos de Basquiat</h1>
-      <p class="article-meta">Por <strong>Margen*</strong> · Número 01 · Septiembre 2026</p>
-    </header>
+<div class="a-img"><img src="3.jpg" alt="Retrato de Basquiat"></div>
+<div class="a-cap">Jean-Michel Basquiat · Foto: Archivo de la fundación</div>
 
-    <figure class="article-hero">
-      <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200&q=80" alt="Arte urbano y grafiti">
-      <figcaption>Imagen utilizada como referencia, sin fines comerciales</figcaption>
-    </figure>
+<h2>La tipografía del cuerpo</h2>
+<p><strong>Margen*:</strong> ¿Qué pasa con su letra? No parece tipografía en el sentido académico.</p>
+<p><strong>Rodrigo Cruz (tipógrafo):</strong> Porque no lo es. Basquiat escribía con el cuerpo, no con la mano. Sus letras tienen el peso de alguien que está apurado, que tiene mucho que decir y poco tiempo. Pero eso no significa descuido. Hay un ritmo. Si transcribes sus textos a una tipografía limpia, pierden toda su energía. El "error" es el diseño. La sangría irregular, las letras que se encogen o se hinchan, las palabras que se comen entre sí: eso es intención, no incapacidad.</p>
 
-    <div class="article-content">
-      <p class="drop-cap">Para esta entrevista, conversamos con tres voces: un historiador del arte afroamericano, un diseñador gráfico que trabajó en los archivos de la fundación Basquiat, y un tipógrafo mexicano que estudia la escritura en el trabajo del artista. Lo que sigue es una conversación editada sobre el diseño que existe dentro del caos de Jean-Michel Basquiat, y sobre cómo su legado sigue siendo malentendido por la industria creativa.</p>
+<blockquote>"Cuando pinta 'Copyright' sobre una corona, está hablando de quién posee la cultura negra."</blockquote>
 
-      <h2>El grafismo como resistencia</h2>
+<div class="a-img"><img src="2.jpeg" alt="Basquiat figura con gorra"></div>
+<div class="a-cap">Figura con gorra · Jean-Michel Basquiat</div>
 
-      <p><strong>Margen*:</strong> ¿Es Basquiat un pintor que usa letras, o un diseñador que usa pintura?</p>
+<h2>De SAMO a las marcas de lujo</h2>
+<p><strong>Margen*:</strong> Basquiat es hoy una marca. ¿Traiciona eso su espíritu?</p>
+<p><strong>Dr. Richardson:</strong> Esa es la pregunta que todos hacemos. Basquiat era profundamente crítico del capitalismo, pero también quería dinero. No era un santo; era un artista joven que quería comer y pagar renta. El problema no es que se venda su obra; el problema es quién la vende y para qué. Cuando una marca de moda de lujo estampa un Basquiat en una bolsa de mil dólares sin contexto, no está honrando al artista. Está consumiendo su rebeldía como estética. Es el equivalente a poner un leopardo en una jaula de oro: sigue siendo prisión.</p>
 
-      <p><strong>Dr. Amos Richardson (historiador):</strong> Es una falsa dicotomía impuesta por la academia occidental. Basquiat no respetaba esas fronteras porque esas fronteras fueron construidas para excluirlo. Para él, la palabra, el símbolo, la figura y el color eran herramientas igualmente válidas de un mismo arsenal. Lo que llamamos "diseño" en su obra —la tipografía, la composición, el uso del copyright— no es accidental. Es estrategia. Cuando pinta "Copyright" sobre una corona, está hablando de quién posee la cultura negra. Eso es diseño de información con carga política.</p>
+<div class="a-img"><img src="Captura%20de%20pantalla%202026-09-06%20a%20la%28s%29%204.07.24%E2%80%AFp.m..png" alt="Collage de Basquiat"></div>
+<div class="a-cap">Collage · Jean-Michel Basquiat</div>
 
-      <p><strong>Lucía Fernández (diseñadora, archivos Basquiat):</strong> Totalmente de acuerdo. Trabajé digitalizando sus cuadernos y lo que me impactó fue la precisión de su letra. La gente piensa que es caótica, pero si la miras con ojos de diseñador, hay una jerarquía implacable. Títulos grandes, notas al margen, tachaduras que funcionan como capas de edición. Es como ver un proceso de diseño editorial en tiempo real.</p>
-
-      <h2>La tipografía del cuerpo</h2>
-
-      <p><strong>Margen*:</strong> ¿Qué pasa con su letra? No parece tipografía en el sentido académico.</p>
-
-      <p><strong>Rodrigo Cruz (tipógrafo):</strong> Porque no lo es. Basquiat escribía con el cuerpo, no con la mano. Sus letras tienen el peso de alguien que está apurado, que tiene mucho que decir y poco tiempo. Pero eso no significa descuido. Hay un ritmo. Si transcribes sus textos a una tipografía limpia, pierden toda su energía. El "error" es el diseño. La sangría irregular, las letras que se encogen o se hinchan, las palabras que se comen entre sí: eso es intención, no incapacidad.</p>
-
-      <blockquote>"Cuando pinta 'Copyright' sobre una corona, está hablando de quién posee la cultura negra."</blockquote>
-
-      <h2>De SAMO a las marcas de lujo</h2>
-
-      <p><strong>Margen*:</strong> Basquiat es hoy una marca. ¿Traiciona eso su espíritu?</p>
-
-      <p><strong>Dr. Richardson:</strong> Esa es la pregunta que todos hacemos. Basquiat era profundamente crítico del capitalismo, pero también quería dinero. No era un santo; era un artista joven que quería comer y pagar renta. El problema no es que se venda su obra; el problema es quién la vende y para qué. Cuando una marca de moda de lujo estampa un Basquiat en una bolsa de mil dólares sin contexto, no está honrando al artista. Está consumiendo su rebeldía como estética. Es el equivalente a poner un leopardo en una jaula de oro: sigue siendo prisión.</p>
-
-      <p><strong>Lucía Fernández:</strong> Lo que me duele es la simplificación. Basquiat se reduce a "el tipo de los grafitis", o "el amigo de Warhol". Se pierde la complejidad. Era un lector voraz, un músico, un poeta. Su obra está llena de referencias a anatomía, jazz, historia colonial, mitología griega. Reducirlo a "arte callejero" es un acto de diseño en sí mismo: un diseño de narrativa que lo vuelve inofensivo.</p>
-
-      <h2>Lo que le debemos</h2>
-
-      <p><strong>Margen*:</strong> ¿Qué lección concreta le queda al diseñador contemporáneo?</p>
-
-      <p><strong>Rodrigo Cruz:</strong> Que la autenticidad no es un estilo que puedas aplicar. Basquiat no estaba haciendo "arte raw" como tendencia; estaba siendo él mismo en un sistema que no estaba preparado para recibirlo. El diseñador puede aprender de eso: que el riesgo de ser genuino, aunque sea incómodo, es menor que el riesgo de ser olvidado por ser genérico.</p>
-
-      <p><strong>Dr. Richardson:</strong> Y que el diseño puede ser agresivo. No todo debe ser "limpio" o "usable". A veces, el diseño más honesto es el que incomoda, el que interrumpe, el que no deja al espectador en paz. Basquiat no pintó para que te sintieras bien. Pintó para que pensaras. Eso es un estándar que deberíamos recuperar.</p>
-    </div>
-  </article>
-
-  <footer class="site-footer">
-    <p>Margen* — Revista Iberoamericana de Diseño · Número 01 · 2026</p>
-  </footer>
-
+<h2>Lo que le debemos</h2>
+<p><strong>Margen*:</strong> ¿Qué lección concreta le queda al diseñador contemporáneo?</p>
+<p><strong>Rodrigo Cruz:</strong> Que la autenticidad no es un estilo que puedas aplicar. Basquiat no estaba haciendo "arte raw" como tendencia; estaba siendo él mismo en un sistema que no estaba preparado para recibirlo. El diseñador puede aprender de eso: que el riesgo de ser genuino, aunque sea incómodo, es menor que el riesgo de ser olvidado por ser genérico.</p>
+<p><strong>Dr. Richardson:</strong> Y que el diseño puede ser agresivo. No todo debe ser "limpio" o "usable". A veces, el diseño más honesto es el que incomoda, el que interrumpe, el que no deja al espectador en paz. Basquiat no pintó para que te sintieras bien. Pintó para que pensaras. Eso es un estándar que deberíamos recuperar.</p>
+</div>
+</div>
+<footer><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--m-s);font-style:italic">Revista Iberoamericana de Diseño · Número 01</span></div></footer>
 </body>
 </html>

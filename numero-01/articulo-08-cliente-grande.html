@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El cliente grande que casi quiebra la boutique | Margen*</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El cliente grande que casi quiebra la boutique | Margen* — Número 01</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--m-bg:#f8f8f8;--m-w:#fff;--m-t:#1a1a1a;--m-t2:#4a4a4a;--m-tm:#999;--m-b:#e8e8e8;--m-a:#c41e3a;--m-s:'Playfair Display',Georgia,serif;--m-n:'Inter',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--m-n);background:var(--m-bg);color:var(--m-t);min-height:100vh;line-height:1.6}
+header{position:sticky;top:0;z-index:100;background:rgba(248,248,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--m-b)}
+.hi{max-width:1400px;margin:0 auto;padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:22px;font-weight:700;letter-spacing:0.08em;text-decoration:none;color:var(--m-t);font-family:inherit}
+.logo span{font-weight:400}
+nav a{font-size:13px;font-weight:500;letter-spacing:0.04em;text-transform:uppercase;color:var(--m-t2);text-decoration:none}
+nav a:hover{color:var(--m-t)}
+.article{max-width:720px;margin:0 auto;padding:40px 4% 48px}
+.a-head{text-align:center;margin-bottom:48px}
+.a-cat{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m-a);margin-bottom:20px;display:block}
+.a-tit{font-family:var(--m-s);font-size:42px;font-weight:500;line-height:1.15;margin-bottom:20px}
+.a-meta{font-size:14px;color:var(--m-tm)}
+.a-body{font-family:var(--m-s);font-size:18px;line-height:1.8}
+.a-body p{margin-bottom:28px;text-align:justify}
+.a-body h2{font-family:var(--m-n);font-size:22px;font-weight:600;margin:48px 0 20px}
+.a-body blockquote{border-left:2px solid var(--m-t);padding-left:24px;margin:32px 0;font-style:italic;color:var(--m-t2);font-family:var(--m-s);font-size:1.3rem;line-height:1.5}
+.a-img{width:100%;max-width:600px;margin:40px auto;overflow:hidden}
+.a-img img{width:100%;max-height:400px;height:auto;object-fit:cover;display:block}
+.a-cap{font-size:13px;color:var(--m-tm);text-align:center;margin-top:12px;margin-bottom:40px;font-style:italic}
+.back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--m-tm);background:none;border:none;margin-bottom:32px;cursor:pointer;font-family:inherit}
+.back:hover{color:var(--m-t)}
+.drop-cap::first-letter{float:left;font-family:var(--m-s);font-size:5rem;line-height:0.75;padding-right:0.6rem;padding-top:0.3rem;color:var(--m-t);font-weight:700}
+footer{border-top:1px solid var(--m-b);padding:48px 4%;max-width:1400px;margin:0 auto}
+.f-bot{display:flex;justify-content:space-between;padding-top:24px;border-top:1px solid var(--m-b);font-size:12px;color:var(--m-tm)}
+@media(max-width:640px){.a-tit{font-size:32px}.drop-cap::first-letter{font-size:3.5rem}}
+</style>
 </head>
 <body>
-
-  <header class="site-header">
-    <a href="index.html" class="logo">MARGEN</a>
-    <nav>
-      <a href="index.html" class="nav-link">← Índice</a>
-    </nav>
-  </header>
-
-  <article class="article-container">
-    <header class="article-header">
-      <span class="article-category">Diseño y Negocios</span>
-      <h1>El cliente grande que casi quiebra la boutique</h1>
-      <p class="article-meta">Por <strong>Mario Caballero</strong> · Número 01 · Septiembre 2026</p>
-    </header>
-
-    <figure class="article-hero">
-      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80" alt="Reunión de negocios">
-      <figcaption>Imagen utilizada como referencia, sin fines comerciales</figcaption>
-    </figure>
-
-    <div class="article-content">
-      <p class="drop-cap">En 2019, una marca de bebidas —llamémosla "Cliente X"— representaba el 72% de nuestra facturación anual. Éramos una boutique de doce personas, y ese contrato nos había permitido mudarnos a una oficina decente, contratar a tres diseñadores junior, y soñar con crecer. Lo que no sabíamos era que estábamos construyendo una casa sobre un solo pilar. Y los pilares, cuando se caen, no avisan.</p>
-
-      <p>Todo empezó con un rebranding. Cliente X quería renovar su imagen completa: packaging, digital, campaña de lanzamiento. El presupuesto era generoso, los plazos eran ajustados pero razonables, y la relación con su director de marca era cordial. Durante los primeros tres meses, el proyecto fue un éxito. Las presentaciones funcionaban, los conceptos pasaban sin mayor resistencia, y el ambiente en el estudio era de euforia contenida. Luego, llegó el giro.</p>
-
-      <h2>La trampa del 90 días</h2>
-
-      <p>Cliente X tenía una política de pagos a noventa días. Siempre la había tenido, pero con proyectos pequeños el impacto era manejable. Con un proyecto de esta magnitud, el flujo de caja se convirtió en un problema real. Estábamos pagando salarios, renta, software, impresiones de prueba, y viajes a la ciudad donde estaba la sede del cliente —todo con dinero que no íbamos a ver hasta dentro de tres meses. Y cuando esos tres meses llegaron, la factura no se pagó. "Proceso interno", dijeron. "El CFO está de viaje". "El sistema falló". Las excusas clásicas.</p>
-
-      <p>Para entonces, ya habíamos entregado la segunda fase del proyecto. Y aquí cometimos el error fatal: seguimos trabajando. La lógica era perversa pero comprensible: si parábamos, perderíamos al cliente. Si perdíamos al cliente, perderíamos el 72% de nuestros ingresos. Así que seguimos, financiando con deuda el trabajo de una empresa que facturaba mil veces más que nosotros.</p>
-
-      <blockquote>"Estábamos financiando con deuda el trabajo de una empresa que facturaba mil veces más que nosotros."</blockquote>
-
-      <h2>La muerte por mil revisiones</h2>
-
-      <p>El segundo problema fue la escalada de cambios. Lo que empezó como "ajustes menores" se convirtió en una reconstrucción perpetua. Nuevos directivos en Cliente X querían dejar su huella; cada uno traía su visión, su referencia, su "sentimiento" sobre el color. No había un brief estable; había un brief vivo que mutaba cada semana. Y nosotros, por miedo a perder al gigante, asentíamos.</p>
-
-      <p>En seis meses, hicimos catorce versiones del logo. No exagero: catorce. La última volvía a la segunda. El equipo estaba exhausto, los diseñadores junior renunciaron, y yo empecé a perder el sueño. No por estrés creativo; por terror financiero. Había llegado a un punto donde, si Cliente X nos dejaba, no solo perderíamos un cliente. Quebraríamos.</p>
-
-      <h2>La salida</h2>
-
-      <p>La solución no vino de una estrategia brillante, sino de una crisis. Cliente X fue adquirida por un fondo de inversión y congeló todos los proyectos creativos. Nosotros, que estábamos a punto de entregar la fase final, nos quedamos con seis meses de trabajo no pagado y un contrato que no protegía al proveedor en caso de suspensión. Fue un golpe brutal. Pero también fue una liberación.</p>
-
-      <p>Tuvimos que reducir el equipo a la mitad, mudarnos a un espacio más pequeño, y renegociar deudas. Fue vergonzoso y doloroso. Pero sobrevivimos. Y lo más importante: aprendimos. Hoy, ningún cliente representa más del 30% de nuestra facturación. Todos los contratos tienen cláusulas de pago a 30 días con penalización por retraso. Y tenemos un límite estricto: tres revisiones mayores por proyecto. La cuarta cuesta extra, y se dice desde el día uno.</p>
-
-      <h2>La lección</h2>
-
-      <p>El cliente grande no es malo por definición. Pero la dependencia sí lo es. Como diseñadores, tendemos a pensar que el problema es creativo: el brief, el gusto del cliente, la dirección de arte. Pero a veces el problema es estructural: un contrato débil, una cartera desbalanceada, un miedo a decir que no. La boutique que sobrevive no es la que hace el mejor diseño; es la que puede seguir haciendo diseño el mes siguiente.</p>
-
-      <p>Mi recomicón concreta: revisa hoy mismo qué porcentaje de tus ingresos proviene de tu cliente más grande. Si es más del 40%, empieza a buscar otros. No mañana. Hoy. Porque el día que ese cliente estornude, tú estarás en terapia intensiva. Y en terapia intensiva no se diseña bien.</p>
-    </div>
-  </article>
-
-  <footer class="site-footer">
-    <p>Margen* — Revista Iberoamericana de Diseño · Número 01 · 2026</p>
-  </footer>
-
+<header><div class="hi"><a href="../index.html" class="logo">MARGEN<span>*</span></a><nav><a href="../index.html">Portada</a></nav></div></header>
+<div class="article">
+<button class="back" onclick="history.back()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15,18 9,12 15,6"/></svg>Volver</button>
+<div class="a-head">
+<div class="a-cat">Diseño y Negocios — Número 01 · Septiembre 2026</div>
+<h1 class="a-tit">El cliente grande que casi quiebra la boutique</h1>
+<div class="a-meta"><span>Mario Caballero</span><span>·</span><span>Septiembre 2026</span></div>
+</div>
+<div class="a-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="El cliente grande que casi quiebra la boutique"></div>
+<div class="a-cap">Imagen utilizada como referencia, sin fines comerciales</div>
+<div class="a-body">
+<p class="drop-cap">En 2019, una marca de bebidas —llamémosla "Cliente X"— representaba el 72% de nuestra facturación anual. Éramos una boutique de doce personas, y ese contrato nos había permitido mudarnos a una oficina decente, contratar a tres diseñadores junior, y soñar con crecer.</p>
+<p>Todo empezó con un rebranding. Cliente X quería renovar su imagen completa: packaging, digital, campaña de lanzamiento. El presupuesto era generoso, los plazos eran ajustados pero razonables.</p>
+<h2>La trampa del 90 días</h2>
+<p>Cliente X tenía una política de pagos a noventa días. Con un proyecto de esta magnitud, el flujo de caja se convirtió en un problema real.</p>
+<blockquote>"Estábamos financiando con deuda el trabajo de una empresa que facturaba mil veces más que nosotros."</blockquote>
+<h2>La muerte por mil revisiones</h2>
+<p>El segundo problema fue la escalada de cambios. En seis meses, hicimos catorce versiones del logo. No exagero: catorce. La última volvía a la segunda.</p>
+<h2>La salida</h2>
+<p>La solución no vino de una estrategia brillante, sino de una crisis. Cliente X fue adquirida por un fondo de inversión y congeló todos los proyectos creativos.</p>
+<h2>La lección</h2>
+<p>Mi recomendación concreta: revisa hoy mismo qué porcentaje de tus ingresos proviene de tu cliente más grande. Si es más del 40%, empieza a buscar otros. No mañana. Hoy.</p>
+</div>
+</div>
+<footer><div class="f-bot"><span>&copy; Margen* — Todos los derechos reservados</span><span style="font-family:var(--m-s);font-style:italic">Revista Iberoamericana de Diseño · Número 01</span></div></footer>
 </body>
 </html>
